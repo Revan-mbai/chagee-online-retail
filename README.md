@@ -1,8 +1,8 @@
 # Chagee Singapore · online retail improvements
 
-Three interactive slides for OPIM639 (Group 3), one per proposed improvement to Chagee Singapore's online retail:
+Three slides for OPIM639 (Group 3), one per proposed improvement to Chagee Singapore's online retail:
 
-1. **Capacity-aware order alerts and rerouting**: a lunch-rush simulation in 10-minute slots, Today vs With AI, with the alert a customer sees on the app.
+1. **Capacity-aware order alerts and rerouting**: a static lunch-rush view in 10-minute slots, with the two customer-side options (an in-app pop-up, or closing the busy outlet on delivery apps).
 2. **Dynamic pricing for different scenarios**: an offer engine over time of day, weather and nearby events, plus the dormant-member nudges.
 3. **Self pick-up to reduce last-mile delivery**: what leaves Chagee per cup on each channel, and the pick-up incentives on a checkout mock.
 
