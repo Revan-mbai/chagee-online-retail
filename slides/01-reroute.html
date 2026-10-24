@@ -134,6 +134,12 @@
     @media (prefers-reduced-motion: reduce){
       #r1 .r1-cup{transition:none}
     }
+    /* idle motion (keyframes in theme.css; off in print and for reduced motion) */
+    #r1 .r1-badge{animation:idle-nudge-rest 3.4s ease-in-out infinite}
+    #r1 .r1-badge[data-s="1"]{animation-delay:.15s} #r1 .r1-badge[data-s="2"]{animation-delay:.3s} #r1 .r1-badge[data-s="3"]{animation-delay:.45s}
+    #r1 .r1-badge[data-s="4"]{animation-delay:.6s} #r1 .r1-badge[data-s="5"]{animation-delay:.75s}
+    #r1 .r1-alert,#r1 .r1-cx{animation:idle-glow 2.4s ease-out infinite}
+    #r1 .r1-ch.r1-sel::after{animation:idle-pop 3.2s ease-in-out infinite}
   </style>
   <script>
   (function () {

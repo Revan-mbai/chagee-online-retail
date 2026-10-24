@@ -162,3 +162,30 @@ aside.notes{display:none}
   body.printnotes .notespage{display:block!important;position:relative;width:1280px;height:720px;page-break-after:always;padding:60px 90px;font:19px/1.6 var(--sans);color:var(--ink2)}
   .notespage h6{font:600 13px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin:0 0 14px}
 }
+
+/* ---------- presenter spotlight: → darkens the right-hand cards one at a time (deck.js adds .spot) ---------- */
+.cards>.bc{cursor:pointer;user-select:none;transition:background-color .3s ease,border-color .3s ease,box-shadow .3s ease,transform .3s ease}
+.cards>.bc *{transition:color .3s ease,background-color .3s ease}
+@media screen{   /* the spotlight never reaches print */
+.cards>.bc.spot{background:var(--navy)!important;border-color:var(--navy)!important;box-shadow:0 14px 30px rgba(36,64,107,.38);transform:translateY(-2px)}
+.cards>.bc.spot,.cards>.bc.spot *{color:#fff!important}
+.cards>.bc.spot .k{color:var(--gold)!important}
+.cards>.bc.spot .num{background:var(--gold)!important;color:var(--navy)!important}
+.cards>.bc.spot li::before{background:var(--gold)!important}
+.cards>.bc.warn.spot{background:var(--red)!important;border-color:var(--red)!important;box-shadow:0 14px 30px rgba(184,50,43,.35)}   /* a warning stays red */
+.cards>.bc.warn.spot .k{color:#FBEDEC!important}
+}
+.slide:has(.cards>.bc.spot) .panel *,.slide:has(.cards>.bc.spot) .panel *::after{animation:none!important}   /* the spotlit card is the only thing moving */
+@media (prefers-reduced-motion:reduce){.cards>.bc,.cards>.bc *{transition:none!important}.cards>.bc.spot{transform:none}}
+
+/* ---------- idle motion: slow, small loops on icons so the slides feel alive (slides opt in per element) ---------- */
+@keyframes idle-sway{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-2deg)}}
+@keyframes idle-pop{0%,70%,100%{transform:scale(1)}80%{transform:scale(1.18)}}
+@keyframes idle-ring{0%{transform:scale(1);opacity:.6}100%{transform:scale(2.6);opacity:0}}
+@keyframes idle-glow{0%{box-shadow:0 0 0 0 rgba(184,50,43,.35)}70%,100%{box-shadow:0 0 0 8px rgba(184,50,43,0)}}
+@keyframes idle-drip{0%{transform:translateY(-3px);opacity:0}20%{opacity:1}100%{transform:translateY(9px);opacity:0}}
+@keyframes idle-bob{0%,13%,100%{transform:none}6.5%{transform:translateY(-4px)}}   /* a short bob, then a long rest */
+@keyframes idle-nudge-rest{0%,30%,100%{transform:none}15%{transform:translateY(3px)}}
+@keyframes idle-ring-sm{0%{transform:scale(1);opacity:.5}45%,100%{transform:scale(1.6);opacity:0}}
+@media (prefers-reduced-motion:reduce){.slide *,.slide *::before,.slide *::after{animation:none!important}}
+@media print{.slide *,.slide *::before,.slide *::after{animation:none!important}}   /* the spotlight is cleared before printing (deck.js) */

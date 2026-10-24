@@ -12,7 +12,8 @@ The theme follows the group's storyboard deck, [KeziahVickraman-MBAI/new-chagee-
 
 Open `index.html` in a browser. It is one self-contained file (Google Fonts aside).
 
-- **→ / ←** or Space: next / previous slide · **N** speaker notes · **F** full screen · **P** print or save as PDF · **G** go to a slide
+- **→**, Space, PageDown or the toolbar ▶: darken the right-hand cards one at a time, then go to the next slide. **←**, PageUp or ◀ steps back. Click a card to darken it directly.
+- **N** speaker notes · **F** full screen · **P** print or save as PDF · **G** go to a slide · **Home / End** first / last slide
 - Every slide opens on a complete static state, so a printed or PDF copy reads without clicking.
 
 To publish it, deploy the repository as a static site (for example on Vercel, with no build command). `index.html` at the root is the deck.

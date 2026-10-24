@@ -26,11 +26,20 @@
     deck.style.left = `${W / 2}px`;
     deck.style.transform = `translate(${-640 * s}px,${-360 * s}px) scale(${s})`;
   }
-  function show(i) {
+  /* presenter spotlight: before moving on, → darkens the right-hand cards one at a time (.spot); ← steps back */
+  const spots = sl => $$(sl, ".cards > .bc");
+  function spot(sl, k) {
+    const c = spots(sl); sl._spot = Math.max(0, Math.min(c.length, k));
+    c.forEach((el, j) => el.classList.toggle("spot", j === sl._spot - 1));
+  }
+  slides.forEach(sl => spots(sl).forEach((c, j) => c.addEventListener("click", e => { if (e.detail > 1) return spot(sl, j + 1); spot(sl, sl._spot === j + 1 ? 0 : j + 1); })));
+
+  function show(i, fromEnd = false) {
     const n = Math.max(0, Math.min(slides.length - 1, i));
     if (n === cur) return;
-    if (cur >= 0) slides[cur].dispatchEvent(new CustomEvent("slideleave"));
+    if (cur >= 0) { slides[cur].dispatchEvent(new CustomEvent("slideleave")); spot(slides[cur], 0); }
     cur = n;
+    spot(slides[cur], fromEnd ? spots(slides[cur]).length : 0);   // back from the next slide: land where you left
     slides.forEach((s, k) => s.classList.toggle("active", k === cur));
     const gt = $(document, "#goto"); if (document.activeElement !== gt) gt.value = cur + 1;
     $(document, "#count .tot").textContent = `/ ${slides.length}`;
@@ -39,15 +48,18 @@
     history.replaceState(null, "", `${location.search}#${cur + 1}`);
     slides[cur].dispatchEvent(new CustomEvent("slideenter"));
   }
-  const next = () => show(cur + 1), prev = () => show(cur - 1);
+  const next = () => { const sl = slides[cur]; if (!sl) return show(0); if ((sl._spot || 0) < spots(sl).length) spot(sl, (sl._spot || 0) + 1); else show(cur + 1); };
+  const prev = () => { const sl = slides[cur]; if (!sl) return show(0); if ((sl._spot || 0) > 0) spot(sl, sl._spot - 1); else show(cur - 1, true); };
 
   const toast = m => { const t = $(document, "#toast"); t.textContent = m; t.classList.add("on"); clearTimeout(toast.h); toast.h = setTimeout(() => t.classList.remove("on"), 2000); };
   const toggleNotes = () => { document.body.classList.toggle("shownotes"); $(document, "#notesb").classList.toggle("on", document.body.classList.contains("shownotes")); fit(); };
   const toggleFull = () => { try { const p = document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.(); p && p.catch && p.catch(() => {}); } catch (e) {} };
-  const preparePrint = () => slides.forEach(s => s.dispatchEvent(new CustomEvent("deckprint")));
+  const preparePrint = () => slides.forEach(s => { spot(s, 0); s.dispatchEvent(new CustomEvent("deckprint")); });
 
   $(document, "#prev").onclick = prev;
   $(document, "#next").onclick = next;
+  // after a mouse click on any toolbar button, give the keys back to the deck so Space advances instead of re-clicking it
+  $(document, "#toolbar").addEventListener("click", e => { const b = e.target.closest("button"); if (b && e.detail) b.blur(); });
   $(document, "#notesb").onclick = toggleNotes;
   $(document, "#printb").onclick = () => { preparePrint(); window.print(); };
   $(document, "#fs").onclick = toggleFull;
@@ -71,6 +83,7 @@
 
   addEventListener("keydown", e => {
     if (e.target.isContentEditable || e.target.closest?.("input,select,textarea")) return;
+    // presentation clickers send PageDown/PageUp, so they step the spotlight too
     if (["ArrowRight", "PageDown"].includes(e.key) || (e.key === " " && e.target.tagName !== "BUTTON")) { e.preventDefault(); next(); }
     else if (["ArrowLeft", "PageUp"].includes(e.key)) { e.preventDefault(); prev(); }
     else if (e.key === "Home") show(0);
@@ -86,5 +99,5 @@
 
   if (PRINT) { document.body.classList.add("print"); preparePrint(); }
   else { fit(); show((parseInt(location.hash.slice(1), 10) || 1) - 1); }
-  window.Deck = { show, next, prev, toast, get current() { return cur; } };
+  window.Deck = { show, next, prev, toast, get current() { return cur; }, get spot() { return slides[cur]?._spot || 0; } };
 })();

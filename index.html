@@ -172,6 +172,33 @@ aside.notes{display:none}
   .notespage h6{font:600 13px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin:0 0 14px}
 }
 
+/* ---------- presenter spotlight: → darkens the right-hand cards one at a time (deck.js adds .spot) ---------- */
+.cards>.bc{cursor:pointer;user-select:none;transition:background-color .3s ease,border-color .3s ease,box-shadow .3s ease,transform .3s ease}
+.cards>.bc *{transition:color .3s ease,background-color .3s ease}
+@media screen{   /* the spotlight never reaches print */
+.cards>.bc.spot{background:var(--navy)!important;border-color:var(--navy)!important;box-shadow:0 14px 30px rgba(36,64,107,.38);transform:translateY(-2px)}
+.cards>.bc.spot,.cards>.bc.spot *{color:#fff!important}
+.cards>.bc.spot .k{color:var(--gold)!important}
+.cards>.bc.spot .num{background:var(--gold)!important;color:var(--navy)!important}
+.cards>.bc.spot li::before{background:var(--gold)!important}
+.cards>.bc.warn.spot{background:var(--red)!important;border-color:var(--red)!important;box-shadow:0 14px 30px rgba(184,50,43,.35)}   /* a warning stays red */
+.cards>.bc.warn.spot .k{color:#FBEDEC!important}
+}
+.slide:has(.cards>.bc.spot) .panel *,.slide:has(.cards>.bc.spot) .panel *::after{animation:none!important}   /* the spotlit card is the only thing moving */
+@media (prefers-reduced-motion:reduce){.cards>.bc,.cards>.bc *{transition:none!important}.cards>.bc.spot{transform:none}}
+
+/* ---------- idle motion: slow, small loops on icons so the slides feel alive (slides opt in per element) ---------- */
+@keyframes idle-sway{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-2deg)}}
+@keyframes idle-pop{0%,70%,100%{transform:scale(1)}80%{transform:scale(1.18)}}
+@keyframes idle-ring{0%{transform:scale(1);opacity:.6}100%{transform:scale(2.6);opacity:0}}
+@keyframes idle-glow{0%{box-shadow:0 0 0 0 rgba(184,50,43,.35)}70%,100%{box-shadow:0 0 0 8px rgba(184,50,43,0)}}
+@keyframes idle-drip{0%{transform:translateY(-3px);opacity:0}20%{opacity:1}100%{transform:translateY(9px);opacity:0}}
+@keyframes idle-bob{0%,13%,100%{transform:none}6.5%{transform:translateY(-4px)}}   /* a short bob, then a long rest */
+@keyframes idle-nudge-rest{0%,30%,100%{transform:none}15%{transform:translateY(3px)}}
+@keyframes idle-ring-sm{0%{transform:scale(1);opacity:.5}45%,100%{transform:scale(1.6);opacity:0}}
+@media (prefers-reduced-motion:reduce){.slide *,.slide *::before,.slide *::after{animation:none!important}}
+@media print{.slide *,.slide *::before,.slide *::after{animation:none!important}}   /* the spotlight is cleared before printing (deck.js) */
+
 </style>
 </head>
 <body>
@@ -312,6 +339,12 @@ aside.notes{display:none}
     @media (prefers-reduced-motion: reduce){
       #r1 .r1-cup{transition:none}
     }
+    /* idle motion (keyframes in theme.css; off in print and for reduced motion) */
+    #r1 .r1-badge{animation:idle-nudge-rest 3.4s ease-in-out infinite}
+    #r1 .r1-badge[data-s="1"]{animation-delay:.15s} #r1 .r1-badge[data-s="2"]{animation-delay:.3s} #r1 .r1-badge[data-s="3"]{animation-delay:.45s}
+    #r1 .r1-badge[data-s="4"]{animation-delay:.6s} #r1 .r1-badge[data-s="5"]{animation-delay:.75s}
+    #r1 .r1-alert,#r1 .r1-cx{animation:idle-glow 2.4s ease-out infinite}
+    #r1 .r1-ch.r1-sel::after{animation:idle-pop 3.2s ease-in-out infinite}
   </style>
   <script>
   (function () {
@@ -481,6 +514,7 @@ aside.notes{display:none}
                   <text class="p2-dl">demand</text>
                   <rect class="p2-vl" x="-0.75" y="0" width="1.5" height="1" fill="#24406B" fill-opacity=".45"/>
                   <rect class="p2-gap" x="-5" y="0" width="10" height="1" rx="0"/>
+                  <g class="p2-ringg"><circle class="p2-ring" r="6.5"/></g>
                   <circle class="p2-dot" r="6.5" fill="#fff" stroke="#24406B" stroke-width="2.6"/>
                   <text class="p2-lbl" text-anchor="middle">room to fill</text>
                   <g class="p2-pill"><rect x="-27" y="0" width="54" height="22" rx="11" fill="#24406B"/><text class="p2-pillt" x="0" y="15.5" text-anchor="middle">15:00</text></g>
@@ -586,8 +620,6 @@ aside.notes{display:none}
     #p2 .p2-cup{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
     #p2 .p2-cta{flex:none;margin:0 14px;display:flex;justify-content:center;align-items:center;height:34px;border-radius:999px;background:var(--red);color:#fff;font:600 13px/1 var(--sans)}
     #p2 .p2-home{flex:none;width:60px;height:4px;border-radius:2px;background:#262626;margin:10px auto 7px}
-    #p2 .p2-pop{animation:p2-pop .3s ease}
-    @keyframes p2-pop{from{opacity:.3;transform:translateY(4px)}to{opacity:1;transform:none}}
     /* side cards */
     #p2 .p2-cards .bc{flex:1 1 0;min-height:0;display:flex;flex-direction:column;padding:14px 16px 16px}
     #p2 .p2-cards .bc .k{font-size:12px;letter-spacing:.12em}
@@ -599,8 +631,11 @@ aside.notes{display:none}
     #p2 .p2-rc b{font-weight:500;color:var(--ink)}
     #p2 .p2-rc.p2-tot{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);align-items:center;color:var(--ink);font-weight:500}
     #p2 .p2-rc.p2-tot b{font:500 36px/1 var(--serif);color:#2F6B45}
-    @media (prefers-reduced-motion:reduce){#p2 .p2-pop{animation:none}}
-    @media print{#p2 .p2-pop{animation:none}}
+    /* idle motion (keyframes in theme.css; off in print and for reduced motion) */
+    #p2 .p2-ring{fill:none;stroke-width:2;transform-box:fill-box;transform-origin:center;animation:idle-ring 2.2s ease-out infinite}
+    #p2 .p2-cup svg{animation:idle-sway 3.6s ease-in-out infinite;transform-origin:50% 100%}
+    #p2 .p2-sn::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--c);animation:idle-ring-sm 3.6s ease-out infinite}
+    #p2 .p2-st:nth-child(2) .p2-sn::after{animation-delay:1.2s} #p2 .p2-st:nth-child(3) .p2-sn::after{animation-delay:2.4s}
   </style>
   <script>
   (function () {
@@ -673,8 +708,9 @@ aside.notes{display:none}
       const gap = q(".p2-gap"); gap.style.fill = tone;
       tf(gap, "translate(" + x + "px," + top + "px) scale(1," + Math.max(0.01, Math.abs(yc - yd)) + ")");
       tf(q(".p2-dot"), "translate(" + x + "px," + yd + "px)");
+      tf(q(".p2-ringg"), "translate(" + x + "px," + yd + "px)"); q(".p2-ring").style.stroke = tone;
       const lb = q(".p2-lbl"); lb.textContent = s.st; lb.style.fill = TONE[s.tone].x;
-      tf(lb, "translate(" + x + "px," + (top - 12) + "px)");
+      tf(lb, "translate(" + x + "px," + (top - (yd <= yc ? 22 : 12)) + "px)");   // over capacity the dot is the top: clear its ring
       const px = Math.min(PL + PW - 27, Math.max(PL + 27, x));
       tf(q(".p2-pill"), "translate(" + px + "px," + (BY + 9) + "px)");
       q(".p2-pillt").textContent = hm(s.t);
@@ -701,9 +737,9 @@ aside.notes{display:none}
       $(".p2-otag").textContent = s.o.tag; $(".p2-big").textContent = s.o.big; $(".p2-big").classList.toggle("p2-bigs", s.o.big.length > 9); $(".p2-oline").textContent = s.o.line;
       $(".p2-cta").textContent = s.o.cta;
       $(".p2-clock").textContent = dorm ? "15:00" : hm(s.t);
-      if (still) $$(".p2-pop").forEach(el => el.classList.remove("p2-pop"));
-      else if (cur && cur !== k && !RM) {
-        [off, rule, $(".p2-chartv"), $(".p2-dorv")].forEach(el => { el.classList.remove("p2-pop"); void el.offsetWidth; el.classList.add("p2-pop"); });
+      // a one-shot fade on a tab change (Web Animations, so it never replays when the spotlight pauses CSS motion)
+      if (!still && cur && cur !== k && !RM) {
+        [off, rule, $(".p2-chartv"), $(".p2-dorv")].forEach(el => el.animate([{ opacity: .3, transform: "translateY(4px)" }, { opacity: 1, transform: "none" }], { duration: 300, easing: "ease" }));
       }
       cur = k;
     }
@@ -859,6 +895,13 @@ aside.notes{display:none}
 
     @media (prefers-reduced-motion:reduce){#k3 *,#k3 *::before,#k3 *::after{transition:none!important}}
     @media print{#k3 *,#k3 *::before,#k3 *::after{transition:none!important}}
+    /* idle motion (keyframes in theme.css; off in print and for reduced motion) */
+    #k3 .k3-cup{animation:idle-sway 3.6s ease-in-out infinite;transform-origin:50% 100%}
+    #k3 .k3-drops circle{transform-box:fill-box;animation:idle-drip 1.9s ease-in infinite}
+    #k3 .k3-drops circle:nth-child(2){animation-delay:.5s} #k3 .k3-drops circle:nth-child(3){animation-delay:1s} #k3 .k3-drops circle:nth-child(4){animation-delay:1.4s}
+    #k3 .k3-chips svg{animation:idle-bob 9s ease-in-out infinite}
+    #k3 .k3-chips li:nth-child(2) svg{animation-delay:1.2s} #k3 .k3-chips li:nth-child(3) svg{animation-delay:2.4s}
+    #k3 .k3-chips li:nth-child(4) svg{animation-delay:3.6s} #k3 .k3-chips li:nth-child(5) svg{animation-delay:4.8s}
   </style>
   <script>
   (function () {
@@ -873,7 +916,8 @@ aside.notes{display:none}
     ];
     const vis = $(".k3-visual"), btns = $$(".k3-ch"), tiles = $$(".k3-f");
 
-    function show(i) {
+    const RM = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+    function show(i, pop) {
       vis.dataset.ch = String(i);
       btns.forEach((b, k) => { b.classList.toggle("on", k === i); b.setAttribute("aria-pressed", String(k === i)); });
       tiles.forEach(t => {
@@ -881,10 +925,12 @@ aside.notes{display:none}
         t.querySelector(".k3-val").textContent = f[0];
         t.querySelector(".k3-sub").textContent = f[1];
         t.dataset.ok = f[2] ? "1" : "0";
+        if (pop && !RM) t.querySelector(".k3-mark").animate([{ transform: "scale(1)" }, { transform: "scale(1.25)" }, { transform: "scale(1)" }],
+          { duration: 450, delay: 90 * tiles.indexOf(t), easing: "ease-out" });   // the tick/cross pops once per channel change
       });
     }
 
-    btns.forEach((b, i) => b.addEventListener("click", e => { show(i); if (e.detail) b.blur(); }));
+    btns.forEach((b, i) => b.addEventListener("click", e => { show(i, true); if (e.detail) b.blur(); }));
     sl.addEventListener("deckprint", () => show(DEF));
     show(DEF);
   })();
@@ -893,8 +939,8 @@ aside.notes{display:none}
 </div></div>
 
 <div id="toolbar" role="toolbar" aria-label="Slide controls">
-  <button id="prev" aria-label="Previous slide" title="Previous (←)">◀</button><span class="count" id="count"><input id="goto" type="text" inputmode="numeric" aria-label="Go to slide number" title="Type a slide number and press Enter (G)"><span class="tot"></span></span>
-  <button id="next" aria-label="Next slide" title="Next (→ or Space)">▶</button><span class="sep"></span>
+  <button id="prev" aria-label="Previous step" title="Previous step (←)">◀</button><span class="count" id="count"><input id="goto" type="text" inputmode="numeric" aria-label="Go to slide number" title="Type a slide number and press Enter (G)"><span class="tot"></span></span>
+  <button id="next" aria-label="Next step" title="Next step: darken the next right-hand card, then the next slide (→ or Space)">▶</button><span class="sep"></span>
   <button id="notesb" title="Speaker notes (N)">Notes</button>
   <span class="sep"></span><button id="printb" title="Print or save as PDF, one slide per page (P)">⎙ Print / PDF</button>
   <button id="fs" aria-label="Full screen" title="Full screen (F)">⛶ Full screen</button>
@@ -930,11 +976,20 @@ aside.notes{display:none}
     deck.style.left = `${W / 2}px`;
     deck.style.transform = `translate(${-640 * s}px,${-360 * s}px) scale(${s})`;
   }
-  function show(i) {
+  /* presenter spotlight: before moving on, → darkens the right-hand cards one at a time (.spot); ← steps back */
+  const spots = sl => $$(sl, ".cards > .bc");
+  function spot(sl, k) {
+    const c = spots(sl); sl._spot = Math.max(0, Math.min(c.length, k));
+    c.forEach((el, j) => el.classList.toggle("spot", j === sl._spot - 1));
+  }
+  slides.forEach(sl => spots(sl).forEach((c, j) => c.addEventListener("click", e => { if (e.detail > 1) return spot(sl, j + 1); spot(sl, sl._spot === j + 1 ? 0 : j + 1); })));
+
+  function show(i, fromEnd = false) {
     const n = Math.max(0, Math.min(slides.length - 1, i));
     if (n === cur) return;
-    if (cur >= 0) slides[cur].dispatchEvent(new CustomEvent("slideleave"));
+    if (cur >= 0) { slides[cur].dispatchEvent(new CustomEvent("slideleave")); spot(slides[cur], 0); }
     cur = n;
+    spot(slides[cur], fromEnd ? spots(slides[cur]).length : 0);   // back from the next slide: land where you left
     slides.forEach((s, k) => s.classList.toggle("active", k === cur));
     const gt = $(document, "#goto"); if (document.activeElement !== gt) gt.value = cur + 1;
     $(document, "#count .tot").textContent = `/ ${slides.length}`;
@@ -943,15 +998,18 @@ aside.notes{display:none}
     history.replaceState(null, "", `${location.search}#${cur + 1}`);
     slides[cur].dispatchEvent(new CustomEvent("slideenter"));
   }
-  const next = () => show(cur + 1), prev = () => show(cur - 1);
+  const next = () => { const sl = slides[cur]; if (!sl) return show(0); if ((sl._spot || 0) < spots(sl).length) spot(sl, (sl._spot || 0) + 1); else show(cur + 1); };
+  const prev = () => { const sl = slides[cur]; if (!sl) return show(0); if ((sl._spot || 0) > 0) spot(sl, sl._spot - 1); else show(cur - 1, true); };
 
   const toast = m => { const t = $(document, "#toast"); t.textContent = m; t.classList.add("on"); clearTimeout(toast.h); toast.h = setTimeout(() => t.classList.remove("on"), 2000); };
   const toggleNotes = () => { document.body.classList.toggle("shownotes"); $(document, "#notesb").classList.toggle("on", document.body.classList.contains("shownotes")); fit(); };
   const toggleFull = () => { try { const p = document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.(); p && p.catch && p.catch(() => {}); } catch (e) {} };
-  const preparePrint = () => slides.forEach(s => s.dispatchEvent(new CustomEvent("deckprint")));
+  const preparePrint = () => slides.forEach(s => { spot(s, 0); s.dispatchEvent(new CustomEvent("deckprint")); });
 
   $(document, "#prev").onclick = prev;
   $(document, "#next").onclick = next;
+  // after a mouse click on any toolbar button, give the keys back to the deck so Space advances instead of re-clicking it
+  $(document, "#toolbar").addEventListener("click", e => { const b = e.target.closest("button"); if (b && e.detail) b.blur(); });
   $(document, "#notesb").onclick = toggleNotes;
   $(document, "#printb").onclick = () => { preparePrint(); window.print(); };
   $(document, "#fs").onclick = toggleFull;
@@ -975,6 +1033,7 @@ aside.notes{display:none}
 
   addEventListener("keydown", e => {
     if (e.target.isContentEditable || e.target.closest?.("input,select,textarea")) return;
+    // presentation clickers send PageDown/PageUp, so they step the spotlight too
     if (["ArrowRight", "PageDown"].includes(e.key) || (e.key === " " && e.target.tagName !== "BUTTON")) { e.preventDefault(); next(); }
     else if (["ArrowLeft", "PageUp"].includes(e.key)) { e.preventDefault(); prev(); }
     else if (e.key === "Home") show(0);
@@ -990,7 +1049,7 @@ aside.notes{display:none}
 
   if (PRINT) { document.body.classList.add("print"); preparePrint(); }
   else { fit(); show((parseInt(location.hash.slice(1), 10) || 1) - 1); }
-  window.Deck = { show, next, prev, toast, get current() { return cur; } };
+  window.Deck = { show, next, prev, toast, get current() { return cur; }, get spot() { return slides[cur]?._spot || 0; } };
 })();
 
 </script>

@@ -141,6 +141,13 @@
 
     @media (prefers-reduced-motion:reduce){#k3 *,#k3 *::before,#k3 *::after{transition:none!important}}
     @media print{#k3 *,#k3 *::before,#k3 *::after{transition:none!important}}
+    /* idle motion (keyframes in theme.css; off in print and for reduced motion) */
+    #k3 .k3-cup{animation:idle-sway 3.6s ease-in-out infinite;transform-origin:50% 100%}
+    #k3 .k3-drops circle{transform-box:fill-box;animation:idle-drip 1.9s ease-in infinite}
+    #k3 .k3-drops circle:nth-child(2){animation-delay:.5s} #k3 .k3-drops circle:nth-child(3){animation-delay:1s} #k3 .k3-drops circle:nth-child(4){animation-delay:1.4s}
+    #k3 .k3-chips svg{animation:idle-bob 9s ease-in-out infinite}
+    #k3 .k3-chips li:nth-child(2) svg{animation-delay:1.2s} #k3 .k3-chips li:nth-child(3) svg{animation-delay:2.4s}
+    #k3 .k3-chips li:nth-child(4) svg{animation-delay:3.6s} #k3 .k3-chips li:nth-child(5) svg{animation-delay:4.8s}
   </style>
   <script>
   (function () {
@@ -155,7 +162,8 @@
     ];
     const vis = $(".k3-visual"), btns = $$(".k3-ch"), tiles = $$(".k3-f");
 
-    function show(i) {
+    const RM = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+    function show(i, pop) {
       vis.dataset.ch = String(i);
       btns.forEach((b, k) => { b.classList.toggle("on", k === i); b.setAttribute("aria-pressed", String(k === i)); });
       tiles.forEach(t => {
@@ -163,10 +171,12 @@
         t.querySelector(".k3-val").textContent = f[0];
         t.querySelector(".k3-sub").textContent = f[1];
         t.dataset.ok = f[2] ? "1" : "0";
+        if (pop && !RM) t.querySelector(".k3-mark").animate([{ transform: "scale(1)" }, { transform: "scale(1.25)" }, { transform: "scale(1)" }],
+          { duration: 450, delay: 90 * tiles.indexOf(t), easing: "ease-out" });   // the tick/cross pops once per channel change
       });
     }
 
-    btns.forEach((b, i) => b.addEventListener("click", e => { show(i); if (e.detail) b.blur(); }));
+    btns.forEach((b, i) => b.addEventListener("click", e => { show(i, true); if (e.detail) b.blur(); }));
     sl.addEventListener("deckprint", () => show(DEF));
     show(DEF);
   })();
