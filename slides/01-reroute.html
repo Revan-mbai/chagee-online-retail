@@ -3,101 +3,78 @@
   <div class="inner">
     <p class="kicker">01 · Online retail · capacity-aware order alerts<span class="ctag">Course link · Topic 4, fulfilment flexibility</span></p>
     <h2 class="head">Quote the real wait, then send overflow next door</h2>
-    <div class="body" style="grid-template-columns:1fr 300px;gap:16px;margin-top:12px">
+    <div class="body" style="grid-template-columns:1fr 262px;gap:16px;margin-top:12px">
       <div class="panel">
         <div class="ptop"><span class="ptitle">Lunch rush in 10-min slots · illustrative</span><span class="ctl"><span class="seg r1-seg" role="group" aria-label="Compare the lunch rush"><button class="btn r1-mode" data-mode="today" aria-pressed="false">Today</button><button class="btn on r1-mode" data-mode="ai" aria-pressed="true">With AI</button></span></span></div>
         <div class="visual r1-visual">
-          <div class="r1-left">
-            <div class="r1-chart">
-              <div class="r1-legend" aria-hidden="true"></div>
-              <div class="r1-plot"></div>
-            </div>
-            <div class="r1-stats">
-              <div class="r1-st"><span>Quoted wait</span><b class="r1-vq">–</b><i>app's promise</i></div>
-              <div class="r1-st"><span>Real wait</span><b class="r1-vr">–</b><i>at peak</i></div>
-              <div class="r1-st"><span>Orders kept</span><b class="r1-vk">–</b><i class="r1-vk2">&nbsp;</i></div>
-              <div class="r1-st"><span>Rerouted</span><b class="r1-vrr">–</b><i>to Outlet B</i></div>
-              <div class="r1-st"><span>Cancelled</span><b class="r1-vc">–</b><i>lost sales</i></div>
-            </div>
+          <div class="r1-chart">
+            <div class="r1-legend" aria-hidden="true"></div>
+            <div class="r1-plot"></div>
           </div>
           <div class="r1-phone" data-screen="ai">
             <div class="r1-scr">
-              <div class="r1-sbar"><b class="r1-clock">12:35</b><span class="r1-notch"></span><span class="r1-icons" aria-hidden="true"><i></i><i></i><i></i><em></em></span></div>
-              <div class="r1-appbar"><b>Pick-up order</b><span class="r1-where">Outlet A · 1 drink · S$6</span></div>
+              <div class="r1-sbar"><b class="r1-clock">12:35</b><span class="r1-notch"></span></div>
+              <div class="r1-appbar">Pick-up order</div>
               <div class="r1-pbody">
                 <div class="r1-scrn r1-s-today">
-                  <div class="r1-pnote">Order placed 12:35</div>
                   <div class="r1-tq"><small>App says</small><b>Ready in ~15 min</b></div>
-                  <div class="r1-bar"><i class="r1-bfill"></i><span class="r1-bmark"></span></div>
-                  <div class="r1-wt">Waiting <b class="r1-wmin">0 min</b></div>
-                  <div class="r1-cx">Order cancelled<br>after 20 min</div>
+                  <div class="r1-link" aria-hidden="true"></div>
+                  <div class="r1-cx"><b>Cancelled</b><span>after 20 min</span></div>
                 </div>
                 <div class="r1-scrn r1-s-ai">
-                  <div class="r1-alert"><b>12:30 slot is full</b><span>Outlet A is at capacity</span></div>
-                  <div class="r1-ch" data-ch="next"><b>Next window, Outlet A</b><span>ready 12:40 to 12:50 · ~15 min</span></div>
-                  <div class="r1-ch r1-top" data-ch="B"><em>Top pick</em><b>Collect at Outlet B</b><span>ready 12:43 · 4-min walk</span></div>
-                  <p class="r1-rank">Ranked by ready time + walk</p>
-                  <div class="r1-ok">&nbsp;</div>
-                  <svg class="r1-map" viewBox="0 0 170 44" width="170" height="44" aria-hidden="true">
-                    <rect x=".5" y=".5" width="169" height="43" rx="8" fill="#F6F3ED" stroke="#E4DED2"/>
-                    <path class="r1-route" d="M36 26C62 14 100 42 130 26" fill="none" stroke-width="2" stroke-dasharray="3 3"/>
-                    <circle cx="32" cy="26" r="9" fill="#24406B"/><text x="32" y="30" text-anchor="middle">A</text>
-                    <circle cx="138" cy="26" r="9" fill="#2F6B45"/><text x="138" y="30" text-anchor="middle">B</text>
-                    <text class="r1-mapt" x="85" y="15" text-anchor="middle">4-min walk</text>
-                  </svg>
+                  <div class="r1-alert">12:30 slot is full</div>
+                  <div class="r1-ch" data-ch="next"><b>Next slot at Outlet A</b><span>ready in ~15 min</span></div>
+                  <div class="r1-ch" data-ch="B"><b>Collect at Outlet B</b><span>ready in ~8 min</span><span>4-min walk</span></div>
                 </div>
               </div>
               <div class="r1-home"></div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="cards" style="gap:10px">
-        <div class="bc"><div class="k">AI role</div>
-          <ol class="r1-ai">
-            <li><span class="num">1</span>Forecast demand per 10-min slot</li>
-            <li><span class="num">2</span><span>Live production speed → ready times, <span class="r1-nb">slot-full alerts</span></span></li>
-            <li><span class="num">3</span>Rank nearby outlets by ready time + walk</li>
-          </ol>
-        </div>
-        <div class="bc warn"><div class="k">Why</div><p>Known <b class="r1-nb">15-min</b> waits are forgiven; surprise <b class="r1-nb">40-min</b> waits are not. Nearby spare capacity is already paid for.</p></div>
-        <div class="bc r1-calc"><div class="k">Benefit a year</div>
-          <label class="r1-sl"><span>Peak share of volume</span><b class="r1-pv">40%</b><input type="range" class="r1-peak" min="20" max="60" step="5" value="40"></label>
-          <label class="r1-sl"><span>Extra peak cups kept</span><b class="r1-kv">3%</b><input type="range" class="r1-kept" min="1" max="6" step="0.5" value="3"></label>
-          <div class="r1-res">
-            <div><b class="r1-rev">S$0.58M</b><p><span>revenue</span><i class="r1-m1">S$48.2M × 40% × 3%</i></p></div>
-            <div><b class="r1-gp">S$0.4M</b><p><span>gross profit</span><i>at 70% margin</i></p></div>
+          <div class="r1-stats">
+            <div class="r1-st"><span>Real wait</span><p><b class="r1-vr">–</b><i class="r1-vr2"></i></p></div>
+            <div class="r1-st"><span>Orders kept</span><p><b class="r1-vk">–</b><i class="r1-vk2"></i></p></div>
+            <div class="r1-st"><span>Cancelled</span><p><b class="r1-vc">–</b></p></div>
           </div>
         </div>
       </div>
+      <div class="cards r1-cards">
+        <div class="bc"><div class="k">AI role</div>
+          <ol class="r1-ai">
+            <li><span class="num">1</span>Forecast each 10-min slot</li>
+            <li><span class="num">2</span>Predict ready times</li>
+            <li><span class="num">3</span>Rank nearby outlets</li>
+          </ol>
+        </div>
+        <div class="bc r1-whyc"><div class="k">Why</div>
+          <p class="r1-why">A known <b>15-min</b> wait<br>is forgiven;<br>a surprise <b>40-min</b> wait<br>is not.</p>
+        </div>
+      </div>
     </div>
-    <div class="takeaway"><span class="lab">BENEFIT</span><span class="t">Honest waits + rerouting: keep <b>3%</b> more peak cups (40% of volume) ≈ <b>S$0.58M</b> revenue, <b>S$0.4M</b> gross profit a year.</span></div>
+    <div class="takeaway"><span class="lab">BENEFIT</span><span class="t">Keep <b>3%</b> more peak cups ≈ <b>S$0.58M</b> revenue, <b>S$0.4M</b> gross profit a year.</span></div>
   </div>
-  <div class="foot"><span>OPIM639 · Group 3 · online retail · illustrative assumptions, not Chagee data · sales base S$48.2M = 44 outlets × ~500 cups a day × S$6 × 365</span><span class="rail"></span><span class="pg"></span></div>
+  <div class="foot"><span>OPIM639 · Group 3 · online retail · illustrative assumptions, not Chagee data</span><span class="rail"></span><span class="pg"></span></div>
   <aside class="notes">
-    <p>First improvement: quote the real wait, then send overflow to a quieter outlet nearby. The slide opens on the With AI result of a toy lunch rush at one outlet, 12:00 to 13:00.</p>
-    <p>Click <b>Today</b>. Orders keep landing in Outlet A's full 10-minute slots, in red. The app still promises 15 minutes, the real wait climbs to about 40, and five customers cancel, including the one on the phone.</p>
-    <p>Click <b>With AI</b>. A full slot triggers the alert on the phone: an honest next window, or Outlet B, ranked by ready time and walk. Overflow moves into B's spare capacity: 52 of 53 orders kept, four more than today.</p>
-    <p>Close on the benefit: peak is 40% of volume and we assume 3% more peak cups kept, about S$0.58M revenue and S$0.4M gross profit a year. All figures are illustrative.</p>
+    <p>First improvement: quote the real wait, then send overflow to a quieter outlet nearby. A toy lunch rush in 10-minute slots; every figure is illustrative.</p>
+    <p>Click <b>Today</b>. Orders keep landing in full slots, in red. The app still promises 15 minutes, the real wait reaches 40, and five customers cancel, like the one on the phone.</p>
+    <p>Click <b>With AI</b>. A full slot triggers an alert: an honest next slot, or Outlet B, ranked by ready time and walk. Sixteen orders move into B's spare capacity: 52 of 53 kept, four more than today. B's staff and rent are already paid, so most of each rerouted cup is profit.</p>
+    <p>Benefit: peak is 40% of volume. 40% × 3% more peak cups × S$48.2M sales base (44 outlets × about 500 cups a day × S$6 × 365) ≈ S$0.58M revenue; at 70% margin, about S$0.4M gross profit a year.</p>
   </aside>
   <style>
-    #r1 .r1-seg .btn{height:30px;padding:0 16px;font-size:12.5px}
+    #r1 .ptitle{font-size:12px}
+    #r1 .r1-seg .btn{height:32px;padding:0 16px;font-size:13px}
     #r1 .r1-seg .btn:focus-visible{outline:2px solid var(--gold);outline-offset:-3px}
-    #r1 .r1-visual{display:grid;grid-template-columns:1fr 206px;grid-template-rows:minmax(0,1fr);gap:14px}
-    #r1 .r1-left{display:flex;flex-direction:column;gap:10px;min-width:0}
-    #r1 .r1-chart{flex:1;min-height:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px 8px;display:flex;flex-direction:column;justify-content:space-between}
-    #r1 .r1-legend{display:flex;align-items:center;gap:14px;font:11px/1 var(--sans);color:var(--ink2);white-space:nowrap}
-    #r1 .r1-legend span{display:inline-flex;align-items:center;gap:5px}
+    #r1 .r1-visual{display:grid;grid-template-columns:minmax(0,1fr) 206px;grid-template-rows:minmax(0,1fr) auto;gap:14px 16px;margin-top:12px}
+    #r1 .r1-chart{min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px 6px;display:flex;flex-direction:column;justify-content:space-between}
+    #r1 .r1-legend{display:flex;align-items:center;gap:18px;font:12px/1 var(--sans);color:var(--ink2);white-space:nowrap}
+    #r1 .r1-legend span{display:inline-flex;align-items:center;gap:6px}
     #r1 .r1-legend .r1-cup{position:static;width:12px;height:15px;transition:none}
-    #r1 .r1-legend .r1-lring{width:12px;height:14px;border:2px solid var(--ink);border-radius:4px;box-shadow:0 0 0 2px rgba(200,169,106,.45)}
+    #r1 .r1-legend b{font-weight:600;color:#2F6B45}
     #r1 .r1-plot{position:relative}
     #r1 .r1-bg{position:absolute;left:0;top:0}
-    #r1 .r1-bg text{font:11px var(--sans);fill:var(--taupe)}
-    #r1 .r1-rl{position:absolute;left:0;width:64px;font:11px/1.3 var(--sans);color:var(--taupe)}
-    #r1 .r1-rl b{display:block;font:600 13px/1.25 var(--sans);color:var(--ink)}
+    #r1 .r1-bg text{font:12px var(--sans);fill:var(--taupe)}
+    #r1 .r1-rl{position:absolute;left:0;width:70px;font:12px/1.3 var(--sans);color:var(--taupe)}
+    #r1 .r1-rl b{display:block;font:600 13px/1.3 var(--sans);color:var(--ink)}
     #r1 .r1-rl.r1-over{color:#B8605A}
-    #r1 .r1-zcap{position:absolute;text-align:center;font:italic 11.5px/16px var(--sans);color:#B8605A;transition:opacity .3s}
-    #r1 .r1-plot[data-mode="today"] .r1-zcap{opacity:0}
     #r1 .r1-cup{position:absolute;left:0;top:0;width:20px;height:25px;fill:currentColor;color:var(--navy);
       transition:left .5s ease,top .5s ease,color .35s ease}
     #r1 .r1-cup rect{opacity:.78}
@@ -110,87 +87,52 @@
     #r1 .r1-cup.r1-k-cancel .r1-x{display:block;stroke-width:1.8}
     #r1 .r1-cup.r1-k-spare{color:transparent}
     #r1 .r1-cup.r1-k-spare rect{opacity:0}
-    #r1 .r1-cup.r1-k-spare path{fill:none;stroke:#C9C0AE;stroke-width:1;stroke-dasharray:2 2}
-    #r1 .r1-ring{position:absolute;width:30px;height:35px;background:#fff;border:2px solid var(--ink);border-radius:8px;box-shadow:0 0 0 3px rgba(200,169,106,.45);pointer-events:none;transition:left .5s ease,top .5s ease}
-    #r1 .r1-badge{position:absolute;z-index:2;width:44px;margin-left:-22px;text-align:center;font:600 11px/17px var(--sans);color:#2F6B45;background:#EEF5F0;border-radius:999px}
-    #r1 .r1-plot.r1-still .r1-cup,#r1 .r1-plot.r1-still .r1-ring{transition:none}
-    #r1 .r1-stats{flex:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
-    #r1 .r1-st{min-width:0;background:#fff;border:1px solid var(--line);border-radius:9px;padding:7px 10px 7px}
-    #r1 .r1-st span{display:block;font:500 11px/1.2 var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--taupe);white-space:nowrap}
-    #r1 .r1-st b{display:block;margin-top:2px;font:500 25px/1.1 var(--serif);color:var(--ink)}
-    #r1 .r1-st b small{font:500 12px var(--sans);color:var(--ink2);margin-left:2px}
-    #r1 .r1-st i{display:block;font:11px/1.25 var(--sans);font-style:normal;color:var(--taupe);white-space:nowrap}
+    #r1 .r1-cup.r1-k-spare path{fill:none;stroke:#B8AD98;stroke-width:1.2;stroke-dasharray:2 2}
+    #r1 .r1-legend .r1-cup.r1-k-spare path{stroke-width:1.6}
+    #r1 .r1-badge{position:absolute;z-index:2;width:40px;margin-left:-20px;text-align:center;font:600 12px/18px var(--sans);color:#2F6B45}
+    #r1 .r1-plot.r1-still .r1-cup{transition:none}
+    /* stats: three numbers, no boxes */
+    #r1 .r1-stats{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 206px;column-gap:16px;padding:0 0 0 4px}
+    #r1 .r1-st span{display:block;font:600 13px/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+    #r1 .r1-st p{margin:4px 0 0;display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+    #r1 .r1-st b{font:500 36px/1 var(--serif);color:var(--ink)}
+    #r1 .r1-st b small{font:500 14px var(--sans);color:var(--ink2);margin-left:3px}
+    #r1 .r1-st i{font:14px/1 var(--sans);font-style:normal;color:var(--ink2)}
     #r1 .r1-st i em{font-style:normal;font-weight:600;color:#2F6B45}
     #r1 .r1-st b.r1-bad{color:var(--red)}
     #r1 .r1-st b.r1-good{color:#2F6B45}
     /* phone */
-    #r1 .r1-phone{display:flex;background:#232B3A;border-radius:30px;padding:7px;box-shadow:0 6px 18px rgba(36,64,107,.16)}
-    #r1 .r1-scr{flex:1;position:relative;display:flex;flex-direction:column;background:#fff;border-radius:24px;overflow:hidden}
-    #r1 .r1-sbar{flex:none;height:28px;display:flex;align-items:center;justify-content:space-between;padding:0 16px 0 18px;font:600 11px/1 var(--sans);color:var(--ink)}
+    #r1 .r1-phone{display:flex;background:#232B3A;border-radius:28px;padding:6px;box-shadow:0 6px 18px rgba(36,64,107,.14)}    #r1 .r1-scr{flex:1;position:relative;display:flex;flex-direction:column;background:#fff;border-radius:23px;overflow:hidden}
+    #r1 .r1-sbar{flex:none;height:28px;display:flex;align-items:center;padding:0 18px;font:600 12px/1 var(--sans);color:var(--ink)}
     #r1 .r1-notch{position:absolute;left:50%;top:8px;width:40px;height:5px;margin-left:-20px;background:#232B3A;border-radius:3px}
-    #r1 .r1-icons{display:inline-flex;align-items:flex-end;gap:2px}
-    #r1 .r1-icons i{display:block;width:3px;background:var(--ink);border-radius:1px}
-    #r1 .r1-icons i:nth-child(1){height:4px}#r1 .r1-icons i:nth-child(2){height:6px}#r1 .r1-icons i:nth-child(3){height:8px}
-    #r1 .r1-icons em{display:block;width:16px;height:8px;margin-left:4px;border:1.5px solid var(--ink);border-radius:2px;background:linear-gradient(90deg,var(--ink) 70%,transparent 70%)}
-    #r1 .r1-appbar{flex:none;padding:6px 14px 8px;border-bottom:1px solid var(--line)}
-    #r1 .r1-appbar b{display:block;font:600 13.5px/1.25 var(--sans);color:var(--ink)}
-    #r1 .r1-appbar span{display:block;font:11px/1.3 var(--sans);color:var(--taupe)}
-    #r1 .r1-pbody{flex:1;min-height:0;position:relative;padding:10px 11px 0}
+    #r1 .r1-appbar{flex:none;padding:4px 14px 9px;border-bottom:1px solid var(--line);font:600 14px/1.25 var(--sans);color:var(--ink)}
+    #r1 .r1-pbody{flex:1;min-height:0;padding:14px 11px 0}
     #r1 .r1-scrn{display:none;flex-direction:column}
     #r1 .r1-phone[data-screen="today"] .r1-s-today,#r1 .r1-phone[data-screen="ai"] .r1-s-ai{display:flex}
-    #r1 .r1-home{flex:none;width:64px;height:4px;margin:6px auto 7px;border-radius:2px;background:#262626}
-    #r1 .r1-pnote{margin:6px 0 0;text-align:center;font:11.5px/1.35 var(--sans);color:var(--taupe)}
-    #r1 .r1-tq{margin-top:10px;padding:10px 10px 11px;border-radius:10px;background:var(--cream);text-align:center}
-    #r1 .r1-tq small{display:block;font:11px var(--sans);color:var(--taupe)}
-    #r1 .r1-tq b{display:block;margin-top:3px;font:500 19px/1.1 var(--serif);color:var(--navy);white-space:nowrap}
-    #r1 .r1-bar{position:relative;height:8px;margin-top:16px;border-radius:4px;background:#EEE9DF}
-    #r1 .r1-bfill{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:4px;background:var(--navy)}
-    #r1 .r1-bfill.r1-late{background:linear-gradient(90deg,var(--navy) 0 var(--q,60%),var(--red) var(--q,60%) 100%)}
-    #r1 .r1-bmark{position:absolute;left:60%;top:-4px;bottom:-4px;width:2px;background:var(--ink2)}
-    #r1 .r1-wt{margin-top:9px;text-align:center;font:12.5px var(--sans);color:var(--ink2)}
-    #r1 .r1-wt b{font-weight:600;color:var(--ink)}
-    #r1 .r1-wt b.r1-bad{color:var(--red)}
-    #r1 .r1-cx{display:none;margin-top:12px;padding:8px;border-radius:9px;background:#FBEDEC;border-left:3px solid var(--red);text-align:center;font:600 12px/1.35 var(--sans);color:var(--red)}
-    #r1 .r1-s-today.r1-gone .r1-cx{display:block}
-    #r1 .r1-alert{padding:7px 9px 8px;border-radius:9px;background:#FBEDEC;border-left:3px solid var(--red)}
-    #r1 .r1-alert b{display:block;font:600 12.5px/1.25 var(--sans);color:var(--ink)}
-    #r1 .r1-alert span{display:block;font:11px/1.3 var(--sans);color:var(--ink2)}
-    #r1 .r1-ch{position:relative;display:block;width:100%;margin-top:8px;padding:7px 8px 8px 9px;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:10px;font-family:var(--sans)}
-    #r1 .r1-ch.r1-top{margin-top:14px;padding-top:10px}
-    #r1 .r1-ch::after{content:"";position:absolute;right:7px;top:7px;width:16px;height:16px;border-radius:50%;font:700 11px/16px var(--sans);color:#fff;text-align:center}
-    #r1 .r1-ch.r1-top::after{top:9px}
-    #r1 .r1-ch b{display:block;font:600 12px/1.25 var(--sans);color:var(--navy)}
-    #r1 .r1-ch span{display:block;margin-top:1px;font:11px/1.3 var(--sans);color:var(--ink2)}
-    #r1 .r1-ch em{position:absolute;left:8px;top:-9px;padding:0 6px;border-radius:999px;background:#FBF5E8;border:1px solid #E8D9B5;font:600 11px/15px var(--sans);font-style:normal;color:#7A6432}
+    #r1 .r1-home{flex:none;width:60px;height:4px;margin:6px auto 7px;border-radius:2px;background:#262626}
+    #r1 .r1-tq{padding:12px 8px 13px;border-radius:10px;background:var(--cream);text-align:center}
+    #r1 .r1-tq small{display:block;font:12px var(--sans);color:var(--taupe)}
+    #r1 .r1-tq b{display:block;margin-top:4px;font:500 21px/1.1 var(--serif);color:var(--navy);white-space:nowrap}
+    #r1 .r1-link{width:0;height:26px;margin:4px auto;border-left:2px dotted #C9C0AE}
+    #r1 .r1-cx{padding:10px 8px 11px;border-radius:10px;background:#FBEDEC;text-align:center;color:var(--red)}
+    #r1 .r1-cx b{display:block;font:500 21px/1.1 var(--serif)}
+    #r1 .r1-cx span{display:block;margin-top:3px;font:13px var(--sans)}
+    #r1 .r1-alert{padding:9px 10px;border-radius:9px;background:#FBEDEC;border-left:3px solid var(--red);font:600 13px/1.3 var(--sans);color:var(--ink)}
+    #r1 .r1-ch{position:relative;margin-top:10px;padding:9px 26px 10px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px}
+    #r1 .r1-ch b{display:block;font:600 13px/1.3 var(--sans);color:var(--navy)}
+    #r1 .r1-ch span{display:block;margin-top:2px;font:12px/1.3 var(--sans);color:var(--ink2)}
     #r1 .r1-ch.r1-sel{border-color:var(--navy);background:#EEF1F7}
-    #r1 .r1-ch.r1-sel::after{content:"✓";background:var(--navy)}
-    #r1 .r1-map{display:block;margin-top:8px}
-    #r1 .r1-map text{font:600 11px var(--sans);fill:#fff}
-    #r1 .r1-map .r1-mapt{font-weight:500;fill:var(--ink2);paint-order:stroke;stroke:#F6F3ED;stroke-width:3px;stroke-linejoin:round}
-    #r1 .r1-route{stroke:#B9B2A5}
-    #r1 .r1-s-ai.r1-toB .r1-route{stroke:#2F6B45}
-    #r1 .r1-rank{margin:7px 0 0;font:11px/1.3 var(--sans);color:var(--taupe);text-align:center}
-    #r1 .r1-ok{margin-top:8px;padding:6px 8px;border-radius:8px;background:#EEF5F0;font:600 11.5px/1.3 var(--sans);color:#2F6B45;text-align:center}
-    /* side cards */
-    #r1 .bc .k{font-size:11px;letter-spacing:.11em}
-    #r1 .r1-ai{list-style:none;margin:5px 0 0;padding:0;display:flex;flex-direction:column;gap:5px}
-    #r1 .r1-ai li{display:flex;align-items:flex-start;gap:8px;font:12.5px/1.38 var(--sans);color:var(--ink2);text-wrap:balance}
-    #r1 .r1-ai .num{flex:none;width:18px;height:18px;margin-top:0;font-size:11px}
-    #r1 .bc.warn p{margin-top:3px;font-size:12.5px}
-    #r1 .r1-nb{white-space:nowrap}
-    #r1 .r1-calc{flex:1;display:flex;flex-direction:column}
-    #r1 .r1-sl{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:0 8px;margin-top:12px;font:12.5px var(--sans);color:var(--ink2)}
-    #r1 .r1-sl b{font:600 13px var(--sans);color:var(--ink)}
-    #r1 .r1-sl input{grid-column:1 / -1;width:100%;margin:5px 0 0;accent-color:var(--red)}
-    #r1 .r1-res{margin-top:auto;padding:3px 10px;border-radius:8px;background:var(--cream)}
-    #r1 .r1-res>div{display:grid;grid-template-columns:100px 1fr;align-items:center;gap:8px;padding:10px 0}
-    #r1 .r1-res>div+div{border-top:1px solid var(--line)}
-    #r1 .r1-res b{font:500 28px/1 var(--serif);color:var(--navy)}
-    #r1 .r1-res p{margin:0}
-    #r1 .r1-res span{display:block;font:600 12px/1.3 var(--sans);color:var(--ink)}
-    #r1 .r1-res i{display:block;font:11px/1.3 var(--sans);font-style:normal;color:var(--taupe);white-space:nowrap}
+    #r1 .r1-ch.r1-sel::after{content:"✓";position:absolute;right:7px;top:50%;width:17px;height:17px;margin-top:-8.5px;border-radius:50%;background:var(--navy);font:700 11px/17px var(--sans);color:#fff;text-align:center}
+    /* side cards: same pattern on all three slides (two equal cards, 12px caps label, 15px text) */
+    #r1 .r1-cards .bc{flex:1 1 0;min-height:0;display:flex;flex-direction:column;padding:14px 16px 16px}
+    #r1 .r1-cards .bc .k{font-size:12px;letter-spacing:.12em}
+    #r1 .r1-ai{flex:1;list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;justify-content:space-evenly;gap:12px}
+    #r1 .r1-ai li{display:flex;align-items:center;gap:12px;font:15px/1.35 var(--sans);color:var(--ink)}
+    #r1 .r1-ai .num{width:22px;height:22px;margin:0;font-size:12px}
+    #r1 .r1-why{margin:auto 0;padding-bottom:10px;font:400 20px/1.35 var(--serif);color:var(--ink2);white-space:nowrap}
+    #r1 .r1-why b{font-weight:600;color:var(--ink)}
     @media (prefers-reduced-motion: reduce){
-      #r1 .r1-cup,#r1 .r1-ring{transition:none}
+      #r1 .r1-cup{transition:none}
     }
   </style>
   <script>
@@ -224,16 +166,16 @@
           const wait = 10 + (c + Math.max(0, i + 1 - CAP)) * 10 / CAP;
           let k = i < CAP ? "ok" : "full", tc = null;
           if (k === "full") { late++; if (e.you || (wait >= 25 && late % 2 === 0)) { k = "cancel"; tc = Math.min(e.t + 20, END); } }
-          r[e.id] = { o: "A", s, i, k, wait, quote: 15, tc };
+          r[e.id] = { o: "A", s, i, k, wait, tc };
         } else {
-          if (A[s].length < CAP) { r[e.id] = { o: "A", s, i: A[s].push(e.id) - 1, k: "ok", wait: 10, quote: 10 }; continue; }
+          if (A[s].length < CAP) { r[e.id] = { o: "A", s, i: A[s].push(e.id) - 1, k: "ok", wait: 10 }; continue; }
           let c = pick(alerts++);
           const nextOk = s + 1 < NS && A[s + 1].length < CAP, bOk = rr[s] + DB[s] < CAP;
           if (c === "next" && !nextOk) c = bOk ? "B" : "cancel";
           if (c === "B" && !bOk) c = nextOk ? "next" : "cancel";
-          if (c === "next") r[e.id] = { o: "A", s: s + 1, i: A[s + 1].push(e.id) - 1, k: "next", from: s, wait: 15, quote: 15 };
-          else if (c === "B") { rr[s]++; r[e.id] = { o: "B", s, i: B[s].push(e.id) - 1, k: "rr", from: s, wait: 12, quote: 12 }; }
-          else r[e.id] = { o: "A", s, i: CAP + xs[s]++, k: "cancel", wait: 0, quote: 15, tc: e.t };
+          if (c === "next") r[e.id] = { o: "A", s: s + 1, i: A[s + 1].push(e.id) - 1, k: "next", from: s, wait: 15 };
+          else if (c === "B") { rr[s]++; r[e.id] = { o: "B", s, i: B[s].push(e.id) - 1, k: "rr", from: s, wait: 12 }; }
+          else r[e.id] = { o: "A", s, i: CAP + xs[s]++, k: "cancel", wait: 0 };
           r[e.id].choice = c;
         }
       }
@@ -241,11 +183,12 @@
     }
     const cache = {};
     const sim = m => cache[m] || (cache[m] = simulate(m));
-    const keptAt = (r, T) => { let n = 0, x = 0; orders.forEach(e => { if (e.o !== "A" || e.t > T) return; n++; const R = r[e.id]; if (R.k === "cancel" && R.tc <= T) x++; }); return { n, x }; };
-    const TODAY_KEPT = (k => k.n - k.x)(keptAt(sim("today"), END));
+    const tally = r => { let n = 0, x = 0; orders.forEach(e => { if (e.o !== "A") return; n++; if (r[e.id].k === "cancel") x++; }); return { n, x }; };   // Outlet A orders by 13:00, and how many cancelled
+    const TODAY_KEPT = (k => k.n - k.x)(tally(sim("today")));
+    const RR = orders.filter(e => sim("ai")[e.id].k === "rr").length;
 
-    /* geometry of the slot chart: over-capacity zone on top, Outlet A, reroute badges, Outlet B, time axis */
-    const LW = 68, BW = 78, CW = 20, CH = 25, GX = 4, PITCH = 31, RW = 3 * CW + 2 * GX, PW = LW + NS * BW;
+    /* geometry of the slot chart: over-capacity band on top, Outlet A, reroute counts, Outlet B, time axis */
+    const LW = 72, BW = 81, CW = 20, CH = 25, GX = 4, PITCH = 31, RW = 3 * CW + 2 * GX, PW = LW + NS * BW;
     const ZONE = 2, BOXH = 2 * PITCH + 4, A0 = ZONE + 3 * PITCH + 2 + BOXH, BASE = { A: A0, B: A0 + 38 + BOXH }, PH = BASE.B + 24;
     const pos = (o, s, i) => ({ x: LW + s * BW + (BW - RW) / 2 + (i % 3) * (CW + GX), y: BASE[o] - 4 - Math.floor(i / 3) * PITCH - CH });
     const CUP = '<rect x=".6" y="1.4" width="14.8" height="3.2" rx="1.2"/><path d="M1.9 5.4H14.1L12.6 19.4H3.4Z"/><path class="r1-x" d="M5.5 9.6l5 6M10.5 9.6l-5 6"/>';
@@ -255,32 +198,30 @@
     const plot = $(".r1-plot");
     plot.style.width = PW + "px"; plot.style.height = PH + "px";
     let bg = `<svg class="r1-bg" width="${PW}" height="${PH}" viewBox="0 0 ${PW} ${PH}" aria-hidden="true">`;
-    bg += `<rect x="${LW}" y="${ZONE}" width="${NS * BW}" height="${3 * PITCH}" rx="7" fill="#FBEDEC" opacity=".55"/>`;
+    bg += `<rect x="${LW}" y="${ZONE}" width="${NS * BW}" height="${3 * PITCH}" rx="7" fill="#FBEDEC" opacity=".6"/>`;
     bg += `<line x1="${LW}" x2="${PW}" y1="${BASE.A - BOXH - 2}" y2="${BASE.A - BOXH - 2}" stroke="#D99A95" stroke-dasharray="4 3"/>`;
     for (const o of ["A", "B"]) for (let s = 0; s < NS; s++) {
-      bg += `<rect x="${LW + s * BW + 2}" y="${BASE[o] - BOXH}" width="${BW - 4}" height="${BOXH}" rx="7" fill="#FAF8F3" stroke="#DDD5C6" stroke-dasharray="3 3"/>`;
+      bg += `<rect x="${LW + s * BW + 3}" y="${BASE[o] - BOXH}" width="${BW - 6}" height="${BOXH}" rx="7" fill="#F8F5EF"/>`;
     }
     for (let s = 0; s < NS; s++) bg += `<text x="${LW + s * BW + BW / 2}" y="${PH - 5}" text-anchor="middle">12:${s ? s * 10 : "00"}</text>`;
-    bg += `<text x="0" y="${PH - 5}">slot starts</text></svg>`;
+    bg += `</svg>`;
     let html = bg;
     for (const o of ["A", "B"]) for (let s = 0; s < NS; s++) for (let i = 0; i < CAP; i++) {
       const p = pos(o, s, i); html += cupSvg("r1-k-spare").replace("<svg ", `<svg style="left:${p.x}px;top:${p.y}px" `);
     }
-    html += `<div class="r1-rl r1-over" style="top:${ZONE + 1.5 * PITCH - 15}px">over<br>capacity</div>`;
-    html += `<div class="r1-rl" style="top:${BASE.A - BOXH + 7}px"><b>Outlet A</b>busy<br>6 per slot</div>`;
-    html += `<div class="r1-rl" style="top:${BASE.B - BOXH + 7}px"><b>Outlet B</b>4-min walk<br>6 per slot</div>`;
-    for (let s = 0; s < NS; s++) html += `<div class="r1-badge" data-s="${s}" style="left:${LW + s * BW + BW / 2}px;top:${(BASE.A + BASE.B - BOXH) / 2 - 8.5}px"></div>`;
-    html += `<div class="r1-zcap" style="left:${LW}px;width:${NS * BW}px;top:${ZONE + PITCH - 4}px">With AI, a full slot triggers the alert, not a longer queue</div>`;
-    html += `<div class="r1-ring"></div>`;
+    html += `<div class="r1-rl r1-over" style="top:${ZONE + 1.5 * PITCH - 16}px">over<br>capacity</div>`;
+    html += `<div class="r1-rl" style="top:${BASE.A - BOXH / 2 - 9}px"><b>Outlet A</b></div>`;
+    html += `<div class="r1-rl" style="top:${BASE.B - BOXH / 2 - 17}px"><b>Outlet B</b>nearby</div>`;
+    for (let s = 0; s < NS; s++) html += `<div class="r1-badge" data-s="${s}" style="left:${LW + s * BW + BW / 2}px;top:${(BASE.A + BASE.B - BOXH) / 2 - 9}px"></div>`;
     plot.innerHTML = html;
     const cups = orders.map(() => { const d = document.createElement("div"); d.innerHTML = cupSvg("r1-k-ok"); const el = d.firstChild; plot.appendChild(el); return el; });
-    const ring = $(".r1-ring"), badges = $$(".r1-badge");
+    const badges = $$(".r1-badge");
     const LEG = {
-      today: [["r1-k-ok", "booked"], ["r1-k-full", "landed in a full slot"], ["r1-k-cancel", "cancelled"], ["r1-k-spare", "spare"], ["ring", "phone's order"]],
-      ai: [["r1-k-ok", "booked"], ["r1-k-next", "next window"], ["r1-k-rr", "rerouted to B"], ["r1-k-cancel", "cancelled"], ["r1-k-spare", "spare"], ["ring", "phone's order"]]
+      today: [["r1-k-ok", "booked"], ["r1-k-cancel", "cancelled"], ["r1-k-spare", "spare"]],
+      ai: [["r1-k-ok", "booked"], ["r1-k-next", "next slot"], ["r1-k-rr", `rerouted to B <b>${RR}</b>`], ["r1-k-cancel", "cancelled"], ["r1-k-spare", "spare"]]
     };
 
-    /* The toggle shows each mode's end state at 13:00. Switching glides every cup to its new slot (CSS transitions). */
+    /* The toggle shows each mode's end state at 13:00. Switching glides only the overflow cups to their new slot (CSS transitions). */
     const st = { mode: "ai" };
     let legendMode = "";
 
@@ -290,85 +231,47 @@
       // within each slot: the outlet's own cups first, then cups moved in, each by arrival, so a toggle only moves the overflow
       orders.forEach(e => { const R = r[e.id]; if (st.mode === "ai" && R.k === "cancel") return; (slots[R.o + R.s] = slots[R.o + R.s] || []).push(e); });
       Object.values(slots).forEach(l => l.sort((a, b) => (r[a.id].from != null) - (r[b.id].from != null) || a.t - b.t).forEach((e, i) => { at[e.id] = i; }));
-      const spot = e => { const R = r[e.id]; return pos(R.o, R.s, at[e.id] ?? R.i); };
       orders.forEach(e => {
         const el = cups[e.id], R = r[e.id];
         el.setAttribute("class", "r1-cup r1-k-" + R.k);
         if (R.k === "rr") rrBy[R.from]++;
-        place(el, spot(e));
+        place(el, pos(R.o, R.s, at[e.id] ?? R.i));
       });
-      const yp = spot(YOU);   // ring around the phone's customer
-      ring.style.left = (yp.x - 5) + "px"; ring.style.top = (yp.y - 5) + "px";
       badges.forEach((b, s) => { b.textContent = rrBy[s] ? "↓ " + rrBy[s] : ""; b.style.display = rrBy[s] ? "" : "none"; });
       if (legendMode !== st.mode) {
-        legendMode = st.mode; plot.dataset.mode = st.mode;
-        $(".r1-legend").innerHTML = LEG[st.mode].map(([c, t]) => `<span>${c === "ring" ? '<i class="r1-lring"></i>' : cupSvg(c, 12, 15)}${t}</span>`).join("");
+        legendMode = st.mode;
+        $(".r1-legend").innerHTML = LEG[st.mode].map(([c, t]) => `<span>${cupSvg(c, 12, 15)}${t}</span>`).join("");
       }
       stats(r); phone(r);
       $$(".r1-mode").forEach(b => { const on = b.dataset.mode === st.mode; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on ? "true" : "false"); });
     }
 
     function stats(r) {
-      let q = 0, w = 0, rr = 0;
-      orders.forEach(e => { if (e.o !== "A") return; const R = r[e.id]; q = Math.max(q, R.quote); w = Math.max(w, R.wait); if (R.k === "rr") rr++; });
-      const kp = keptAt(r, END), min = v => `${Math.round(v)}<small>min</small>`;
+      let w = 0;
+      orders.forEach(e => { if (e.o === "A") w = Math.max(w, r[e.id].wait); });
+      const kp = tally(r), ai = st.mode === "ai";
       const vr = $(".r1-vr"), vk = $(".r1-vk"), vc = $(".r1-vc");
-      $(".r1-vq").innerHTML = min(q);
-      vr.innerHTML = min(w);
-      vr.className = "r1-vr" + (w > 20 ? " r1-bad" : st.mode === "ai" ? " r1-good" : "");
-      const kept = kp.n - kp.x, d = kept - TODAY_KEPT, gain = st.mode === "ai" && d > 0;
-      vk.innerHTML = `${kept}<small>/${kp.n}</small>`;
+      vr.innerHTML = `${Math.round(w)}<small>min</small>`;
+      vr.className = "r1-vr" + (w > 20 ? " r1-bad" : ai ? " r1-good" : "");
+      $(".r1-vr2").textContent = ai ? "as quoted" : "app said ~15";
+      const kept = kp.n - kp.x, d = kept - TODAY_KEPT, gain = ai && d > 0;
+      vk.innerHTML = `${kept}<small>/ ${kp.n}</small>`;
       vk.className = "r1-vk" + (gain ? " r1-good" : "");
-      $(".r1-vk2").innerHTML = gain ? `<em>+${d}</em> vs today` : "ordered at A";
-      $(".r1-vrr").textContent = rr;
+      $(".r1-vk2").innerHTML = gain ? `<em>+${d}</em> vs today` : "";
       vc.textContent = kp.x; vc.className = "r1-vc" + (kp.x > 1 ? " r1-bad" : "");
     }
 
     function phone(r) {
       const R = r[YOU.id];
       $(".r1-phone").dataset.screen = st.mode;
-      $(".r1-clock").textContent = hhmm(st.mode === "ai" ? YOU_T : Math.min(END, R.tc));   // each screen shows the moment the customer saw it
-      let where = "Outlet A";
-      if (st.mode === "today") {
-        const el = Math.max(0, Math.min(END, R.tc) - YOU_T);
-        const f = $(".r1-bfill"); f.style.width = Math.min(100, el / 25 * 100) + "%";
-        f.classList.toggle("r1-late", el > 15); f.style.setProperty("--q", (15 / Math.max(el, 15) * 100) + "%");
-        const wm = $(".r1-wmin"); wm.textContent = Math.floor(el) + " min"; wm.classList.toggle("r1-bad", el > 15);
-        $(".r1-s-today").classList.toggle("r1-gone", END >= R.tc);
-      } else {
-        $$(".r1-ch").forEach(b => b.classList.toggle("r1-sel", b.dataset.ch === R.choice));
-        $(".r1-ok").innerHTML = R.choice === "B" ? "✓ Moved to Outlet B" : R.choice === "next" ? "✓ Booked 12:40 to 12:50" : "Order cancelled";
-        if (R.choice === "B") where = "Outlet B";
-        $(".r1-s-ai").classList.toggle("r1-toB", R.choice === "B");
-      }
-      $(".r1-where").textContent = where + " · 1 drink · S$6";
+      $(".r1-clock").textContent = hhmm(st.mode === "ai" ? YOU_T : R.tc);   // each screen shows the moment the customer saw it
+      if (st.mode === "ai") $$(".r1-ch").forEach(b => b.classList.toggle("r1-sel", b.dataset.ch === R.choice));
     }
     function show(m) { if (m !== st.mode) { st.mode = m; render(); } }
-
-    /* benefit calculator: S$48.2M sales base (44 outlets × ~500 cups a day × S$6 × 365 = S$48.18M, rounded) */
-    const BASE_M = 48.2, GM = 0.70;
-    const money = v => "S$" + String(+v.toFixed(2)) + "M";
-    function calc() {
-      const p = +$(".r1-peak").value, k = +$(".r1-kept").value, rev = BASE_M * p / 100 * k / 100, gp = rev * GM;
-      const ks = (k % 1 ? k.toFixed(1) : k) + "%";
-      $(".r1-pv").textContent = p + "%"; $(".r1-kv").textContent = ks;
-      $(".r1-rev").textContent = "S$" + rev.toFixed(2) + "M";   // the BENEFIT bar stays on the user's case (40%, 3%)
-      $(".r1-gp").textContent = money(gp);
-      $(".r1-m1").textContent = `S$${BASE_M}M × ${p}% × ${ks}`;
-    }
-    function calcDefault() { $(".r1-peak").value = 40; $(".r1-kept").value = 3; calc(); }
-    $(".r1-peak").setAttribute("aria-label", "Peak share of volume");
-    $(".r1-kept").setAttribute("aria-label", "Extra peak cups kept");
-    [".r1-peak", ".r1-kept"].forEach(c => {
-      $(c).addEventListener("input", calc);
-      $(c).addEventListener("pointerup", e => e.target.blur());   // arrow keys go back to the deck after a drag
-    });
-
     function setDefault() { st.mode = "ai"; render(); }
 
     $$(".r1-mode").forEach(b => b.addEventListener("click", e => { show(b.dataset.mode); if (e.detail) b.blur(); }));
-    sl.addEventListener("deckprint", () => { setDefault(); calcDefault(); });
-    calcDefault();
+    sl.addEventListener("deckprint", setDefault);
     plot.classList.add("r1-still");                          // first draw lands in place, no glide from the corner
     setDefault();
     requestAnimationFrame(() => requestAnimationFrame(() => plot.classList.remove("r1-still")));

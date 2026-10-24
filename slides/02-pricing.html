@@ -3,196 +3,145 @@
   <div class="inner">
     <p class="kicker">02 · Online retail · dynamic pricing<span class="ctag">Course link · Topic 3, price optimisation</span></p>
     <h2 class="head">Discount only when there is room to fill</h2>
-    <div class="body" style="grid-template-columns:1fr 300px;gap:16px;margin-top:12px">
+    <div class="body" style="grid-template-columns:1fr 262px;gap:16px;margin-top:12px">
       <div class="panel">
-        <div class="ptop"><span class="ptitle p2-title">Offer engine · menu price fixed · illustrative</span><span class="ctl"><span class="seg p2-views" role="group" aria-label="View"><button class="btn on" data-view="scn" aria-pressed="true">Scenarios</button><button class="btn" data-view="dor" aria-pressed="false">Dormant members</button></span><button class="btn primary p2-play">▶ Play</button><button class="btn p2-reset">Reset</button></span></div>
+        <div class="ptop"><span class="ptitle">Offer engine · illustrative</span><span class="ctl"><span class="seg p2-seg" role="group" aria-label="Pricing scenario"><button class="btn on" data-k="off" aria-pressed="true">Off-peak</button><button class="btn" data-k="peak" aria-pressed="false">Peak</button><button class="btn" data-k="hot" aria-pressed="false">Hot day</button><button class="btn" data-k="rain" aria-pressed="false">Rain</button><button class="btn" data-k="event" aria-pressed="false" title="Concerts, F1, public holidays">Event</button><button class="btn" data-k="quiet" aria-pressed="false" title="Weekends and school holidays at office outlets">Quiet CBD</button><button class="btn" data-k="dorm" aria-pressed="false">Dormant</button></span></span></div>
         <div class="visual p2-visual">
           <div class="p2-grid">
-            <div class="p2-left">
-              <div class="p2-view p2-scn">
-                <div class="p2-ctrls">
-                  <div class="p2-cg"><span class="p2-lab">Weather</span><span class="seg p2-wx" role="group" aria-label="Weather"><button class="btn" data-v="hot">Hot</button><button class="btn on" data-v="normal">Normal</button><button class="btn" data-v="rain">Rain</button></span></div>
-                  <div class="p2-cg"><span class="p2-lab">Context</span><span class="seg p2-cx" role="group" aria-label="Context"><button class="btn on" data-v="normal">Normal</button><button class="btn" data-v="event" title="Concerts, F1, public holidays">Event nearby</button><button class="btn" data-v="quiet" title="Weekends and school holidays at CBD outlets">Quiet office area</button></span></div>
-                </div>
-                <div class="p2-box">
-                  <div class="p2-bh"><span><b>Forecast cups an hour</b></span><span class="p2-leg"><span><svg class="p2-key" width="22" height="8" viewBox="0 0 22 8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="#4A4A4A" stroke-width="1.3" stroke-dasharray="7 4"/></svg>store capacity</span><span class="p2-ghostl"><svg class="p2-key" width="22" height="8" viewBox="0 0 22 8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="#9A9387" stroke-width="1.6" stroke-dasharray="4 4"/></svg>normal day</span></span></div>
-                  <svg class="p2-svg p2-chart" viewBox="0 0 530 300" width="530" height="300" role="img" aria-label="Illustrative demand curve against store capacity, with the voucher that applies at each time of day"></svg>
-                  <input class="p2-rng p2-time" type="range" min="10" max="22" step="0.25" value="15" aria-label="Time of day">
-                </div>
+            <div class="p2-box">
+              <p class="p2-rule" aria-live="polite"><span class="p2-cond"><i></i><span class="p2-condt">Spare capacity</span></span><span class="p2-arr" aria-hidden="true">→</span><span class="p2-act">S$1 off the highest-profit drink</span></p>
+              <div class="p2-chartv">
+                <svg class="p2-chart" viewBox="0 0 560 348" width="560" height="348" role="img" aria-label="Illustrative demand against store capacity, with a marker where this scenario sits">
+                  <defs><clipPath id="p2-overclip"><rect class="p2-overr" x="0" y="0" width="560" height="0"/></clipPath></defs>
+                  <g class="p2-ticks"></g>
+                  <path class="p2-area" fill="#E6EAF1"/>
+                  <path class="p2-overa" fill="#B8322B" fill-opacity=".22" clip-path="url(#p2-overclip)"/>
+                  <line class="p2-cap" stroke="#4A4A4A" stroke-width="1.4" stroke-dasharray="7 5"/>
+                  <text class="p2-capl" text-anchor="end">capacity</text>
+                  <path class="p2-line" fill="none" stroke="#24406B" stroke-width="2.6" stroke-linejoin="round"/>
+                  <text class="p2-dl">demand</text>
+                  <rect class="p2-vl" x="-0.75" y="0" width="1.5" height="1" fill="#24406B" fill-opacity=".45"/>
+                  <rect class="p2-gap" x="-5" y="0" width="10" height="1" rx="0"/>
+                  <circle class="p2-dot" r="6.5" fill="#fff" stroke="#24406B" stroke-width="2.6"/>
+                  <text class="p2-lbl" text-anchor="middle">room to fill</text>
+                  <g class="p2-pill"><rect x="-27" y="0" width="54" height="22" rx="11" fill="#24406B"/><text class="p2-pillt" x="0" y="15.5" text-anchor="middle">15:00</text></g>
+                </svg>
               </div>
-              <div class="p2-view p2-dor p2-off">
-                <div class="p2-ctrls">
-                  <div class="p2-cg"><span class="p2-lab">Member</span><span class="seg p2-mem" role="group" aria-label="Member type"><button class="btn on" data-v="reg">Weekly regular</button><button class="btn" data-v="new">Little history</button></span></div>
-                  <div class="p2-cg"><span class="p2-lab">Step</span><span class="seg p2-step" role="group" aria-label="Step"><button class="btn" data-v="watch">Watching</button><button class="btn on" data-v="n1">Nudge 1</button><button class="btn" data-v="n2">Nudge 2</button><button class="btn" data-v="measure">Measure</button></span></div>
-                </div>
-                <div class="p2-box">
-                  <div class="p2-bh"><span><b>Days since last order</b></span><span class="p2-leg"><span><i style="background:#24406B"></i>order</span><span><i style="background:#2F6B45"></i>S$1 voucher</span><span><i style="background:#D9C79B"></i>valid 7 days</span><span><i style="background:#24406B;border-radius:50%;width:8px"></i>upsize or points</span></span></div>
-                  <svg class="p2-svg p2-tl" viewBox="0 0 530 300" width="530" height="300" role="img" aria-label="Illustrative timeline of a dormant member: trigger, first nudge, second nudge and a holdout group"></svg>
-                  <input class="p2-rng p2-day" type="range" min="-14" max="56" step="1" value="14" aria-label="Days since last order">
-                </div>
+              <div class="p2-dorv p2-off">
+                <ol class="p2-steps">
+                  <li class="p2-st" style="--c:#B8322B"><b class="p2-sn">1</b><span class="p2-sh"><span class="p2-sk">Trigger</span><span class="p2-sb">2× usual gap</span></span><span class="p2-sl">with no order · 30 days if little history</span></li>
+                  <li class="p2-st" style="--c:#2F6B45"><b class="p2-sn">2</b><span class="p2-sh"><span class="p2-sk">Nudge 1</span><span class="p2-sb">S$1 off</span></span><span class="p2-sl">7 days · off-peak · app pick-up</span></li>
+                  <li class="p2-st" style="--c:#24406B"><b class="p2-sn">3</b><span class="p2-sh"><span class="p2-sk">Nudge 2 · day 14</span><span class="p2-sb">Free upsize</span></span><span class="p2-sl">or bonus points</span></li>
+                </ol>
+                <p class="p2-hold"><i></i>Holdout group gets nothing, to measure the lift</p>
               </div>
             </div>
-            <div class="p2-right">
-              <div class="p2-badge" aria-live="polite"><span class="p2-bdot"></span><span class="p2-btx"><span class="p2-bk">Rule fired</span><span class="p2-bn">Off-peak, spare capacity</span></span></div>
-              <div class="p2-phone" aria-label="Offer the customer sees in the app">
-                <div class="p2-scr">
-                  <div class="p2-sbar"><span class="p2-clock">15:00</span><svg width="34" height="10" viewBox="0 0 34 10" aria-hidden="true"><rect x="0" y="6" width="3" height="4" rx="1" fill="#262626"/><rect x="5" y="4" width="3" height="6" rx="1" fill="#262626"/><rect x="10" y="2" width="3" height="8" rx="1" fill="#262626"/><rect x="18" y="1" width="14" height="8" rx="2" fill="none" stroke="#262626"/><rect x="20" y="3" width="9" height="4" rx="1" fill="#262626"/></svg></div>
-                  <div class="p2-app"><span class="p2-logo">CHAGEE</span><span class="p2-appr">Member</span></div>
-                  <div class="p2-offer">
-                    <span class="p2-otag">Today's offer</span>
-                    <span class="p2-big">S$1 off</span>
-                    <span class="p2-oline">on today's featured tea</span>
-                    <span class="p2-ometa">App order · valid till 22:00</span>
-                  </div>
-                  <div class="p2-rcpt">
-                    <div><span>Menu price</span><b>S$6.00</b></div>
-                    <div><span class="p2-rk">Voucher</span><b class="p2-rv">−S$1.00</b></div>
-                    <div class="p2-pay"><span>You pay</span><b class="p2-rp">S$5.00</b></div>
-                  </div>
-                  <div class="p2-ctas"><span class="p2-cta">Order for pick-up</span><span class="p2-cta2"></span></div>
-                  <div class="p2-home"></div>
+            <div class="p2-phone" aria-label="Offer the customer sees in the app">
+              <div class="p2-scr">
+                <div class="p2-sbar"><span class="p2-clock">15:00</span></div>
+                <div class="p2-app"><span class="p2-logo">CHAGEE</span></div>
+                <div class="p2-offer p2-t-green">
+                  <span class="p2-otag">Today's offer</span>
+                  <span class="p2-big">S$1 off</span>
+                  <span class="p2-oline">on today's featured tea</span>
                 </div>
+                <div class="p2-cup" aria-hidden="true"><svg width="70" height="92" viewBox="0 0 70 92"><path d="M11 22h48l-6 64a4 4 0 0 1-4 4H21a4 4 0 0 1-4-4z" fill="#F6F3ED" stroke="#C9C2B5" stroke-width="1.5"/><path d="M14 44h42l-3.6 38a3 3 0 0 1-3 2.6H20.6a3 3 0 0 1-3-2.6z" fill="#E9DCC0"/><rect x="7" y="15" width="56" height="8" rx="3" fill="#24406B"/><path d="M38 15l6-13" stroke="#24406B" stroke-width="3" stroke-linecap="round"/></svg></div>
+                <div class="p2-cta">Order for pick-up</div>
+                <div class="p2-home"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="cards p2-cards" style="gap:10px">
-        <div class="bc p2-rules">
-          <div class="k p2-rkh">Rules · first match wins</div>
-          <ol class="p2-lad p2-lad-scn">
-            <li data-r="event"><i style="background:#B8322B"></i><b>Event nearby</b><span>None; push pre-orders</span></li>
-            <li data-r="peak"><i style="background:#B8322B"></i><b>Peak</b><span>None; fewer Grab orders</span></li>
-            <li data-r="pre"><i style="background:#C8A96A"></i><b>Before peak</b><span>S$0.50 off pre-orders</span></li>
-            <li data-r="hot"><i style="background:#C8A96A"></i><b>Hot</b><span>S$0.50</span></li>
-            <li data-r="rain"><i style="background:#2F6B45"></i><b>Rain</b><span>S$1 delivery or sheltered</span></li>
-            <li data-r="quiet"><i style="background:#2F6B45"></i><b>Quiet office</b><span>S$1</span></li>
-            <li data-r="off" class="p2-act"><i style="background:#2F6B45"></i><b>Off-peak</b><span>S$1, top-profit drink</span></li>
-          </ol>
-          <ol class="p2-lad p2-lad-dor p2-off">
-            <li data-r="trig"><i style="background:#B8322B"></i><b>Trigger</b><span>No order for 2× usual gap <span class="p2-nw">(30 days if little history)</span></span></li>
-            <li data-r="n1"><i style="background:#2F6B45"></i><b>Nudge 1</b><span><span class="p2-nw">S$1 on most-ordered drink;</span> <span class="p2-nw">7 days, off-peak, app pick-up</span></span></li>
-            <li data-r="n2"><i style="background:#24406B"></i><b>Nudge 2</b><span>14 days on: free upsize <span class="p2-nw">or bonus points</span></span></li>
-            <li data-r="measure"><i style="background:#9A9387"></i><b>Holdout</b><span>No voucher, to count <span class="p2-nw">the extra orders</span></span></li>
-          </ol>
+      <div class="cards p2-cards">
+        <div class="bc p2-guard">
+          <div class="k">Guardrails</div>
+          <ul>
+            <li><span>Menu price never changes</span></li>
+            <li><span>Max <b>S$1</b> off</span></li>
+            <li><span>No vouchers at peak</span></li>
+          </ul>
         </div>
-        <div class="bc p2-cup">
-          <div class="k p2-cuph">Per cup with this offer</div>
-          <div class="p2-cuptop"><span class="p2-earn">S$3.20</span><span class="p2-earnl">still earned; staff and rent already paid</span></div>
-          <div class="p2-bar" aria-hidden="true"><span class="p2-b2"></span><span class="p2-b1"></span><span class="p2-b3"></span></div>
-          <div class="p2-eq"><span>S$6</span><span class="p2-eqv">− S$1 voucher</span><span class="p2-eqi">− S$1.80 ingredients</span></div>
+        <div class="bc p2-cupc">
+          <div class="k">Per S$1 voucher cup</div>
+          <div class="p2-rc"><span>Price</span><b>S$6</b></div>
+          <div class="p2-rc"><span>Voucher</span><b>− S$1</b></div>
+          <div class="p2-rc"><span>Ingredients</span><b>− S$1.80</b></div>
+          <div class="p2-rc p2-tot"><span>Still earned</span><b>S$3.20</b></div>
         </div>
       </div>
     </div>
-    <div class="takeaway"><span class="lab">BENEFIT</span><span class="t">Off-peak vouchers: <b>+5%</b> on S$12.05M delivery sales × about 40% margin after commission and discount ≈ <b>S$241k</b> a year.</span></div>
+    <div class="takeaway"><span class="lab">BENEFIT</span><span class="t">Off-peak vouchers turn idle capacity into about <b>S$241k</b> profit a year.</span></div>
   </div>
   <div class="foot"><span>OPIM639 · Group 3 · online retail · illustrative assumptions, not Chagee data · delivery 25% of S$48.2M sales</span><span class="rail"></span><span class="pg"></span></div>
   <aside class="notes">
-    <p>Second improvement: discount only when the outlet has room to fill. The menu price stays at S$6; only the voucher moves. The slide opens at 3 pm on a normal day, well under capacity, so the app offers S$1 off our highest-profit drink.</p>
-    <p>Press <b>Play</b> to run the day: an hour before lunch, pre-orders get S$0.50 off; at the peak, vouchers stop and we take fewer Grab orders; then the S$1 returns. Click <b>Hot</b>: the voucher shrinks to S$0.50. <b>Rain</b>: the S$1 moves to delivery or sheltered pick-up. <b>Event nearby</b>, such as a concert or F1: no discount, push pre-orders.</p>
-    <p>Open <b>Dormant members</b> and click through the steps: trigger, two nudges and the holdout.</p>
-    <p>Close on the per-cup card: S$6 minus S$1 minus S$1.80 still earns S$3.20, about S$241k a year. All figures are illustrative.</p>
+    <p>Second improvement: discount only when there is room to fill. The menu price never changes; only the voucher moves, capped at S$1. <b>Off-peak</b> is the default: demand sits under capacity, so the app offers S$1 off our highest-profit drink.</p>
+    <p>Click <b>Peak</b>: over capacity, so no voucher, S$0.50 off pre-orders made before the rush, and fewer low-profit Grab orders. Click <b>Hot day</b>: demand is already high, so only S$0.50. Click <b>Rain</b>: S$1 on app delivery or sheltered pick-up. Click <b>Event</b>: no discount, push pre-orders. Click <b>Quiet CBD</b>: S$1 fills weekend capacity. Click <b>Dormant</b>: two nudges, and a holdout group measures the lift.</p>
+    <p>Click <b>Off-peak</b> again: each voucher cup still earns S$3.20, S$6 minus S$1 minus S$1.80, because staff and rent are already paid. Delivery is 25% of S$48.2M, so S$12.05M; 5% more at about 40% margin is about S$241k profit a year. Illustrative figures.</p>
   </aside>
   <style>
-    #p2 .p2-play{min-width:94px;justify-content:center;text-align:center}
-    #p2 .p2-grid{display:grid;grid-template-columns:minmax(0,1fr) 214px;gap:14px;height:100%}
-    #p2 .p2-left{display:flex;flex-direction:column;min-width:0;min-height:0}
-    #p2 .p2-view{display:flex;flex-direction:column;gap:10px;flex:1;min-height:0}
+    #p2 .ptitle{font-size:12px}
+    #p2 .p2-seg .btn{height:32px;padding:0 16px;font-size:13px}
+    #p2 .p2-seg .btn:focus-visible{outline:2px solid var(--gold);outline-offset:-3px}
+    #p2 .p2-visual{margin-top:12px}
+    #p2 .p2-grid{display:grid;grid-template-columns:minmax(0,1fr) 206px;gap:16px;height:100%}
     #p2 .p2-off{display:none!important}
-    #p2 .p2-ctrls{flex:none;display:flex;gap:18px;align-items:flex-end;height:46px}
-    #p2 .p2-cg{display:flex;flex-direction:column;gap:6px}
-    #p2 .p2-lab{font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--taupe)}
-    #p2 .p2-ctrls .seg .btn{padding:0 11px}
-    #p2 .p2-box{flex:1;min-height:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 12px 6px;display:flex;flex-direction:column}
-    #p2 .p2-bh{flex:none;display:flex;justify-content:space-between;align-items:center;gap:10px;height:16px;font:11px/1.2 var(--sans);color:var(--taupe)}
-    #p2 .p2-bh b{font-weight:600;letter-spacing:.12em;text-transform:uppercase}
-    #p2 .p2-leg{display:flex;gap:12px;align-items:center}
-    #p2 .p2-leg>span{display:flex;align-items:center}
-    #p2 .p2-leg i{display:inline-block;width:10px;height:8px;border-radius:2px;margin-right:4px}
-    #p2 .p2-key{display:block;flex:none;margin-right:5px}
-    #p2 .p2-svg{display:block;flex:none;width:530px;height:300px;margin-top:2px;touch-action:none;user-select:none}
-    #p2 .p2-rng{display:block;flex:none;margin:0 0 0 22px;width:500px;height:18px;accent-color:var(--red);cursor:pointer}
-    #p2 .p2-day{margin-left:88px;width:436px}
-    #p2 .p2-ax{font:11px var(--sans);fill:var(--taupe)}
-    #p2 .p2-ax.p2-ax80{font-weight:700;fill:var(--ink)}
-    #p2 .p2-svl{font:600 11px var(--sans);paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
-    #p2 .p2-pilt{font:600 11px var(--sans);fill:#fff}
-    #p2 .p2-stt{font:600 11px var(--sans)}
-    #p2 .p2-tll{font:11px var(--sans);fill:var(--ink2);paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
-    #p2 .p2-tlb{font:600 12px var(--sans);fill:var(--ink)}
-    #p2 .p2-dim{opacity:.28}
-    #p2 .p2-hid{opacity:0}
-    #p2 svg g{transition:opacity .25s}
-    #p2 .p2-right{display:flex;flex-direction:column;gap:10px;align-items:stretch;min-height:0}
-    #p2 .p2-badge{flex:none;height:46px;display:flex;align-items:center;gap:9px;background:var(--navy);border-radius:10px;padding:0 12px;color:#fff}
-    #p2 .p2-bdot{flex:none;width:10px;height:10px;border-radius:50%;background:#2F6B45;box-shadow:0 0 0 2px #fff}
-    #p2 .p2-btx{display:flex;flex-direction:column;gap:3px;min-width:0}
-    #p2 .p2-bk{font:600 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-    #p2 .p2-bn{font:600 13px/1.15 var(--sans);white-space:nowrap}
-    #p2 .p2-phone{flex:1;min-height:0;width:196px;margin:0 auto;border-radius:30px;background:#232B3A;padding:7px;box-shadow:0 6px 18px rgba(36,64,107,.16)}
-    #p2 .p2-scr{position:relative;height:100%;border-radius:24px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+    #p2 .p2-box{min-width:0;min-height:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px 12px;display:flex;flex-direction:column}
+    /* the rule for the selected scenario: condition pill → action */
+    #p2 .p2-rule{flex:none;margin:0;display:flex;align-items:center;gap:12px;height:34px;white-space:nowrap}
+    #p2 .p2-cond{display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 14px 0 12px;border-radius:999px;background:var(--tint,#EEF5F0);color:var(--tone,#2F6B45);font:600 15px/1 var(--sans)}
+    #p2 .p2-cond i{width:9px;height:9px;border-radius:50%;background:var(--tone,#2F6B45)}
+    #p2 .p2-arr{font:400 20px/1 var(--sans);color:var(--taupe)}
+    #p2 .p2-act{font:500 17px/1.2 var(--sans);color:var(--ink)}
+    #p2 .p2-chartv{flex:1;min-height:0;display:flex;align-items:flex-end;justify-content:center}
+    #p2 .p2-chart{display:block;flex:none;width:560px;height:348px}
+    #p2 .p2-tick{font:12px var(--sans);fill:var(--taupe)}
+    #p2 .p2-capl{font:12px var(--sans);fill:var(--ink2)}
+    #p2 .p2-dl{font:600 12px var(--sans);fill:var(--navy)}
+    #p2 .p2-lbl{font:600 13px var(--sans);paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round}
+    #p2 .p2-pillt{font:600 12px var(--sans);fill:#fff}
+    /* dormant members: a static three-step strip */
+    #p2 .p2-dorv{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:22px;padding:0 6px}
+    #p2 .p2-steps{position:relative;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:26px}
+    #p2 .p2-steps::before{content:"";position:absolute;left:14px;top:30px;bottom:30px;border-left:2px dotted #D8D1C3}
+    #p2 .p2-st{position:relative;display:grid;grid-template-columns:30px 160px minmax(0,1fr);gap:0 18px;align-items:center}
+    #p2 .p2-sn{position:relative;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--c);color:#fff;font:600 14px/1 var(--sans);box-shadow:0 0 0 4px #fff}
+    #p2 .p2-sh{display:flex;flex-direction:column;gap:5px}
+    #p2 .p2-sk{font:600 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+    #p2 .p2-sb{font:500 30px/1.05 var(--serif);color:var(--ink);white-space:nowrap}
+    #p2 .p2-sl{font:14px/1.4 var(--sans);color:var(--ink2)}
+    #p2 .p2-hold{margin:0 0 0 46px;display:flex;align-items:center;gap:9px;padding-top:14px;border-top:1px solid var(--line);font:13px/1.3 var(--sans);color:var(--ink2)}
+    #p2 .p2-hold i{flex:none;width:12px;height:12px;border-radius:50%;border:2px solid var(--taupe)}
+    /* phone */
+    #p2 .p2-phone{align-self:stretch;width:206px;min-height:0;border-radius:28px;background:#232B3A;padding:6px;box-shadow:0 6px 18px rgba(36,64,107,.14)}
+    #p2 .p2-scr{position:relative;height:100%;border-radius:23px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
     #p2 .p2-scr::before{content:"";position:absolute;top:8px;left:50%;width:40px;height:5px;margin-left:-20px;border-radius:3px;background:#232B3A}
-    #p2 .p2-sbar{flex:none;display:flex;justify-content:space-between;align-items:center;padding:9px 16px 4px;font:600 11px/1 var(--sans);color:var(--ink)}
-    #p2 .p2-app{flex:none;display:flex;justify-content:space-between;align-items:baseline;padding:6px 14px 8px;border-bottom:1px solid var(--line)}
-    #p2 .p2-logo{font:600 13px/1 var(--serif);letter-spacing:.22em;color:var(--ink)}
-    #p2 .p2-appr{font:11px/1 var(--sans);color:var(--taupe)}
-    #p2 .p2-offer{flex:none;margin:9px 8px 0;padding:10px 10px 11px;border-radius:10px;background:var(--cream);border-left:4px solid #2F6B45;display:flex;flex-direction:column;gap:4px}
-    #p2 .p2-otag{font:600 11px/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:#2F6B45}
-    #p2 .p2-big{font:500 33px/1.05 var(--serif);color:var(--ink);white-space:nowrap}
-    #p2 .p2-big.p2-bigs{font-size:27px;line-height:1.2}
-    #p2 .p2-oline{font:12px/1.3 var(--sans);color:var(--ink2);text-wrap:balance}
-    #p2 .p2-ometa{font:11px/1.3 var(--sans);color:var(--taupe);text-wrap:balance}
-    #p2 .p2-offer.p2-t-gold{border-left-color:var(--gold)} #p2 .p2-t-gold .p2-otag{color:#8A6416}
-    #p2 .p2-offer.p2-t-red{border-left-color:var(--red)} #p2 .p2-t-red .p2-otag{color:var(--red)}
-    #p2 .p2-offer.p2-t-navy{border-left-color:var(--navy)} #p2 .p2-t-navy .p2-otag{color:var(--navy)}
-    #p2 .p2-offer.p2-t-grey{border-left-color:var(--taupe)} #p2 .p2-t-grey .p2-otag{color:var(--taupe)}
-    #p2 .p2-pop{animation:p2-pop .35s ease}
-    @keyframes p2-pop{from{opacity:.25;transform:translateY(5px)}to{opacity:1;transform:none}}
-    #p2 .p2-rcpt{flex:none;margin:8px 14px 0;font:12px/1 var(--sans);color:var(--ink2)}
-    #p2 .p2-rcpt>div{display:flex;justify-content:space-between;padding:4px 0}
-    #p2 .p2-rcpt b{font-weight:500;color:var(--ink)}
-    #p2 .p2-rcpt .p2-pay{border-top:1px solid var(--line);margin-top:3px;padding-top:7px}
-    #p2 .p2-rcpt .p2-pay span,#p2 .p2-rcpt .p2-pay b{font-weight:700;color:var(--ink)}
-    #p2 .p2-rv.p2-neg{color:var(--red)}
-    #p2 .p2-ctas{margin-top:auto;padding:6px 12px 0;display:flex;flex-direction:column;gap:5px}
-    #p2 .p2-home{flex:none;width:64px;height:4px;border-radius:2px;background:#262626;margin:8px auto 6px}
-    #p2 .p2-cta{display:flex;justify-content:center;align-items:center;height:30px;border-radius:999px;background:var(--red);color:#fff;font:600 12px/1 var(--sans)}
-    #p2 .p2-cta2{display:flex;justify-content:center;align-items:center;height:25px;border-radius:999px;border:1px solid #D8D1C3;color:var(--navy);font:500 12px/1 var(--sans)}
-    #p2 .p2-cta2:empty{display:none}
-    #p2 .p2-scr.p2-grey .p2-cta{background:#CFCAC0}
-    #p2 .p2-cards .bc .k{font-size:11px;letter-spacing:.11em}
-    #p2 .p2-rules{flex:1;min-height:0;display:flex;flex-direction:column}
-    #p2 .p2-lad{flex:1;list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;justify-content:space-between}
-    #p2 .p2-lad li{display:grid;grid-template-columns:9px 76px 1fr;gap:0 8px;align-items:start;padding:10px 8px;border-radius:7px;font:13px/1.3 var(--sans);color:var(--ink2);white-space:nowrap;transition:background .2s,color .2s}
-    #p2 .p2-lad li i{width:9px;height:9px;border-radius:50%;align-self:start;margin-top:4.5px}
-    #p2 .p2-lad li b{font-weight:600;color:var(--ink)}
-    #p2 .p2-lad li.p2-act{background:var(--navy);color:#fff}
-    #p2 .p2-lad li.p2-act b{color:#fff}
-    #p2 .p2-lad li.p2-act i{box-shadow:0 0 0 2px #fff}
-    #p2 .p2-lad li.p2-done{color:var(--navy)}
-    #p2 .p2-lad li.p2-done b{color:var(--navy)}
-    #p2 .p2-lad{position:relative}
-    #p2 .p2-lad::before{content:"";position:absolute;left:12px;top:19px;bottom:18px;border-left:1px dashed #D8D1C3}
-    #p2 .p2-lad li{position:relative}
-    #p2 .p2-lad-dor::before{top:17px;bottom:31px}
-    #p2 .p2-lad-dor li{grid-template-columns:9px 64px 1fr;padding:8px 8px;font-size:12px;white-space:normal}
-    #p2 .p2-lad-dor li i{margin-top:4px}
-    #p2 .p2-cup{flex:none}
-    #p2 .p2-nw{white-space:nowrap}
-    #p2 .p2-cuptop{display:flex;align-items:center;gap:10px;height:36px;margin-top:4px}
-    #p2 .p2-earn{flex:none;font:500 34px/1 var(--serif);color:#2F6B45}
-    #p2 .p2-earnl{font:12px/1.3 var(--sans);color:var(--ink2);text-wrap:balance}
-    #p2 .p2-bar{display:flex;height:12px;margin-top:8px;border-radius:4px;overflow:hidden;background:#F1EEE8}
-    #p2 .p2-bar span{height:100%;transition:width .35s ease}
-    #p2 .p2-b1{background:var(--taupe)} #p2 .p2-b2{background:var(--red)} #p2 .p2-b3{background:#2F6B45}
-    #p2 .p2-eq{display:flex;gap:7px;margin-top:6px;font:12px/1.35 var(--sans);color:var(--ink2);white-space:nowrap}
-    #p2 .p2-eq span:first-child{color:var(--ink);font-weight:500}
-    #p2 .p2-eqv{color:var(--red)}
-    #p2 .p2-eqi{color:#7E776B}
-    #p2 .p2-cuptop,#p2 .p2-bar,#p2 .p2-eq{transition:opacity .25s}
-    #p2 .p2-cup.p2-dimc .p2-cuptop,#p2 .p2-cup.p2-dimc .p2-bar,#p2 .p2-cup.p2-dimc .p2-eq{opacity:.45}
-    @media (prefers-reduced-motion:reduce){#p2 .p2-pop{animation:none}#p2 .p2-bar span,#p2 .p2-lad li,#p2 svg g,#p2 .p2-cuptop,#p2 .p2-bar,#p2 .p2-eq{transition:none}}
-    @media print{#p2 .p2-pop{animation:none}#p2 .p2-bar span,#p2 .p2-lad li,#p2 svg g,#p2 .p2-cuptop,#p2 .p2-bar,#p2 .p2-eq{transition:none}}
+    #p2 .p2-sbar{flex:none;height:28px;display:flex;align-items:center;padding:0 18px;font:600 12px/1 var(--sans);color:var(--ink)}
+    #p2 .p2-app{flex:none;padding:8px 14px 9px;border-bottom:1px solid var(--line);text-align:center}
+    #p2 .p2-logo{font:600 14px/1 var(--serif);letter-spacing:.24em;color:var(--ink)}
+    #p2 .p2-offer{flex:none;margin:12px 10px 0;padding:12px 12px 13px;border-radius:10px;background:var(--cream);border-left:4px solid var(--tone,#2F6B45);display:flex;flex-direction:column;gap:5px}
+    #p2 .p2-otag{font:600 12px/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--tonet,#2F6B45)}
+    #p2 .p2-big{font:500 34px/1.05 var(--serif);color:var(--ink);white-space:nowrap}
+    #p2 .p2-big.p2-bigs{font-size:29px}
+    #p2 .p2-oline{font:13px/1.3 var(--sans);color:var(--ink2)}
+    #p2 .p2-cup{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+    #p2 .p2-cta{flex:none;margin:0 14px;display:flex;justify-content:center;align-items:center;height:34px;border-radius:999px;background:var(--red);color:#fff;font:600 13px/1 var(--sans)}
+    #p2 .p2-home{flex:none;width:60px;height:4px;border-radius:2px;background:#262626;margin:10px auto 7px}
+    #p2 .p2-pop{animation:p2-pop .3s ease}
+    @keyframes p2-pop{from{opacity:.3;transform:translateY(4px)}to{opacity:1;transform:none}}
+    /* side cards */
+    #p2 .p2-cards .bc{flex:1 1 0;min-height:0;display:flex;flex-direction:column;padding:14px 16px 16px}
+    #p2 .p2-cards .bc .k{font-size:12px;letter-spacing:.12em}
+    #p2 .p2-guard ul{flex:1;list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;justify-content:space-evenly;gap:12px}
+    #p2 .p2-guard li{display:flex;align-items:center;gap:12px;font:15px/1.35 var(--sans);color:var(--ink)}
+    #p2 .p2-guard li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--navy)}
+    #p2 .p2-cupc{border-left-color:#2F6B45}
+    #p2 .p2-rc{display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;font:15px/1.35 var(--sans);color:var(--ink2)}
+    #p2 .p2-rc b{font-weight:500;color:var(--ink)}
+    #p2 .p2-rc.p2-tot{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);align-items:center;color:var(--ink);font-weight:500}
+    #p2 .p2-rc.p2-tot b{font:500 36px/1 var(--serif);color:#2F6B45}
+    @media (prefers-reduced-motion:reduce){#p2 .p2-pop{animation:none}}
+    @media print{#p2 .p2-pop{animation:none}}
   </style>
   <script>
   (function () {
@@ -201,345 +150,109 @@
     if (!sl) return;
     const $ = s => sl.querySelector(s), $$ = s => Array.from(sl.querySelectorAll(s));
     const RM = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
-    const hm = t => { const m = Math.round(t * 60); return Math.floor(m / 60) + ":" + String(m % 60).padStart(2, "0"); };
-    const m2 = v => "S$" + v.toFixed(2);
-    const short = v => "S$" + (v % 1 ? v.toFixed(2) : v.toFixed(0));
-    const dayTxt = d => "day " + (d < 0 ? "−" + (-d) : d);
-    const TONE = { green: "#2F6B45", gold: "#C8A96A", red: "#B8322B", navy: "#24406B", grey: "#9A9387" };
-    const AMT = { green: ["S$1"], gold: ["S$0.50"], red: ["no voucher", "none"] };
 
-    /* ---------- illustrative demand model: cups an hour at one outlet (normal day about 500 cups) ---------- */
-    const T0 = 10, T1 = 22, STEP = 0.25, NS = (T1 - T0) / STEP, CAP = 80, BUSY = 0.9 * CAP;
+    /* illustrative demand model: cups an hour at one outlet; capacity 80 */
+    const T0 = 10, T1 = 22, CAP = 80, YMAX = 124;
     const g = (t, mu, s) => Math.exp(-(((t - mu) / s) ** 2));
-    const WX = { hot: { all: 1.1, tea: 1.6 }, normal: { all: 1, tea: 1 }, rain: { all: 0.75, tea: 1 } };
-    const CX = { normal: { all: 1, lunch: 1, eve: 1 }, event: { all: 1.15, lunch: 1, eve: 2.6 }, quiet: { all: 0.7, lunch: 0.3, eve: 0.8 } };
+    const WX = { normal: { all: 1, tea: 1 }, hot: { all: 1.1, tea: 1.6 }, rain: { all: 0.75, tea: 1 } };
+    const CX = { normal: { all: 1, lunch: 1, eve: 1 }, event: { all: 1.15, lunch: 1, eve: 2.1 }, quiet: { all: 0.7, lunch: 0.3, eve: 0.8 } };
     const demand = (t, wx, cx) => { const w = WX[wx], c = CX[cx];
       return (15 + 78 * c.lunch * g(t, 12.75, 1.25) + 26 * w.tea * g(t, 15.75, 1.1) + 40 * c.eve * g(t, 19, 1.5)) * w.all * c.all; };
 
-    /* ---------- the rules, first match wins ---------- */
-    const R = {
-      event: { badge: "Event nearby", tone: "red", v: 0 },
-      peak: { badge: "Peak: no room to fill", tone: "red", v: 0 },
-      pre: { badge: "Before the peak", tone: "gold", v: 0.5 },
-      hot: { badge: "Hot weather, off-peak", tone: "gold", v: 0.5 },
-      rain: { badge: "Rain, off-peak", tone: "green", v: 1, note: "on sheltered pick-up; delivery adds a rider fee" },
-      quiet: { badge: "Quiet office area", tone: "green", v: 1 },
-      off: { badge: "Off-peak, spare capacity", tone: "green", v: 1 }
+    const TONE = {
+      green: { c: "#2F6B45", t: "#EEF5F0", x: "#2F6B45" },
+      gold: { c: "#C8A96A", t: "#FBF5E8", x: "#8A6416" },
+      red: { c: "#B8322B", t: "#FBEDEC", x: "#B8322B" },
+      navy: { c: "#24406B", t: "#E9EDF4", x: "#24406B" }
     };
-    // a 15-minute slot is busy when demand anywhere in it reaches 90% of capacity, so the S$1 only returns with visible room to fill
-    function slotBusy(wx, cx) {
-      const b = [];
-      for (let i = 0; i < NS; i++) { let m = 0; for (let k = 0; k <= 4; k++) m = Math.max(m, demand(T0 + (i + k / 4) * STEP, wx, cx)); b.push(m >= BUSY); }
-      return b;
-    }
-    function slotRules(busy, wx, cx) {
-      const pre = busy.map(() => false);
-      for (let i = 0; i < NS; i++) if (busy[i] && (i === 0 || !busy[i - 1]))
-        for (let k = 1; k <= 4 && i - k >= 0 && !busy[i - k]; k++) pre[i - k] = true;
-      return busy.map((p, i) => cx === "event" ? "event" : p ? "peak" : pre[i] ? "pre" : wx === "hot" ? "hot" : wx === "rain" ? "rain" : cx === "quiet" ? "quiet" : "off");
-    }
-    function runs(list, keyOf) {
-      const out = [];
-      list.forEach((r, i) => { const k = keyOf ? keyOf(r) : r, l = out[out.length - 1]; if (l && l.key === k) l.b = i + 1; else out.push({ key: k, rule: r, a: i, b: i + 1 }); });
-      return out;
-    }
-    const slotOf = t => Math.min(NS - 1, Math.max(0, Math.floor((t - T0) / STEP + 1e-6)));
+    /* one entry per tab: where the scenario sits on the day, the rule, and the offer the app shows */
+    const SC = {
+      off: { wx: "normal", cx: "normal", t: 15, tone: "green", st: "room to fill", cond: "Spare capacity", act: "S$1 off the highest-profit drink",
+        o: { tag: "Today's offer", big: "S$1 off", line: "on today's featured tea", cta: "Order for pick-up" } },
+      peak: { wx: "normal", cx: "normal", t: 12.75, tone: "red", st: "no room", cond: "Over capacity", act: "No voucher · limit low-profit Grab orders",
+        o: { tag: "Lunch rush", big: "No voucher", line: "Pre-order before 12:00 tomorrow: S$0.50 off", cta: "Pre-order" } },
+      hot: { wx: "hot", cx: "normal", t: 15.75, tone: "gold", st: "less room", cond: "Demand already high", act: "Smaller discount: S$0.50",
+        o: { tag: "Hot day", big: "S$0.50 off", line: "on today's featured tea", cta: "Order for pick-up" } },
+      rain: { wx: "rain", cx: "normal", t: 15, tone: "green", st: "room to fill", cond: "Fewer walk-ins", act: "S$1 on app delivery or sheltered pick-up",
+        o: { tag: "Rainy day", big: "S$1 off", line: "app delivery, or pick-up at malls and MRT", cta: "Order for delivery" } },
+      event: { wx: "normal", cx: "event", t: 19, tone: "red", st: "no room", cond: "Concert, F1 or holiday", act: "No discount · push pre-orders",
+        o: { tag: "Event nearby", big: "Pre-order", line: "skip the event queue", cta: "Choose a time" } },
+      quiet: { wx: "normal", cx: "quiet", t: 12.75, tone: "green", st: "room to fill", cond: "CBD weekend or school holiday", act: "S$1 to fill spare capacity",
+        o: { tag: "Quiet weekend", big: "S$1 off", line: "on today's featured tea", cta: "Order for pick-up" } },
+      dorm: { tone: "navy", cond: "Member gone quiet", act: "S$1 nudge, then a stronger offer",
+        o: { tag: "We miss you", big: "S$1 off", line: "your most-ordered drink", cta: "Order for pick-up" } }
+    };
+    const DEF = "off";
 
-    function offerFor(rule, run, next) {
-      const till = hm(T0 + run.b * STEP);
-      switch (rule) {
-        case "event": return { tone: "red", tag: "Big event nearby", big: "Pre-order", line: "skip the queue, collect at your time", meta: "Concert, F1 or holiday", v: 0, cta: "Pre-order now" };
-        case "peak": return { tone: "red", tag: "Busy hour", big: "No voucher", line: "menu price during the rush", meta: "Busy till " + till, v: 0, cta: "Order ahead" };
-        case "pre": return { tone: "gold", tag: "Beat the rush", big: "S$0.50 off", line: "pre-order for " + hm(T0 + next.a * STEP) + " to " + hm(T0 + next.b * STEP), meta: "Order before " + hm(T0 + next.a * STEP), v: 0.5, cta: "Pre-order now" };
-        case "hot": return { tone: "gold", tag: "Cool down", big: "S$0.50 off", line: "on today's featured tea", meta: "App order · valid till " + till, v: 0.5, cta: "Order for pick-up" };
-        case "rain": return { tone: "green", tag: "Rainy day", big: "S$1 off", line: "on app delivery, or sheltered pick-up", meta: "Malls or near MRT links", v: 1, cta: "Order for delivery", cta2: "Sheltered pick-up" };
-        case "quiet": return { tone: "green", tag: "Quiet day in the CBD", big: "S$1 off", line: "on today's featured tea", meta: "Weekend or school holiday", v: 1, cta: "Order for pick-up" };
-        default: return { tone: "green", tag: "Today's offer", big: "S$1 off", line: "on today's featured tea", meta: "App order · valid till " + till, v: 1, cta: "Order for pick-up" };
-      }
-    }
-
-    /* ---------- state ---------- */
-    const DEF = { view: "scn", wx: "normal", cx: "normal", t: 15, mem: "reg" };
-    const S = Object.assign({}, DEF, { day: 14, rules: [], busy: [] });
-    let raf = 0, playing = false, paused = false, lastKey = "";
-
-    /* ---------- shared outputs: badge, phone, rule ladder, per-cup card ---------- */
-    function setBadge(text, tone) { $(".p2-bn").textContent = text; $(".p2-bdot").style.background = TONE[tone]; }
-    function setPhone(o, clock) {
-      $(".p2-clock").textContent = clock;
-      const box = $(".p2-offer");
-      box.className = "p2-offer p2-t-" + o.tone;
-      $(".p2-otag").textContent = o.tag; $(".p2-big").textContent = o.big; $(".p2-big").classList.toggle("p2-bigs", o.big.length > 8);
-      $(".p2-oline").textContent = o.line; $(".p2-ometa").textContent = o.meta;
-      const rv = $(".p2-rv");
-      $(".p2-rk").textContent = o.rowk || "Voucher";
-      rv.textContent = o.rowv || (o.v ? "−" + m2(o.v) : "none");
-      rv.classList.toggle("p2-neg", !!o.v && !o.rowv);
-      $(".p2-rp").textContent = m2(6 - o.v);
-      $(".p2-cta").textContent = o.cta; $(".p2-cta2").textContent = o.cta2 || "";
-      $(".p2-scr").classList.toggle("p2-grey", o.tone === "grey");
-      const key = o.tag + o.big + o.line;
-      if (key !== lastKey && lastKey && !RM) { box.classList.remove("p2-pop"); void box.offsetWidth; box.classList.add("p2-pop"); }
-      lastKey = key;
-    }
-    function setLadder(sel, act, done) {
-      $$(sel + " li").forEach(li => { li.classList.toggle("p2-act", li.dataset.r === act); li.classList.toggle("p2-done", (done || []).includes(li.dataset.r)); });
-    }
-    function setCup(v, title, note, dim) {
-      $(".p2-cuph").textContent = title;
-      const earn = 6 - v - 1.8;
-      $(".p2-earn").textContent = m2(earn);
-      $(".p2-earnl").textContent = note || (v ? "still earned; staff and rent already paid" : "earned at menu price; no voucher");
-      $(".p2-b1").style.width = (1.8 / 6 * 100) + "%";
-      $(".p2-b2").style.width = (v / 6 * 100) + "%";
-      $(".p2-b3").style.width = (earn / 6 * 100) + "%";
-      $(".p2-eqv").textContent = v ? "− " + short(v) + " voucher" : "− no voucher";
-      $(".p2-cup").classList.toggle("p2-dimc", !!dim);
-    }
-
-    /* ---------- scenario chart ---------- */
-    const CW = 530, CH = 300, PL = 30, PR = 16, PT = 12, PB = 46, PW = CW - PL - PR, PH = CH - PT - PB, YMAX = 150;
-    const SY = PT + PH + 6, SH = 14, PILY = PT + PH + 23, AXY = PT + PH + 36;
+    /* chart geometry */
+    const W = 560, H = 348, PL = 14, PR = 14, PT = 40, PB = 44, PW = W - PL - PR, PH = H - PT - PB, BY = PT + PH;
     const X = t => PL + (t - T0) / (T1 - T0) * PW, Y = v => PT + PH - Math.min(v, YMAX) / YMAX * PH;
-    const chart = $(".p2-chart");
-    const ghostOn = () => S.wx !== "normal" || S.cx !== "normal";
-    // rough text widths for 11px semibold Roboto, used when the slide is hidden and cannot be measured
-    const estW = s => { let w = 0; for (const ch of s) w += ch === " " ? 3 : ch === "." ? 3 : /[0-9S$]/.test(ch) ? 6.3 : /[mw]/.test(ch) ? 9 : /[ilrt]/.test(ch) ? 4 : 6.1; return w; };
-    function curve(wx, cx) { const p = []; for (let i = 0; i <= 144; i++) { const t = T0 + i * (T1 - T0) / 144; p.push(X(t).toFixed(1) + "," + Y(demand(t, wx, cx)).toFixed(1)); } return "M" + p.join("L"); }
-    function drawChart() {
-      const wx = S.wx, cx = S.cx, line = curve(wx, cx), area = line + "L" + X(T1) + "," + Y(0) + "L" + X(T0) + "," + Y(0) + "Z";
-      S.busy = slotBusy(wx, cx); S.rules = slotRules(S.busy, wx, cx);
-      let h = '<defs><clipPath id="p2-over"><rect x="' + PL + '" y="0" width="' + PW + '" height="' + Y(CAP) + '"/></clipPath>' +
-        '<clipPath id="p2-stripc"><rect x="' + PL + '" y="' + SY + '" width="' + PW + '" height="' + SH + '" rx="4"/></clipPath></defs>';
-      [0, 40, 80, 120].forEach(v => { h += '<line x1="' + PL + '" x2="' + (PL + PW) + '" y1="' + Y(v) + '" y2="' + Y(v) + '" stroke="#EFEAE0"/><text class="p2-ax' + (v === CAP ? " p2-ax80" : "") + '" x="' + (PL - 7) + '" y="' + (Y(v) + 4) + '" text-anchor="end">' + v + '</text>'; });
-      h += '<rect x="' + PL + '" y="' + Y(CAP) + '" width="' + PW + '" height="' + (Y(0) - Y(CAP)) + '" fill="#2F6B45" fill-opacity=".11"/>';
-      h += '<path d="' + area + '" fill="#E2E7EF"/>';
-      h += '<path d="' + area + '" fill="#B8322B" fill-opacity=".3" clip-path="url(#p2-over)"/>';
-      if (ghostOn()) h += '<path d="' + curve("normal", "normal") + '" fill="none" stroke="#9A9387" stroke-width="1.6" stroke-dasharray="4 4"/>';
-      h += '<line x1="' + PL + '" x2="' + (PL + PW) + '" y1="' + Y(CAP) + '" y2="' + Y(CAP) + '" stroke="#4A4A4A" stroke-width="1.3" stroke-dasharray="7 4"/>';
-      h += '<path d="' + line + '" fill="none" stroke="#24406B" stroke-width="2.3" stroke-linejoin="round"/>';
-      h += '<g class="p2-cur"><line class="p2-cl" stroke="#24406B" stroke-width="1.4" y1="' + PT + '" y2="' + PILY + '"/><rect class="p2-sp" width="7" rx="2"/><circle class="p2-cd" r="5" fill="#fff" stroke="#24406B" stroke-width="2.4"/><rect class="p2-svb" rx="4" fill="#fff" stroke-opacity=".45" style="display:none"/><text class="p2-svl"></text></g>';
-      // the voucher over the day: one run per colour, amount written inside when it fits
-      h += '<g clip-path="url(#p2-stripc)">';
-      const tr = runs(S.rules, r => R[r].tone);
-      tr.forEach(r => {
-        const x0 = X(T0 + r.a * STEP), w = (r.b - r.a) * STEP / (T1 - T0) * PW, tone = R[r.rule].tone;
-        h += '<rect x="' + x0 + '" y="' + SY + '" width="' + Math.max(0, w) + '" height="' + SH + '" fill="' + TONE[tone] + '"/>';
-        const txt = AMT[tone].find(s => estW(s) + 3 <= w);
-        if (txt) h += '<text class="p2-stt" x="' + (x0 + w / 2) + '" y="' + (SY + 10.5) + '" text-anchor="middle" fill="' + (tone === "gold" ? "#262626" : "#fff") + '">' + txt + '</text>';
+    const hm = t => { const m = Math.round(t * 60); return Math.floor(m / 60) + ":" + String(m % 60).padStart(2, "0"); };
+    const pts = (wx, cx) => { const p = []; for (let i = 0; i <= 120; i++) { const t = T0 + i * (T1 - T0) / 120; p.push(X(t).toFixed(1) + "," + Y(demand(t, wx, cx)).toFixed(1)); } return p; };
+    const chart = $(".p2-chart"), q = s => chart.querySelector(s);
+    const setD = (el, d) => { el.style.d = 'path("' + d + '")'; el.setAttribute("d", d); };
+    const tf = (el, s) => { el.style.transform = s; };
+
+    function drawStatic() {
+      let h = '<line x1="' + PL + '" x2="' + (PL + PW) + '" y1="' + BY + '" y2="' + BY + '" stroke="#D8D1C3"/>';
+      [10, 13, 16, 19, 22].forEach(t => {
+        const a = t === 10 ? "start" : t === 22 ? "end" : "middle";
+        h += '<text class="p2-tick" data-t="' + t + '" x="' + X(t) + '" y="' + (BY + 26) + '" text-anchor="' + a + '">' + t + ':00</text>';
       });
-      h += '</g>';
-      for (let t = 10; t <= 22; t += 2) h += '<text class="p2-ax p2-xt" data-t="' + t + '" x="' + X(t) + '" y="' + AXY + '" text-anchor="middle">' + t + ':00</text>';
-      h += '<rect class="p2-pil" y="' + PILY + '" width="46" height="19" rx="9.5" fill="#24406B"/><text class="p2-pilt p2-cpt" y="' + AXY + '" text-anchor="middle"></text>';
-      h += '<rect class="p2-hit" x="' + (PL - 6) + '" y="0" width="' + (PW + 12) + '" height="' + CH + '" fill="transparent" style="cursor:ew-resize"/>';
-      chart.innerHTML = h;
-      $(".p2-ghostl").style.display = ghostOn() ? "" : "none";
+      q(".p2-ticks").innerHTML = h;
+      const cap = q(".p2-cap"), yc = Y(CAP);
+      cap.setAttribute("x1", PL); cap.setAttribute("x2", PL + PW); cap.setAttribute("y1", yc); cap.setAttribute("y2", yc);
+      const cl = q(".p2-capl"); cl.setAttribute("x", PL + PW); cl.setAttribute("y", yc - 8);
+      q(".p2-overr").setAttribute("height", yc);
     }
-    // place the cursor label beside the cursor where it touches neither curve, the capacity line nor the cursor;
-    // if no such spot exists, take the spot with the least overlap and put the label on a white tag
-    function placeLabel(el, bg, text, fill, x, yPref) {
-      el.textContent = text;
-      let w = 0; try { w = el.getComputedTextLength(); } catch (_) { w = 0; }
-      w = (w || estW(text)) + 2;
-      const yc = Y(CAP), cs = [[S.wx, S.cx, 1]].concat(ghostOn() ? [["normal", "normal", 0.4]] : []);
-      const score = (x0, y) => {
-        const x1 = x0 + w, y0 = y - 10, y1 = y + 3;
-        if (x0 < PL + 2 || x1 > PL + PW - 2 || y0 < PT + 1 || y1 > PT + PH - 2) return Infinity;
-        if (yc >= y0 - 2 && yc <= y1 + 2) return Infinity;
-        let sc = 0;
-        for (const [wx, cx, wt] of cs) {
-          let prev = null;
-          for (let px = x0 - 3; px <= x1 + 3.01; px += 1.5) {
-            const yv = Y(demand(Math.min(T1, Math.max(T0, T0 + (px - PL) / PW * (T1 - T0))), wx, cx));
-            const lo = prev === null ? yv : Math.min(prev, yv), hi = prev === null ? yv : Math.max(prev, yv);
-            if (hi >= y0 - 3 && lo <= y1 + 3) sc += wt;
-            prev = yv;
-          }
-        }
-        return sc;
-      };
-      const sides = x < PL + PW - w - 14 ? [1, -1] : [-1, 1];
-      let best = { s: sides[0], y: yPref, sc: Infinity };
-      search: for (let k = 0; k <= 50; k++) {
-        const y = yPref + (k % 2 ? 1 : -1) * Math.ceil(k / 2) * 4;
-        for (const s of sides) {
-          const sc = score(s > 0 ? x + 10 : x - 10 - w, y);
-          if (sc < best.sc) best = { s, y, sc };
-          if (sc === 0) break search;
-        }
+
+    function drawChart(s) {
+      const p = pts(s.wx, s.cx), line = "M" + p.join("L"), area = line + "L" + X(T1) + "," + BY + "L" + X(T0) + "," + BY + "Z";
+      setD(q(".p2-line"), line); setD(q(".p2-area"), area); setD(q(".p2-overa"), area);
+      const x = X(s.t), yd = Y(demand(s.t, s.wx, s.cx)), yc = Y(CAP), top = Math.min(yd, yc), tone = TONE[s.tone].c;
+      tf(q(".p2-vl"), "translate(" + x + "px," + yd + "px) scale(1," + Math.max(0.01, BY - yd) + ")");
+      const gap = q(".p2-gap"); gap.style.fill = tone;
+      tf(gap, "translate(" + x + "px," + top + "px) scale(1," + Math.max(0.01, Math.abs(yc - yd)) + ")");
+      tf(q(".p2-dot"), "translate(" + x + "px," + yd + "px)");
+      const lb = q(".p2-lbl"); lb.textContent = s.st; lb.style.fill = TONE[s.tone].x;
+      tf(lb, "translate(" + x + "px," + (top - 12) + "px)");
+      const px = Math.min(PL + PW - 27, Math.max(PL + 27, x));
+      tf(q(".p2-pill"), "translate(" + px + "px," + (BY + 9) + "px)");
+      q(".p2-pillt").textContent = hm(s.t);
+      chart.querySelectorAll(".p2-tick").forEach(el => { el.style.opacity = Math.abs(X(+el.dataset.t) - px) < 52 ? 0 : 1; });
+      let yt = BY; for (let t = 20.9; t <= T1; t += 0.05) yt = Math.min(yt, Y(demand(t, s.wx, s.cx)));
+      const dl = q(".p2-dl");
+      dl.setAttribute("x", PL + PW); dl.setAttribute("y", 0); dl.setAttribute("text-anchor", "end"); tf(dl, "translate(0px," + (yt - 8) + "px)");
+    }
+
+    let cur = "";
+    function show(k, still) {
+      const s = SC[k] || SC[DEF];
+      $$(".p2-seg .btn").forEach(b => { const on = b.dataset.k === k; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on ? "true" : "false"); });
+      const tn = TONE[s.tone];
+      const rule = $(".p2-rule");
+      rule.style.setProperty("--tone", tn.x); rule.style.setProperty("--tint", tn.t);
+      $(".p2-condt").textContent = s.cond; $(".p2-act").textContent = s.act;
+      const dorm = k === "dorm";
+      $(".p2-chartv").classList.toggle("p2-off", dorm); $(".p2-dorv").classList.toggle("p2-off", !dorm);
+      if (!dorm) drawChart(s);
+      // the phone: what the customer sees
+      const off = $(".p2-offer");
+      off.style.setProperty("--tone", tn.c); off.style.setProperty("--tonet", tn.x);
+      $(".p2-otag").textContent = s.o.tag; $(".p2-big").textContent = s.o.big; $(".p2-big").classList.toggle("p2-bigs", s.o.big.length > 9); $(".p2-oline").textContent = s.o.line;
+      $(".p2-cta").textContent = s.o.cta;
+      $(".p2-clock").textContent = dorm ? "15:00" : hm(s.t);
+      if (still) $$(".p2-pop").forEach(el => el.classList.remove("p2-pop"));
+      else if (cur && cur !== k && !RM) {
+        [off, rule, $(".p2-chartv"), $(".p2-dorv")].forEach(el => { el.classList.remove("p2-pop"); void el.offsetWidth; el.classList.add("p2-pop"); });
       }
-      const tx = best.s > 0 ? x + 10 : x - 10;
-      el.setAttribute("x", tx); el.setAttribute("y", best.y); el.setAttribute("text-anchor", best.s > 0 ? "start" : "end"); el.setAttribute("fill", fill);
-      const tag = best.sc > 0;
-      bg.setAttribute("x", (best.s > 0 ? tx : tx - w) - 4); bg.setAttribute("y", best.y - 11); bg.setAttribute("width", w + 8); bg.setAttribute("height", 16);
-      bg.setAttribute("stroke", fill); bg.style.display = tag ? "" : "none";
-    }
-    function updateScn() {
-      const t = S.t, x = X(t), d = demand(t, S.wx, S.cx), yd = Y(d), yc = Y(CAP), i = slotOf(t);
-      const q = s => chart.querySelector(s), set = (el, a) => { for (const k in a) el.setAttribute(k, a[k]); };
-      set(q(".p2-cl"), { x1: x, x2: x });
-      set(q(".p2-cd"), { cx: x, cy: yd });
-      // the label follows the same slot as the rule: never "spare" while the rule says peak, never "over" while a voucher runs
-      const st = d >= CAP ? "over" : S.busy[i] ? "near" : "spare", col = st === "spare" ? "#2F6B45" : "#B8322B";
-      set(q(".p2-sp"), { x: Math.min(PL + PW - 7, Math.max(PL, x - 3.5)), y: Math.min(yd, yc), height: Math.max(0, Math.abs(yc - yd)), fill: col, "fill-opacity": st === "near" ? ".5" : ".85" });
-      placeLabel(q(".p2-svl"), q(".p2-svb"), st + " capacity", col, x, (yd + yc) / 2 + 4);
-      const px = Math.min(PL + PW - 23, Math.max(PL + 23 - 6, x));
-      set(q(".p2-pil"), { x: px - 23 }); set(q(".p2-cpt"), { x: px }); q(".p2-cpt").textContent = hm(t);
-      chart.querySelectorAll(".p2-xt").forEach(el => { el.style.opacity = Math.abs(X(+el.dataset.t) - px) < 38 ? 0 : 1; });
-      const rr = runs(S.rules), k = rr.findIndex(r => i >= r.a && i < r.b), run = rr[k], rule = run.rule;
-      setPhone(offerFor(rule, run, rr[k + 1] || run), hm(t));
-      setBadge(R[rule].badge, R[rule].tone);
-      setLadder(".p2-lad-scn", rule);
-      setCup(R[rule].v, "Per cup with this offer", R[rule].note, false);
-      const rng = $(".p2-time"); if (Math.abs(+rng.value - t) > 0.13) rng.value = String(t);
+      cur = k;
     }
 
-    /* ---------- dormant-member timeline ---------- */
-    const D0 = -14, D1 = 56, DL = 96, DR = 14, DPW = CW - DL - DR, LA = 90, LB = 216, DAX = AXY;
-    const DX = d => DL + (d - D0) / (D1 - D0) * DPW;
-    const MEM = { reg: { past: [-14, -7, 0], tg: 14, trig: "trigger: 2× usual gap" }, new: { past: [0], tg: 30, trig: "trigger: 30 days" } };
-    const tl = $(".p2-tl");
-    function stepOf(d) { const tg = MEM[S.mem].tg; return d < tg ? "watch" : d < tg + 14 ? "n1" : d < D1 ? "n2" : "measure"; }
-    function stepDay(st) { const tg = MEM[S.mem].tg; return { watch: tg - 5, n1: tg, n2: tg + 14, measure: D1 }[st]; }
-    const expired = d => stepOf(d) === "n1" && d >= MEM[S.mem].tg + 7;
-    function drawTl() {
-      const m = MEM[S.mem], tg = m.tg;
-      let h = "";
-      for (let d = D0; d <= D1; d += 7) h += '<line x1="' + DX(d) + '" x2="' + DX(d) + '" y1="' + (LA - 12) + '" y2="' + (DAX - 18) + '" stroke="#F1EDE5"/><text class="p2-ax p2-xt" data-t="' + d + '" x="' + DX(d) + '" y="' + DAX + '" text-anchor="middle">' + (d < 0 ? "−" + (-d) : d) + '</text>';
-      [[LA, "Nudged", "group"], [LB, "Holdout", "no voucher"]].forEach(([y, a, b]) => { h += '<text class="p2-tlb" x="0" y="' + (y - 2) + '">' + a + '</text><text class="p2-tll" x="0" y="' + (y + 13) + '">' + b + '</text>'; });
-      [LA, LB].forEach(y => {
-        h += '<line x1="' + DX(D0) + '" x2="' + DX(0) + '" y1="' + y + '" y2="' + y + '" stroke="#24406B" stroke-width="2"/>';
-        h += '<line x1="' + DX(0) + '" x2="' + DX(D1) + '" y1="' + y + '" y2="' + y + '" stroke="#C9C2B5" stroke-width="2" stroke-dasharray="3 5"/>';
-        m.past.forEach(d => { h += '<circle cx="' + DX(d) + '" cy="' + y + '" r="6" fill="#24406B"/>'; });
-      });
-      h += S.mem === "reg"
-        ? '<path d="M' + DX(-7) + ',' + (LA - 16) + 'v4H' + DX(0) + 'v-4" fill="none" stroke="#9A9387"/><text class="p2-tll" x="' + DX(-3.5) + '" y="' + (LA - 21) + '" text-anchor="middle">usual gap 7 days</text>'
-        : '<text class="p2-tll" x="' + DX(0) + '" y="' + (LA - 17) + '" text-anchor="middle">only order</text>';
-      // cursor: starts under the lane labels so it never runs through them
-      h += '<g class="p2-cur"><line class="p2-cl" stroke="#24406B" stroke-width="1.4" y1="' + (LA - 12) + '" y2="' + (DAX - 13) + '"/>' +
-        '<rect class="p2-pil" y="' + (DAX - 13) + '" width="54" height="19" rx="9.5" fill="#24406B"/><text class="p2-pilt p2-cpt" y="' + DAX + '" text-anchor="middle"></text></g>';
-      // trigger: label and a short connector down to the first nudge
-      h += '<g data-d="' + tg + '"><line x1="' + DX(tg) + '" x2="' + DX(tg) + '" y1="' + (LA - 45) + '" y2="' + (LA - 31) + '" stroke="#B8322B" stroke-width="1.4" stroke-dasharray="4 3"/>' +
-        '<text class="p2-svl" x="' + DX(tg) + '" y="' + (LA - 50) + '" text-anchor="middle" fill="#B8322B">' + m.trig + '</text></g>';
-      // nudge 1: S$1 voucher, valid 7 days
-      h += '<g data-d="' + tg + '"><rect x="' + DX(tg) + '" y="' + (LA - 7) + '" width="' + (DX(tg + 7) - DX(tg)) + '" height="14" rx="4" fill="#D9C79B"/>' +
-        '<rect x="' + (DX(tg) - 17) + '" y="' + (LA - 11) + '" width="34" height="22" rx="5" fill="#2F6B45"/><text class="p2-pilt" x="' + DX(tg) + '" y="' + (LA + 4) + '" text-anchor="middle">S$1</text>' +
-        '<text class="p2-svl" x="' + DX(tg) + '" y="' + (LA - 19) + '" text-anchor="middle" fill="#2F6B45">nudge 1</text></g>';
-      // nudge 2: free upsize or bonus points
-      h += '<g data-d="' + (tg + 14) + '"><rect x="' + (DX(tg + 14) - 11) + '" y="' + (LA - 11) + '" width="22" height="22" rx="11" fill="#24406B"/><text class="p2-pilt" x="' + DX(tg + 14) + '" y="' + (LA + 4) + '" text-anchor="middle">+</text>' +
-        '<text class="p2-svl" x="' + DX(tg + 14) + '" y="' + (LA - 19) + '" text-anchor="middle" fill="#24406B">nudge 2</text></g>';
-      // holdout
-      h += '<g data-d="' + tg + '"><circle cx="' + DX(tg) + '" cy="' + LB + '" r="8" fill="#fff" stroke="#9A9387" stroke-width="2"/></g>';
-      // measure
-      const bx = DX(D1) - 12;
-      h += '<g data-d="' + D1 + '" data-hide="1"><path d="M' + (bx - 6) + ',' + LA + 'H' + bx + 'V' + LB + 'H' + (bx - 6) + '" fill="none" stroke="#24406B" stroke-width="1.6"/>' +
-        '<text class="p2-svl" x="' + (bx - 10) + '" y="' + ((LA + LB) / 2 - 2) + '" text-anchor="end" fill="#24406B">extra orders =</text>' +
-        '<text class="p2-tll" x="' + (bx - 10) + '" y="' + ((LA + LB) / 2 + 13) + '" text-anchor="end">nudged − holdout</text></g>';
-      h += '<rect class="p2-hit" x="' + (DL - 6) + '" y="0" width="' + (DPW + 12) + '" height="' + CH + '" fill="transparent" style="cursor:ew-resize"/>';
-      tl.innerHTML = h;
-    }
-    const DORM = {
-      watch: { badge: "Watching the gap", tone: "grey", phone: { tone: "grey", tag: "Member home", big: "No offer", line: "too soon to nudge", meta: "Nothing sent yet", v: 0, cta: "Order" } },
-      n1: { badge: "Trigger: first nudge", tone: "green", phone: { tone: "green", tag: "We miss you", big: "S$1 off", line: "your most-ordered drink", meta: "Valid 7 days · off‑peak · app pick‑up only", v: 1, cta: "Order for pick-up" } },
-      n2: { badge: "Still inactive: nudge 2", tone: "navy", phone: { tone: "navy", tag: "A treat for you", big: "Free upsize", line: "or bonus points towards your next tier", meta: "14 days after the first nudge", v: 0, rowk: "Upsize", rowv: "free", cta: "Order for pick-up" } },
-      measure: { badge: "Holdout: measure the lift", tone: "grey", phone: { tone: "grey", tag: "Member home", big: "No offer", line: "menu prices as usual", meta: "Held back to measure the lift", v: 0, cta: "Order" } }
-    };
-    const expiredState = tg => ({ badge: "Nudge 1 expired", tone: "grey", phone: { tone: "grey", tag: "Voucher expired", big: "No offer", line: "the S$1 went unused", meta: "Nudge 2 on day " + (tg + 14), v: 0, cta: "Order" } });
-    function updateDor() {
-      const d = S.day, x = DX(d), st = stepOf(d), tg = MEM[S.mem].tg, exp = expired(d), q = s => tl.querySelector(s);
-      q(".p2-cl").setAttribute("x1", x); q(".p2-cl").setAttribute("x2", x);
-      const px = Math.min(DL + DPW - 27, Math.max(DL + 21, x));
-      q(".p2-pil").setAttribute("x", px - 27); q(".p2-cpt").setAttribute("x", px); q(".p2-cpt").textContent = dayTxt(d);
-      tl.querySelectorAll(".p2-xt").forEach(el => { el.style.opacity = Math.abs(DX(+el.dataset.t) - px) < 38 ? 0 : 1; });
-      tl.querySelectorAll("g[data-d]").forEach(el => { const later = +el.dataset.d > d; el.classList.toggle("p2-dim", later && !el.dataset.hide); el.classList.toggle("p2-hid", later && !!el.dataset.hide); });
-      const s = exp ? expiredState(tg) : DORM[st];
-      setPhone(s.phone, dayTxt(d));
-      setBadge(s.badge, s.tone);
-      const order = ["trig", "n1", "n2", "measure"], act = st === "watch" ? "" : st;
-      setLadder(".p2-lad-dor", act, act ? order.slice(0, order.indexOf(act)) : []);
-      setCup(1, "Per cup with the first nudge", null, st !== "n1" || exp);
-      $$(".p2-step .btn").forEach(b => { const on = b.dataset.v === st; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); });
-      const rng = $(".p2-day"); if (+rng.value !== Math.round(d)) rng.value = String(Math.round(d));
-    }
-
-    /* ---------- views, controls ---------- */
-    function segOn(sel, v) { $$(sel + " .btn").forEach(b => { const on = b.dataset.v === v || b.dataset.view === v; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); }); }
-    function setView(v) {
-      S.view = v;
-      segOn(".p2-views", v);
-      $(".p2-scn").classList.toggle("p2-off", v !== "scn"); $(".p2-dor").classList.toggle("p2-off", v !== "dor");
-      $(".p2-lad-scn").classList.toggle("p2-off", v !== "scn"); $(".p2-lad-dor").classList.toggle("p2-off", v !== "dor");
-      $(".p2-rkh").textContent = v === "scn" ? "Rules · first match wins" : "Dormant members · in order";
-      $(".p2-title").textContent = v === "scn" ? "Offer engine · menu price fixed · illustrative" : "Dormant members · nudged vs holdout · illustrative";
-      if (v === "scn") updateScn(); else updateDor();
-    }
-    function playLabel() { $(".p2-play").textContent = playing ? "❚❚ Pause" : paused ? "▶ Resume" : "▶ Play"; }
-    function halt() { cancelAnimationFrame(raf); raf = 0; playing = false; }
-    function stop() { halt(); paused = false; playLabel(); }
-    function play() {
-      if (playing) { halt(); paused = true; playLabel(); return; }
-      const scn = S.view === "scn", from = scn ? T0 : D0, to = scn ? T1 : D1, speed = scn ? 1.7 : 11; // hours or days per second
-      const key = () => scn ? S.rules[slotOf(S.t)] : stepOf(S.day) + (expired(S.day) ? "x" : "");
-      const cur = scn ? S.t : S.day, resume = paused && cur < to;
-      paused = false;
-      let pos = resume ? cur : from;
-      if (!resume) { if (scn) S.t = from; else S.day = from; }
-      if (RM) { if (scn) { S.t = to; updateScn(); } else { S.day = to; updateDor(); } playLabel(); return; }
-      if (scn) updateScn(); else updateDor();
-      playing = true; playLabel();
-      let last = performance.now(), hold = resume ? 0 : 500, prev = key();
-      const tick = now => {
-        const dt = Math.min(64, now - last); last = now;
-        if (hold > 0) hold -= dt;
-        else {
-          pos = Math.min(to, pos + dt / 1000 * speed);
-          if (scn) { S.t = pos; updateScn(); } else { S.day = Math.round(pos); updateDor(); }
-          const k = key(); if (k !== prev) { prev = k; hold = 1100; }
-        }
-        if (pos >= to && hold <= 0) { stop(); return; }
-        raf = requestAnimationFrame(tick);
-      };
-      raf = requestAnimationFrame(tick);
-    }
-    function reset() {
-      stop();
-      Object.assign(S, DEF); S.day = MEM[DEF.mem].tg;
-      segOn(".p2-wx", S.wx); segOn(".p2-cx", S.cx); segOn(".p2-mem", S.mem);
-      $(".p2-time").value = String(S.t); $(".p2-day").value = String(S.day);
-      lastKey = "";
-      drawChart(); drawTl(); setView("scn");
-    }
-
-    $$(".p2-views .btn").forEach(b => b.addEventListener("click", () => { stop(); setView(b.dataset.view); }));
-    $$(".p2-wx .btn").forEach(b => b.addEventListener("click", () => { stop(); S.wx = b.dataset.v; segOn(".p2-wx", S.wx); drawChart(); updateScn(); }));
-    $$(".p2-cx .btn").forEach(b => b.addEventListener("click", () => { stop(); S.cx = b.dataset.v; segOn(".p2-cx", S.cx); drawChart(); updateScn(); }));
-    $$(".p2-mem .btn").forEach(b => b.addEventListener("click", () => { stop(); const st = stepOf(S.day); S.mem = b.dataset.v; segOn(".p2-mem", S.mem); S.day = stepDay(st); drawTl(); updateDor(); }));
-    $$(".p2-step .btn").forEach(b => b.addEventListener("click", () => { stop(); S.day = stepDay(b.dataset.v); updateDor(); }));
-    $(".p2-time").addEventListener("input", e => { stop(); S.t = +e.target.value; updateScn(); });
-    $(".p2-day").addEventListener("input", e => { stop(); S.day = +e.target.value; updateDor(); });
-    // after a mouse drag on a slider, hand the arrow keys back to the deck; keyboard users keep focus
-    $$(".p2-rng").forEach(r => {
-      r.addEventListener("pointerup", () => r.blur());
-      r.addEventListener("change", e => { let kb = false; try { kb = r.matches(":focus-visible"); } catch (_) { kb = false; } if (e.isTrusted && !kb) r.blur(); });
-    });
-    $(".p2-play").addEventListener("click", play);
-    $(".p2-reset").addEventListener("click", reset);
-
-    // drag directly on either chart
-    function drag(svg, onX) {
-      let on = false;
-      const at = e => { const r = svg.getBoundingClientRect(); onX((e.clientX - r.left) / r.width * CW); };
-      svg.addEventListener("pointerdown", e => { if (!e.target.classList.contains("p2-hit")) return; on = true; stop(); try { svg.setPointerCapture(e.pointerId); } catch (_) {} at(e); });
-      svg.addEventListener("pointermove", e => { if (on) at(e); });
-      const end = () => { on = false; };
-      svg.addEventListener("pointerup", end); svg.addEventListener("pointercancel", end);
-    }
-    drag(chart, x => { const t = T0 + (x - PL) / PW * (T1 - T0); S.t = Math.min(T1, Math.max(T0, Math.round(t / STEP) * STEP)); updateScn(); });
-    drag(tl, x => { const d = D0 + (x - DL) / DPW * (D1 - D0); S.day = Math.min(D1, Math.max(D0, Math.round(d))); updateDor(); });
-
-    sl.addEventListener("slideleave", stop);
-    sl.addEventListener("deckprint", reset);
-    reset();
+    $$(".p2-seg .btn").forEach(b => b.addEventListener("click", e => { show(b.dataset.k); if (e.detail) b.blur(); }));
+    sl.addEventListener("deckprint", () => show(DEF, true));
+    drawStatic();
+    show(DEF, true);
   })();
   </script>
 </section>

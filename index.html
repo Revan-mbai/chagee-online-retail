@@ -181,101 +181,78 @@ aside.notes{display:none}
   <div class="inner">
     <p class="kicker">01 · Online retail · capacity-aware order alerts<span class="ctag">Course link · Topic 4, fulfilment flexibility</span></p>
     <h2 class="head">Quote the real wait, then send overflow next door</h2>
-    <div class="body" style="grid-template-columns:1fr 300px;gap:16px;margin-top:12px">
+    <div class="body" style="grid-template-columns:1fr 262px;gap:16px;margin-top:12px">
       <div class="panel">
         <div class="ptop"><span class="ptitle">Lunch rush in 10-min slots · illustrative</span><span class="ctl"><span class="seg r1-seg" role="group" aria-label="Compare the lunch rush"><button class="btn r1-mode" data-mode="today" aria-pressed="false">Today</button><button class="btn on r1-mode" data-mode="ai" aria-pressed="true">With AI</button></span></span></div>
         <div class="visual r1-visual">
-          <div class="r1-left">
-            <div class="r1-chart">
-              <div class="r1-legend" aria-hidden="true"></div>
-              <div class="r1-plot"></div>
-            </div>
-            <div class="r1-stats">
-              <div class="r1-st"><span>Quoted wait</span><b class="r1-vq">–</b><i>app's promise</i></div>
-              <div class="r1-st"><span>Real wait</span><b class="r1-vr">–</b><i>at peak</i></div>
-              <div class="r1-st"><span>Orders kept</span><b class="r1-vk">–</b><i class="r1-vk2">&nbsp;</i></div>
-              <div class="r1-st"><span>Rerouted</span><b class="r1-vrr">–</b><i>to Outlet B</i></div>
-              <div class="r1-st"><span>Cancelled</span><b class="r1-vc">–</b><i>lost sales</i></div>
-            </div>
+          <div class="r1-chart">
+            <div class="r1-legend" aria-hidden="true"></div>
+            <div class="r1-plot"></div>
           </div>
           <div class="r1-phone" data-screen="ai">
             <div class="r1-scr">
-              <div class="r1-sbar"><b class="r1-clock">12:35</b><span class="r1-notch"></span><span class="r1-icons" aria-hidden="true"><i></i><i></i><i></i><em></em></span></div>
-              <div class="r1-appbar"><b>Pick-up order</b><span class="r1-where">Outlet A · 1 drink · S$6</span></div>
+              <div class="r1-sbar"><b class="r1-clock">12:35</b><span class="r1-notch"></span></div>
+              <div class="r1-appbar">Pick-up order</div>
               <div class="r1-pbody">
                 <div class="r1-scrn r1-s-today">
-                  <div class="r1-pnote">Order placed 12:35</div>
                   <div class="r1-tq"><small>App says</small><b>Ready in ~15 min</b></div>
-                  <div class="r1-bar"><i class="r1-bfill"></i><span class="r1-bmark"></span></div>
-                  <div class="r1-wt">Waiting <b class="r1-wmin">0 min</b></div>
-                  <div class="r1-cx">Order cancelled<br>after 20 min</div>
+                  <div class="r1-link" aria-hidden="true"></div>
+                  <div class="r1-cx"><b>Cancelled</b><span>after 20 min</span></div>
                 </div>
                 <div class="r1-scrn r1-s-ai">
-                  <div class="r1-alert"><b>12:30 slot is full</b><span>Outlet A is at capacity</span></div>
-                  <div class="r1-ch" data-ch="next"><b>Next window, Outlet A</b><span>ready 12:40 to 12:50 · ~15 min</span></div>
-                  <div class="r1-ch r1-top" data-ch="B"><em>Top pick</em><b>Collect at Outlet B</b><span>ready 12:43 · 4-min walk</span></div>
-                  <p class="r1-rank">Ranked by ready time + walk</p>
-                  <div class="r1-ok">&nbsp;</div>
-                  <svg class="r1-map" viewBox="0 0 170 44" width="170" height="44" aria-hidden="true">
-                    <rect x=".5" y=".5" width="169" height="43" rx="8" fill="#F6F3ED" stroke="#E4DED2"/>
-                    <path class="r1-route" d="M36 26C62 14 100 42 130 26" fill="none" stroke-width="2" stroke-dasharray="3 3"/>
-                    <circle cx="32" cy="26" r="9" fill="#24406B"/><text x="32" y="30" text-anchor="middle">A</text>
-                    <circle cx="138" cy="26" r="9" fill="#2F6B45"/><text x="138" y="30" text-anchor="middle">B</text>
-                    <text class="r1-mapt" x="85" y="15" text-anchor="middle">4-min walk</text>
-                  </svg>
+                  <div class="r1-alert">12:30 slot is full</div>
+                  <div class="r1-ch" data-ch="next"><b>Next slot at Outlet A</b><span>ready in ~15 min</span></div>
+                  <div class="r1-ch" data-ch="B"><b>Collect at Outlet B</b><span>ready in ~8 min</span><span>4-min walk</span></div>
                 </div>
               </div>
               <div class="r1-home"></div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="cards" style="gap:10px">
-        <div class="bc"><div class="k">AI role</div>
-          <ol class="r1-ai">
-            <li><span class="num">1</span>Forecast demand per 10-min slot</li>
-            <li><span class="num">2</span><span>Live production speed → ready times, <span class="r1-nb">slot-full alerts</span></span></li>
-            <li><span class="num">3</span>Rank nearby outlets by ready time + walk</li>
-          </ol>
-        </div>
-        <div class="bc warn"><div class="k">Why</div><p>Known <b class="r1-nb">15-min</b> waits are forgiven; surprise <b class="r1-nb">40-min</b> waits are not. Nearby spare capacity is already paid for.</p></div>
-        <div class="bc r1-calc"><div class="k">Benefit a year</div>
-          <label class="r1-sl"><span>Peak share of volume</span><b class="r1-pv">40%</b><input type="range" class="r1-peak" min="20" max="60" step="5" value="40"></label>
-          <label class="r1-sl"><span>Extra peak cups kept</span><b class="r1-kv">3%</b><input type="range" class="r1-kept" min="1" max="6" step="0.5" value="3"></label>
-          <div class="r1-res">
-            <div><b class="r1-rev">S$0.58M</b><p><span>revenue</span><i class="r1-m1">S$48.2M × 40% × 3%</i></p></div>
-            <div><b class="r1-gp">S$0.4M</b><p><span>gross profit</span><i>at 70% margin</i></p></div>
+          <div class="r1-stats">
+            <div class="r1-st"><span>Real wait</span><p><b class="r1-vr">–</b><i class="r1-vr2"></i></p></div>
+            <div class="r1-st"><span>Orders kept</span><p><b class="r1-vk">–</b><i class="r1-vk2"></i></p></div>
+            <div class="r1-st"><span>Cancelled</span><p><b class="r1-vc">–</b></p></div>
           </div>
         </div>
       </div>
+      <div class="cards r1-cards">
+        <div class="bc"><div class="k">AI role</div>
+          <ol class="r1-ai">
+            <li><span class="num">1</span>Forecast each 10-min slot</li>
+            <li><span class="num">2</span>Predict ready times</li>
+            <li><span class="num">3</span>Rank nearby outlets</li>
+          </ol>
+        </div>
+        <div class="bc r1-whyc"><div class="k">Why</div>
+          <p class="r1-why">A known <b>15-min</b> wait<br>is forgiven;<br>a surprise <b>40-min</b> wait<br>is not.</p>
+        </div>
+      </div>
     </div>
-    <div class="takeaway"><span class="lab">BENEFIT</span><span class="t">Honest waits + rerouting: keep <b>3%</b> more peak cups (40% of volume) ≈ <b>S$0.58M</b> revenue, <b>S$0.4M</b> gross profit a year.</span></div>
+    <div class="takeaway"><span class="lab">BENEFIT</span><span class="t">Keep <b>3%</b> more peak cups ≈ <b>S$0.58M</b> revenue, <b>S$0.4M</b> gross profit a year.</span></div>
   </div>
-  <div class="foot"><span>OPIM639 · Group 3 · online retail · illustrative assumptions, not Chagee data · sales base S$48.2M = 44 outlets × ~500 cups a day × S$6 × 365</span><span class="rail"></span><span class="pg"></span></div>
+  <div class="foot"><span>OPIM639 · Group 3 · online retail · illustrative assumptions, not Chagee data</span><span class="rail"></span><span class="pg"></span></div>
   <aside class="notes">
-    <p>First improvement: quote the real wait, then send overflow to a quieter outlet nearby. The slide opens on the With AI result of a toy lunch rush at one outlet, 12:00 to 13:00.</p>
-    <p>Click <b>Today</b>. Orders keep landing in Outlet A's full 10-minute slots, in red. The app still promises 15 minutes, the real wait climbs to about 40, and five customers cancel, including the one on the phone.</p>
-    <p>Click <b>With AI</b>. A full slot triggers the alert on the phone: an honest next window, or Outlet B, ranked by ready time and walk. Overflow moves into B's spare capacity: 52 of 53 orders kept, four more than today.</p>
-    <p>Close on the benefit: peak is 40% of volume and we assume 3% more peak cups kept, about S$0.58M revenue and S$0.4M gross profit a year. All figures are illustrative.</p>
+    <p>First improvement: quote the real wait, then send overflow to a quieter outlet nearby. A toy lunch rush in 10-minute slots; every figure is illustrative.</p>
+    <p>Click <b>Today</b>. Orders keep landing in full slots, in red. The app still promises 15 minutes, the real wait reaches 40, and five customers cancel, like the one on the phone.</p>
+    <p>Click <b>With AI</b>. A full slot triggers an alert: an honest next slot, or Outlet B, ranked by ready time and walk. Sixteen orders move into B's spare capacity: 52 of 53 kept, four more than today. B's staff and rent are already paid, so most of each rerouted cup is profit.</p>
+    <p>Benefit: peak is 40% of volume. 40% × 3% more peak cups × S$48.2M sales base (44 outlets × about 500 cups a day × S$6 × 365) ≈ S$0.58M revenue; at 70% margin, about S$0.4M gross profit a year.</p>
   </aside>
   <style>
-    #r1 .r1-seg .btn{height:30px;padding:0 16px;font-size:12.5px}
+    #r1 .ptitle{font-size:12px}
+    #r1 .r1-seg .btn{height:32px;padding:0 16px;font-size:13px}
     #r1 .r1-seg .btn:focus-visible{outline:2px solid var(--gold);outline-offset:-3px}
-    #r1 .r1-visual{display:grid;grid-template-columns:1fr 206px;grid-template-rows:minmax(0,1fr);gap:14px}
-    #r1 .r1-left{display:flex;flex-direction:column;gap:10px;min-width:0}
-    #r1 .r1-chart{flex:1;min-height:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px 8px;display:flex;flex-direction:column;justify-content:space-between}
-    #r1 .r1-legend{display:flex;align-items:center;gap:14px;font:11px/1 var(--sans);color:var(--ink2);white-space:nowrap}
-    #r1 .r1-legend span{display:inline-flex;align-items:center;gap:5px}
+    #r1 .r1-visual{display:grid;grid-template-columns:minmax(0,1fr) 206px;grid-template-rows:minmax(0,1fr) auto;gap:14px 16px;margin-top:12px}
+    #r1 .r1-chart{min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px 6px;display:flex;flex-direction:column;justify-content:space-between}
+    #r1 .r1-legend{display:flex;align-items:center;gap:18px;font:12px/1 var(--sans);color:var(--ink2);white-space:nowrap}
+    #r1 .r1-legend span{display:inline-flex;align-items:center;gap:6px}
     #r1 .r1-legend .r1-cup{position:static;width:12px;height:15px;transition:none}
-    #r1 .r1-legend .r1-lring{width:12px;height:14px;border:2px solid var(--ink);border-radius:4px;box-shadow:0 0 0 2px rgba(200,169,106,.45)}
+    #r1 .r1-legend b{font-weight:600;color:#2F6B45}
     #r1 .r1-plot{position:relative}
     #r1 .r1-bg{position:absolute;left:0;top:0}
-    #r1 .r1-bg text{font:11px var(--sans);fill:var(--taupe)}
-    #r1 .r1-rl{position:absolute;left:0;width:64px;font:11px/1.3 var(--sans);color:var(--taupe)}
-    #r1 .r1-rl b{display:block;font:600 13px/1.25 var(--sans);color:var(--ink)}
+    #r1 .r1-bg text{font:12px var(--sans);fill:var(--taupe)}
+    #r1 .r1-rl{position:absolute;left:0;width:70px;font:12px/1.3 var(--sans);color:var(--taupe)}
+    #r1 .r1-rl b{display:block;font:600 13px/1.3 var(--sans);color:var(--ink)}
     #r1 .r1-rl.r1-over{color:#B8605A}
-    #r1 .r1-zcap{position:absolute;text-align:center;font:italic 11.5px/16px var(--sans);color:#B8605A;transition:opacity .3s}
-    #r1 .r1-plot[data-mode="today"] .r1-zcap{opacity:0}
     #r1 .r1-cup{position:absolute;left:0;top:0;width:20px;height:25px;fill:currentColor;color:var(--navy);
       transition:left .5s ease,top .5s ease,color .35s ease}
     #r1 .r1-cup rect{opacity:.78}
@@ -288,87 +265,52 @@ aside.notes{display:none}
     #r1 .r1-cup.r1-k-cancel .r1-x{display:block;stroke-width:1.8}
     #r1 .r1-cup.r1-k-spare{color:transparent}
     #r1 .r1-cup.r1-k-spare rect{opacity:0}
-    #r1 .r1-cup.r1-k-spare path{fill:none;stroke:#C9C0AE;stroke-width:1;stroke-dasharray:2 2}
-    #r1 .r1-ring{position:absolute;width:30px;height:35px;background:#fff;border:2px solid var(--ink);border-radius:8px;box-shadow:0 0 0 3px rgba(200,169,106,.45);pointer-events:none;transition:left .5s ease,top .5s ease}
-    #r1 .r1-badge{position:absolute;z-index:2;width:44px;margin-left:-22px;text-align:center;font:600 11px/17px var(--sans);color:#2F6B45;background:#EEF5F0;border-radius:999px}
-    #r1 .r1-plot.r1-still .r1-cup,#r1 .r1-plot.r1-still .r1-ring{transition:none}
-    #r1 .r1-stats{flex:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
-    #r1 .r1-st{min-width:0;background:#fff;border:1px solid var(--line);border-radius:9px;padding:7px 10px 7px}
-    #r1 .r1-st span{display:block;font:500 11px/1.2 var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--taupe);white-space:nowrap}
-    #r1 .r1-st b{display:block;margin-top:2px;font:500 25px/1.1 var(--serif);color:var(--ink)}
-    #r1 .r1-st b small{font:500 12px var(--sans);color:var(--ink2);margin-left:2px}
-    #r1 .r1-st i{display:block;font:11px/1.25 var(--sans);font-style:normal;color:var(--taupe);white-space:nowrap}
+    #r1 .r1-cup.r1-k-spare path{fill:none;stroke:#B8AD98;stroke-width:1.2;stroke-dasharray:2 2}
+    #r1 .r1-legend .r1-cup.r1-k-spare path{stroke-width:1.6}
+    #r1 .r1-badge{position:absolute;z-index:2;width:40px;margin-left:-20px;text-align:center;font:600 12px/18px var(--sans);color:#2F6B45}
+    #r1 .r1-plot.r1-still .r1-cup{transition:none}
+    /* stats: three numbers, no boxes */
+    #r1 .r1-stats{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 206px;column-gap:16px;padding:0 0 0 4px}
+    #r1 .r1-st span{display:block;font:600 13px/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+    #r1 .r1-st p{margin:4px 0 0;display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+    #r1 .r1-st b{font:500 36px/1 var(--serif);color:var(--ink)}
+    #r1 .r1-st b small{font:500 14px var(--sans);color:var(--ink2);margin-left:3px}
+    #r1 .r1-st i{font:14px/1 var(--sans);font-style:normal;color:var(--ink2)}
     #r1 .r1-st i em{font-style:normal;font-weight:600;color:#2F6B45}
     #r1 .r1-st b.r1-bad{color:var(--red)}
     #r1 .r1-st b.r1-good{color:#2F6B45}
     /* phone */
-    #r1 .r1-phone{display:flex;background:#232B3A;border-radius:30px;padding:7px;box-shadow:0 6px 18px rgba(36,64,107,.16)}
-    #r1 .r1-scr{flex:1;position:relative;display:flex;flex-direction:column;background:#fff;border-radius:24px;overflow:hidden}
-    #r1 .r1-sbar{flex:none;height:28px;display:flex;align-items:center;justify-content:space-between;padding:0 16px 0 18px;font:600 11px/1 var(--sans);color:var(--ink)}
+    #r1 .r1-phone{display:flex;background:#232B3A;border-radius:28px;padding:6px;box-shadow:0 6px 18px rgba(36,64,107,.14)}    #r1 .r1-scr{flex:1;position:relative;display:flex;flex-direction:column;background:#fff;border-radius:23px;overflow:hidden}
+    #r1 .r1-sbar{flex:none;height:28px;display:flex;align-items:center;padding:0 18px;font:600 12px/1 var(--sans);color:var(--ink)}
     #r1 .r1-notch{position:absolute;left:50%;top:8px;width:40px;height:5px;margin-left:-20px;background:#232B3A;border-radius:3px}
-    #r1 .r1-icons{display:inline-flex;align-items:flex-end;gap:2px}
-    #r1 .r1-icons i{display:block;width:3px;background:var(--ink);border-radius:1px}
-    #r1 .r1-icons i:nth-child(1){height:4px}#r1 .r1-icons i:nth-child(2){height:6px}#r1 .r1-icons i:nth-child(3){height:8px}
-    #r1 .r1-icons em{display:block;width:16px;height:8px;margin-left:4px;border:1.5px solid var(--ink);border-radius:2px;background:linear-gradient(90deg,var(--ink) 70%,transparent 70%)}
-    #r1 .r1-appbar{flex:none;padding:6px 14px 8px;border-bottom:1px solid var(--line)}
-    #r1 .r1-appbar b{display:block;font:600 13.5px/1.25 var(--sans);color:var(--ink)}
-    #r1 .r1-appbar span{display:block;font:11px/1.3 var(--sans);color:var(--taupe)}
-    #r1 .r1-pbody{flex:1;min-height:0;position:relative;padding:10px 11px 0}
+    #r1 .r1-appbar{flex:none;padding:4px 14px 9px;border-bottom:1px solid var(--line);font:600 14px/1.25 var(--sans);color:var(--ink)}
+    #r1 .r1-pbody{flex:1;min-height:0;padding:14px 11px 0}
     #r1 .r1-scrn{display:none;flex-direction:column}
     #r1 .r1-phone[data-screen="today"] .r1-s-today,#r1 .r1-phone[data-screen="ai"] .r1-s-ai{display:flex}
-    #r1 .r1-home{flex:none;width:64px;height:4px;margin:6px auto 7px;border-radius:2px;background:#262626}
-    #r1 .r1-pnote{margin:6px 0 0;text-align:center;font:11.5px/1.35 var(--sans);color:var(--taupe)}
-    #r1 .r1-tq{margin-top:10px;padding:10px 10px 11px;border-radius:10px;background:var(--cream);text-align:center}
-    #r1 .r1-tq small{display:block;font:11px var(--sans);color:var(--taupe)}
-    #r1 .r1-tq b{display:block;margin-top:3px;font:500 19px/1.1 var(--serif);color:var(--navy);white-space:nowrap}
-    #r1 .r1-bar{position:relative;height:8px;margin-top:16px;border-radius:4px;background:#EEE9DF}
-    #r1 .r1-bfill{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:4px;background:var(--navy)}
-    #r1 .r1-bfill.r1-late{background:linear-gradient(90deg,var(--navy) 0 var(--q,60%),var(--red) var(--q,60%) 100%)}
-    #r1 .r1-bmark{position:absolute;left:60%;top:-4px;bottom:-4px;width:2px;background:var(--ink2)}
-    #r1 .r1-wt{margin-top:9px;text-align:center;font:12.5px var(--sans);color:var(--ink2)}
-    #r1 .r1-wt b{font-weight:600;color:var(--ink)}
-    #r1 .r1-wt b.r1-bad{color:var(--red)}
-    #r1 .r1-cx{display:none;margin-top:12px;padding:8px;border-radius:9px;background:#FBEDEC;border-left:3px solid var(--red);text-align:center;font:600 12px/1.35 var(--sans);color:var(--red)}
-    #r1 .r1-s-today.r1-gone .r1-cx{display:block}
-    #r1 .r1-alert{padding:7px 9px 8px;border-radius:9px;background:#FBEDEC;border-left:3px solid var(--red)}
-    #r1 .r1-alert b{display:block;font:600 12.5px/1.25 var(--sans);color:var(--ink)}
-    #r1 .r1-alert span{display:block;font:11px/1.3 var(--sans);color:var(--ink2)}
-    #r1 .r1-ch{position:relative;display:block;width:100%;margin-top:8px;padding:7px 8px 8px 9px;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:10px;font-family:var(--sans)}
-    #r1 .r1-ch.r1-top{margin-top:14px;padding-top:10px}
-    #r1 .r1-ch::after{content:"";position:absolute;right:7px;top:7px;width:16px;height:16px;border-radius:50%;font:700 11px/16px var(--sans);color:#fff;text-align:center}
-    #r1 .r1-ch.r1-top::after{top:9px}
-    #r1 .r1-ch b{display:block;font:600 12px/1.25 var(--sans);color:var(--navy)}
-    #r1 .r1-ch span{display:block;margin-top:1px;font:11px/1.3 var(--sans);color:var(--ink2)}
-    #r1 .r1-ch em{position:absolute;left:8px;top:-9px;padding:0 6px;border-radius:999px;background:#FBF5E8;border:1px solid #E8D9B5;font:600 11px/15px var(--sans);font-style:normal;color:#7A6432}
+    #r1 .r1-home{flex:none;width:60px;height:4px;margin:6px auto 7px;border-radius:2px;background:#262626}
+    #r1 .r1-tq{padding:12px 8px 13px;border-radius:10px;background:var(--cream);text-align:center}
+    #r1 .r1-tq small{display:block;font:12px var(--sans);color:var(--taupe)}
+    #r1 .r1-tq b{display:block;margin-top:4px;font:500 21px/1.1 var(--serif);color:var(--navy);white-space:nowrap}
+    #r1 .r1-link{width:0;height:26px;margin:4px auto;border-left:2px dotted #C9C0AE}
+    #r1 .r1-cx{padding:10px 8px 11px;border-radius:10px;background:#FBEDEC;text-align:center;color:var(--red)}
+    #r1 .r1-cx b{display:block;font:500 21px/1.1 var(--serif)}
+    #r1 .r1-cx span{display:block;margin-top:3px;font:13px var(--sans)}
+    #r1 .r1-alert{padding:9px 10px;border-radius:9px;background:#FBEDEC;border-left:3px solid var(--red);font:600 13px/1.3 var(--sans);color:var(--ink)}
+    #r1 .r1-ch{position:relative;margin-top:10px;padding:9px 26px 10px 10px;background:#fff;border:1.5px solid var(--line);border-radius:10px}
+    #r1 .r1-ch b{display:block;font:600 13px/1.3 var(--sans);color:var(--navy)}
+    #r1 .r1-ch span{display:block;margin-top:2px;font:12px/1.3 var(--sans);color:var(--ink2)}
     #r1 .r1-ch.r1-sel{border-color:var(--navy);background:#EEF1F7}
-    #r1 .r1-ch.r1-sel::after{content:"✓";background:var(--navy)}
-    #r1 .r1-map{display:block;margin-top:8px}
-    #r1 .r1-map text{font:600 11px var(--sans);fill:#fff}
-    #r1 .r1-map .r1-mapt{font-weight:500;fill:var(--ink2);paint-order:stroke;stroke:#F6F3ED;stroke-width:3px;stroke-linejoin:round}
-    #r1 .r1-route{stroke:#B9B2A5}
-    #r1 .r1-s-ai.r1-toB .r1-route{stroke:#2F6B45}
-    #r1 .r1-rank{margin:7px 0 0;font:11px/1.3 var(--sans);color:var(--taupe);text-align:center}
-    #r1 .r1-ok{margin-top:8px;padding:6px 8px;border-radius:8px;background:#EEF5F0;font:600 11.5px/1.3 var(--sans);color:#2F6B45;text-align:center}
-    /* side cards */
-    #r1 .bc .k{font-size:11px;letter-spacing:.11em}
-    #r1 .r1-ai{list-style:none;margin:5px 0 0;padding:0;display:flex;flex-direction:column;gap:5px}
-    #r1 .r1-ai li{display:flex;align-items:flex-start;gap:8px;font:12.5px/1.38 var(--sans);color:var(--ink2);text-wrap:balance}
-    #r1 .r1-ai .num{flex:none;width:18px;height:18px;margin-top:0;font-size:11px}
-    #r1 .bc.warn p{margin-top:3px;font-size:12.5px}
-    #r1 .r1-nb{white-space:nowrap}
-    #r1 .r1-calc{flex:1;display:flex;flex-direction:column}
-    #r1 .r1-sl{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:0 8px;margin-top:12px;font:12.5px var(--sans);color:var(--ink2)}
-    #r1 .r1-sl b{font:600 13px var(--sans);color:var(--ink)}
-    #r1 .r1-sl input{grid-column:1 / -1;width:100%;margin:5px 0 0;accent-color:var(--red)}
-    #r1 .r1-res{margin-top:auto;padding:3px 10px;border-radius:8px;background:var(--cream)}
-    #r1 .r1-res>div{display:grid;grid-template-columns:100px 1fr;align-items:center;gap:8px;padding:10px 0}
-    #r1 .r1-res>div+div{border-top:1px solid var(--line)}
-    #r1 .r1-res b{font:500 28px/1 var(--serif);color:var(--navy)}
-    #r1 .r1-res p{margin:0}
-    #r1 .r1-res span{display:block;font:600 12px/1.3 var(--sans);color:var(--ink)}
-    #r1 .r1-res i{display:block;font:11px/1.3 var(--sans);font-style:normal;color:var(--taupe);white-space:nowrap}
+    #r1 .r1-ch.r1-sel::after{content:"✓";position:absolute;right:7px;top:50%;width:17px;height:17px;margin-top:-8.5px;border-radius:50%;background:var(--navy);font:700 11px/17px var(--sans);color:#fff;text-align:center}
+    /* side cards: same pattern on all three slides (two equal cards, 12px caps label, 15px text) */
+    #r1 .r1-cards .bc{flex:1 1 0;min-height:0;display:flex;flex-direction:column;padding:14px 16px 16px}
+    #r1 .r1-cards .bc .k{font-size:12px;letter-spacing:.12em}
+    #r1 .r1-ai{flex:1;list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;justify-content:space-evenly;gap:12px}
+    #r1 .r1-ai li{display:flex;align-items:center;gap:12px;font:15px/1.35 var(--sans);color:var(--ink)}
+    #r1 .r1-ai .num{width:22px;height:22px;margin:0;font-size:12px}
+    #r1 .r1-why{margin:auto 0;padding-bottom:10px;font:400 20px/1.35 var(--serif);color:var(--ink2);white-space:nowrap}
+    #r1 .r1-why b{font-weight:600;color:var(--ink)}
     @media (prefers-reduced-motion: reduce){
-      #r1 .r1-cup,#r1 .r1-ring{transition:none}
+      #r1 .r1-cup{transition:none}
     }
   </style>
   <script>
@@ -402,16 +344,16 @@ aside.notes{display:none}
           const wait = 10 + (c + Math.max(0, i + 1 - CAP)) * 10 / CAP;
           let k = i < CAP ? "ok" : "full", tc = null;
           if (k === "full") { late++; if (e.you || (wait >= 25 && late % 2 === 0)) { k = "cancel"; tc = Math.min(e.t + 20, END); } }
-          r[e.id] = { o: "A", s, i, k, wait, quote: 15, tc };
+          r[e.id] = { o: "A", s, i, k, wait, tc };
         } else {
-          if (A[s].length < CAP) { r[e.id] = { o: "A", s, i: A[s].push(e.id) - 1, k: "ok", wait: 10, quote: 10 }; continue; }
+          if (A[s].length < CAP) { r[e.id] = { o: "A", s, i: A[s].push(e.id) - 1, k: "ok", wait: 10 }; continue; }
           let c = pick(alerts++);
           const nextOk = s + 1 < NS && A[s + 1].length < CAP, bOk = rr[s] + DB[s] < CAP;
           if (c === "next" && !nextOk) c = bOk ? "B" : "cancel";
           if (c === "B" && !bOk) c = nextOk ? "next" : "cancel";
-          if (c === "next") r[e.id] = { o: "A", s: s + 1, i: A[s + 1].push(e.id) - 1, k: "next", from: s, wait: 15, quote: 15 };
-          else if (c === "B") { rr[s]++; r[e.id] = { o: "B", s, i: B[s].push(e.id) - 1, k: "rr", from: s, wait: 12, quote: 12 }; }
-          else r[e.id] = { o: "A", s, i: CAP + xs[s]++, k: "cancel", wait: 0, quote: 15, tc: e.t };
+          if (c === "next") r[e.id] = { o: "A", s: s + 1, i: A[s + 1].push(e.id) - 1, k: "next", from: s, wait: 15 };
+          else if (c === "B") { rr[s]++; r[e.id] = { o: "B", s, i: B[s].push(e.id) - 1, k: "rr", from: s, wait: 12 }; }
+          else r[e.id] = { o: "A", s, i: CAP + xs[s]++, k: "cancel", wait: 0 };
           r[e.id].choice = c;
         }
       }
@@ -419,11 +361,12 @@ aside.notes{display:none}
     }
     const cache = {};
     const sim = m => cache[m] || (cache[m] = simulate(m));
-    const keptAt = (r, T) => { let n = 0, x = 0; orders.forEach(e => { if (e.o !== "A" || e.t > T) return; n++; const R = r[e.id]; if (R.k === "cancel" && R.tc <= T) x++; }); return { n, x }; };
-    const TODAY_KEPT = (k => k.n - k.x)(keptAt(sim("today"), END));
+    const tally = r => { let n = 0, x = 0; orders.forEach(e => { if (e.o !== "A") return; n++; if (r[e.id].k === "cancel") x++; }); return { n, x }; };   // Outlet A orders by 13:00, and how many cancelled
+    const TODAY_KEPT = (k => k.n - k.x)(tally(sim("today")));
+    const RR = orders.filter(e => sim("ai")[e.id].k === "rr").length;
 
-    /* geometry of the slot chart: over-capacity zone on top, Outlet A, reroute badges, Outlet B, time axis */
-    const LW = 68, BW = 78, CW = 20, CH = 25, GX = 4, PITCH = 31, RW = 3 * CW + 2 * GX, PW = LW + NS * BW;
+    /* geometry of the slot chart: over-capacity band on top, Outlet A, reroute counts, Outlet B, time axis */
+    const LW = 72, BW = 81, CW = 20, CH = 25, GX = 4, PITCH = 31, RW = 3 * CW + 2 * GX, PW = LW + NS * BW;
     const ZONE = 2, BOXH = 2 * PITCH + 4, A0 = ZONE + 3 * PITCH + 2 + BOXH, BASE = { A: A0, B: A0 + 38 + BOXH }, PH = BASE.B + 24;
     const pos = (o, s, i) => ({ x: LW + s * BW + (BW - RW) / 2 + (i % 3) * (CW + GX), y: BASE[o] - 4 - Math.floor(i / 3) * PITCH - CH });
     const CUP = '<rect x=".6" y="1.4" width="14.8" height="3.2" rx="1.2"/><path d="M1.9 5.4H14.1L12.6 19.4H3.4Z"/><path class="r1-x" d="M5.5 9.6l5 6M10.5 9.6l-5 6"/>';
@@ -433,32 +376,30 @@ aside.notes{display:none}
     const plot = $(".r1-plot");
     plot.style.width = PW + "px"; plot.style.height = PH + "px";
     let bg = `<svg class="r1-bg" width="${PW}" height="${PH}" viewBox="0 0 ${PW} ${PH}" aria-hidden="true">`;
-    bg += `<rect x="${LW}" y="${ZONE}" width="${NS * BW}" height="${3 * PITCH}" rx="7" fill="#FBEDEC" opacity=".55"/>`;
+    bg += `<rect x="${LW}" y="${ZONE}" width="${NS * BW}" height="${3 * PITCH}" rx="7" fill="#FBEDEC" opacity=".6"/>`;
     bg += `<line x1="${LW}" x2="${PW}" y1="${BASE.A - BOXH - 2}" y2="${BASE.A - BOXH - 2}" stroke="#D99A95" stroke-dasharray="4 3"/>`;
     for (const o of ["A", "B"]) for (let s = 0; s < NS; s++) {
-      bg += `<rect x="${LW + s * BW + 2}" y="${BASE[o] - BOXH}" width="${BW - 4}" height="${BOXH}" rx="7" fill="#FAF8F3" stroke="#DDD5C6" stroke-dasharray="3 3"/>`;
+      bg += `<rect x="${LW + s * BW + 3}" y="${BASE[o] - BOXH}" width="${BW - 6}" height="${BOXH}" rx="7" fill="#F8F5EF"/>`;
     }
     for (let s = 0; s < NS; s++) bg += `<text x="${LW + s * BW + BW / 2}" y="${PH - 5}" text-anchor="middle">12:${s ? s * 10 : "00"}</text>`;
-    bg += `<text x="0" y="${PH - 5}">slot starts</text></svg>`;
+    bg += `</svg>`;
     let html = bg;
     for (const o of ["A", "B"]) for (let s = 0; s < NS; s++) for (let i = 0; i < CAP; i++) {
       const p = pos(o, s, i); html += cupSvg("r1-k-spare").replace("<svg ", `<svg style="left:${p.x}px;top:${p.y}px" `);
     }
-    html += `<div class="r1-rl r1-over" style="top:${ZONE + 1.5 * PITCH - 15}px">over<br>capacity</div>`;
-    html += `<div class="r1-rl" style="top:${BASE.A - BOXH + 7}px"><b>Outlet A</b>busy<br>6 per slot</div>`;
-    html += `<div class="r1-rl" style="top:${BASE.B - BOXH + 7}px"><b>Outlet B</b>4-min walk<br>6 per slot</div>`;
-    for (let s = 0; s < NS; s++) html += `<div class="r1-badge" data-s="${s}" style="left:${LW + s * BW + BW / 2}px;top:${(BASE.A + BASE.B - BOXH) / 2 - 8.5}px"></div>`;
-    html += `<div class="r1-zcap" style="left:${LW}px;width:${NS * BW}px;top:${ZONE + PITCH - 4}px">With AI, a full slot triggers the alert, not a longer queue</div>`;
-    html += `<div class="r1-ring"></div>`;
+    html += `<div class="r1-rl r1-over" style="top:${ZONE + 1.5 * PITCH - 16}px">over<br>capacity</div>`;
+    html += `<div class="r1-rl" style="top:${BASE.A - BOXH / 2 - 9}px"><b>Outlet A</b></div>`;
+    html += `<div class="r1-rl" style="top:${BASE.B - BOXH / 2 - 17}px"><b>Outlet B</b>nearby</div>`;
+    for (let s = 0; s < NS; s++) html += `<div class="r1-badge" data-s="${s}" style="left:${LW + s * BW + BW / 2}px;top:${(BASE.A + BASE.B - BOXH) / 2 - 9}px"></div>`;
     plot.innerHTML = html;
     const cups = orders.map(() => { const d = document.createElement("div"); d.innerHTML = cupSvg("r1-k-ok"); const el = d.firstChild; plot.appendChild(el); return el; });
-    const ring = $(".r1-ring"), badges = $$(".r1-badge");
+    const badges = $$(".r1-badge");
     const LEG = {
-      today: [["r1-k-ok", "booked"], ["r1-k-full", "landed in a full slot"], ["r1-k-cancel", "cancelled"], ["r1-k-spare", "spare"], ["ring", "phone's order"]],
-      ai: [["r1-k-ok", "booked"], ["r1-k-next", "next window"], ["r1-k-rr", "rerouted to B"], ["r1-k-cancel", "cancelled"], ["r1-k-spare", "spare"], ["ring", "phone's order"]]
+      today: [["r1-k-ok", "booked"], ["r1-k-cancel", "cancelled"], ["r1-k-spare", "spare"]],
+      ai: [["r1-k-ok", "booked"], ["r1-k-next", "next slot"], ["r1-k-rr", `rerouted to B <b>${RR}</b>`], ["r1-k-cancel", "cancelled"], ["r1-k-spare", "spare"]]
     };
 
-    /* The toggle shows each mode's end state at 13:00. Switching glides every cup to its new slot (CSS transitions). */
+    /* The toggle shows each mode's end state at 13:00. Switching glides only the overflow cups to their new slot (CSS transitions). */
     const st = { mode: "ai" };
     let legendMode = "";
 
@@ -468,85 +409,47 @@ aside.notes{display:none}
       // within each slot: the outlet's own cups first, then cups moved in, each by arrival, so a toggle only moves the overflow
       orders.forEach(e => { const R = r[e.id]; if (st.mode === "ai" && R.k === "cancel") return; (slots[R.o + R.s] = slots[R.o + R.s] || []).push(e); });
       Object.values(slots).forEach(l => l.sort((a, b) => (r[a.id].from != null) - (r[b.id].from != null) || a.t - b.t).forEach((e, i) => { at[e.id] = i; }));
-      const spot = e => { const R = r[e.id]; return pos(R.o, R.s, at[e.id] ?? R.i); };
       orders.forEach(e => {
         const el = cups[e.id], R = r[e.id];
         el.setAttribute("class", "r1-cup r1-k-" + R.k);
         if (R.k === "rr") rrBy[R.from]++;
-        place(el, spot(e));
+        place(el, pos(R.o, R.s, at[e.id] ?? R.i));
       });
-      const yp = spot(YOU);   // ring around the phone's customer
-      ring.style.left = (yp.x - 5) + "px"; ring.style.top = (yp.y - 5) + "px";
       badges.forEach((b, s) => { b.textContent = rrBy[s] ? "↓ " + rrBy[s] : ""; b.style.display = rrBy[s] ? "" : "none"; });
       if (legendMode !== st.mode) {
-        legendMode = st.mode; plot.dataset.mode = st.mode;
-        $(".r1-legend").innerHTML = LEG[st.mode].map(([c, t]) => `<span>${c === "ring" ? '<i class="r1-lring"></i>' : cupSvg(c, 12, 15)}${t}</span>`).join("");
+        legendMode = st.mode;
+        $(".r1-legend").innerHTML = LEG[st.mode].map(([c, t]) => `<span>${cupSvg(c, 12, 15)}${t}</span>`).join("");
       }
       stats(r); phone(r);
       $$(".r1-mode").forEach(b => { const on = b.dataset.mode === st.mode; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on ? "true" : "false"); });
     }
 
     function stats(r) {
-      let q = 0, w = 0, rr = 0;
-      orders.forEach(e => { if (e.o !== "A") return; const R = r[e.id]; q = Math.max(q, R.quote); w = Math.max(w, R.wait); if (R.k === "rr") rr++; });
-      const kp = keptAt(r, END), min = v => `${Math.round(v)}<small>min</small>`;
+      let w = 0;
+      orders.forEach(e => { if (e.o === "A") w = Math.max(w, r[e.id].wait); });
+      const kp = tally(r), ai = st.mode === "ai";
       const vr = $(".r1-vr"), vk = $(".r1-vk"), vc = $(".r1-vc");
-      $(".r1-vq").innerHTML = min(q);
-      vr.innerHTML = min(w);
-      vr.className = "r1-vr" + (w > 20 ? " r1-bad" : st.mode === "ai" ? " r1-good" : "");
-      const kept = kp.n - kp.x, d = kept - TODAY_KEPT, gain = st.mode === "ai" && d > 0;
-      vk.innerHTML = `${kept}<small>/${kp.n}</small>`;
+      vr.innerHTML = `${Math.round(w)}<small>min</small>`;
+      vr.className = "r1-vr" + (w > 20 ? " r1-bad" : ai ? " r1-good" : "");
+      $(".r1-vr2").textContent = ai ? "as quoted" : "app said ~15";
+      const kept = kp.n - kp.x, d = kept - TODAY_KEPT, gain = ai && d > 0;
+      vk.innerHTML = `${kept}<small>/ ${kp.n}</small>`;
       vk.className = "r1-vk" + (gain ? " r1-good" : "");
-      $(".r1-vk2").innerHTML = gain ? `<em>+${d}</em> vs today` : "ordered at A";
-      $(".r1-vrr").textContent = rr;
+      $(".r1-vk2").innerHTML = gain ? `<em>+${d}</em> vs today` : "";
       vc.textContent = kp.x; vc.className = "r1-vc" + (kp.x > 1 ? " r1-bad" : "");
     }
 
     function phone(r) {
       const R = r[YOU.id];
       $(".r1-phone").dataset.screen = st.mode;
-      $(".r1-clock").textContent = hhmm(st.mode === "ai" ? YOU_T : Math.min(END, R.tc));   // each screen shows the moment the customer saw it
-      let where = "Outlet A";
-      if (st.mode === "today") {
-        const el = Math.max(0, Math.min(END, R.tc) - YOU_T);
-        const f = $(".r1-bfill"); f.style.width = Math.min(100, el / 25 * 100) + "%";
-        f.classList.toggle("r1-late", el > 15); f.style.setProperty("--q", (15 / Math.max(el, 15) * 100) + "%");
-        const wm = $(".r1-wmin"); wm.textContent = Math.floor(el) + " min"; wm.classList.toggle("r1-bad", el > 15);
-        $(".r1-s-today").classList.toggle("r1-gone", END >= R.tc);
-      } else {
-        $$(".r1-ch").forEach(b => b.classList.toggle("r1-sel", b.dataset.ch === R.choice));
-        $(".r1-ok").innerHTML = R.choice === "B" ? "✓ Moved to Outlet B" : R.choice === "next" ? "✓ Booked 12:40 to 12:50" : "Order cancelled";
-        if (R.choice === "B") where = "Outlet B";
-        $(".r1-s-ai").classList.toggle("r1-toB", R.choice === "B");
-      }
-      $(".r1-where").textContent = where + " · 1 drink · S$6";
+      $(".r1-clock").textContent = hhmm(st.mode === "ai" ? YOU_T : R.tc);   // each screen shows the moment the customer saw it
+      if (st.mode === "ai") $$(".r1-ch").forEach(b => b.classList.toggle("r1-sel", b.dataset.ch === R.choice));
     }
     function show(m) { if (m !== st.mode) { st.mode = m; render(); } }
-
-    /* benefit calculator: S$48.2M sales base (44 outlets × ~500 cups a day × S$6 × 365 = S$48.18M, rounded) */
-    const BASE_M = 48.2, GM = 0.70;
-    const money = v => "S$" + String(+v.toFixed(2)) + "M";
-    function calc() {
-      const p = +$(".r1-peak").value, k = +$(".r1-kept").value, rev = BASE_M * p / 100 * k / 100, gp = rev * GM;
-      const ks = (k % 1 ? k.toFixed(1) : k) + "%";
-      $(".r1-pv").textContent = p + "%"; $(".r1-kv").textContent = ks;
-      $(".r1-rev").textContent = "S$" + rev.toFixed(2) + "M";   // the BENEFIT bar stays on the user's case (40%, 3%)
-      $(".r1-gp").textContent = money(gp);
-      $(".r1-m1").textContent = `S$${BASE_M}M × ${p}% × ${ks}`;
-    }
-    function calcDefault() { $(".r1-peak").value = 40; $(".r1-kept").value = 3; calc(); }
-    $(".r1-peak").setAttribute("aria-label", "Peak share of volume");
-    $(".r1-kept").setAttribute("aria-label", "Extra peak cups kept");
-    [".r1-peak", ".r1-kept"].forEach(c => {
-      $(c).addEventListener("input", calc);
-      $(c).addEventListener("pointerup", e => e.target.blur());   // arrow keys go back to the deck after a drag
-    });
-
     function setDefault() { st.mode = "ai"; render(); }
 
     $$(".r1-mode").forEach(b => b.addEventListener("click", e => { show(b.dataset.mode); if (e.detail) b.blur(); }));
-    sl.addEventListener("deckprint", () => { setDefault(); calcDefault(); });
-    calcDefault();
+    sl.addEventListener("deckprint", setDefault);
     plot.classList.add("r1-still");                          // first draw lands in place, no glide from the corner
     setDefault();
     requestAnimationFrame(() => requestAnimationFrame(() => plot.classList.remove("r1-still")));
@@ -559,196 +462,145 @@ aside.notes{display:none}
   <div class="inner">
     <p class="kicker">02 · Online retail · dynamic pricing<span class="ctag">Course link · Topic 3, price optimisation</span></p>
     <h2 class="head">Discount only when there is room to fill</h2>
-    <div class="body" style="grid-template-columns:1fr 300px;gap:16px;margin-top:12px">
+    <div class="body" style="grid-template-columns:1fr 262px;gap:16px;margin-top:12px">
       <div class="panel">
-        <div class="ptop"><span class="ptitle p2-title">Offer engine · menu price fixed · illustrative</span><span class="ctl"><span class="seg p2-views" role="group" aria-label="View"><button class="btn on" data-view="scn" aria-pressed="true">Scenarios</button><button class="btn" data-view="dor" aria-pressed="false">Dormant members</button></span><button class="btn primary p2-play">▶ Play</button><button class="btn p2-reset">Reset</button></span></div>
+        <div class="ptop"><span class="ptitle">Offer engine · illustrative</span><span class="ctl"><span class="seg p2-seg" role="group" aria-label="Pricing scenario"><button class="btn on" data-k="off" aria-pressed="true">Off-peak</button><button class="btn" data-k="peak" aria-pressed="false">Peak</button><button class="btn" data-k="hot" aria-pressed="false">Hot day</button><button class="btn" data-k="rain" aria-pressed="false">Rain</button><button class="btn" data-k="event" aria-pressed="false" title="Concerts, F1, public holidays">Event</button><button class="btn" data-k="quiet" aria-pressed="false" title="Weekends and school holidays at office outlets">Quiet CBD</button><button class="btn" data-k="dorm" aria-pressed="false">Dormant</button></span></span></div>
         <div class="visual p2-visual">
           <div class="p2-grid">
-            <div class="p2-left">
-              <div class="p2-view p2-scn">
-                <div class="p2-ctrls">
-                  <div class="p2-cg"><span class="p2-lab">Weather</span><span class="seg p2-wx" role="group" aria-label="Weather"><button class="btn" data-v="hot">Hot</button><button class="btn on" data-v="normal">Normal</button><button class="btn" data-v="rain">Rain</button></span></div>
-                  <div class="p2-cg"><span class="p2-lab">Context</span><span class="seg p2-cx" role="group" aria-label="Context"><button class="btn on" data-v="normal">Normal</button><button class="btn" data-v="event" title="Concerts, F1, public holidays">Event nearby</button><button class="btn" data-v="quiet" title="Weekends and school holidays at CBD outlets">Quiet office area</button></span></div>
-                </div>
-                <div class="p2-box">
-                  <div class="p2-bh"><span><b>Forecast cups an hour</b></span><span class="p2-leg"><span><svg class="p2-key" width="22" height="8" viewBox="0 0 22 8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="#4A4A4A" stroke-width="1.3" stroke-dasharray="7 4"/></svg>store capacity</span><span class="p2-ghostl"><svg class="p2-key" width="22" height="8" viewBox="0 0 22 8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="#9A9387" stroke-width="1.6" stroke-dasharray="4 4"/></svg>normal day</span></span></div>
-                  <svg class="p2-svg p2-chart" viewBox="0 0 530 300" width="530" height="300" role="img" aria-label="Illustrative demand curve against store capacity, with the voucher that applies at each time of day"></svg>
-                  <input class="p2-rng p2-time" type="range" min="10" max="22" step="0.25" value="15" aria-label="Time of day">
-                </div>
+            <div class="p2-box">
+              <p class="p2-rule" aria-live="polite"><span class="p2-cond"><i></i><span class="p2-condt">Spare capacity</span></span><span class="p2-arr" aria-hidden="true">→</span><span class="p2-act">S$1 off the highest-profit drink</span></p>
+              <div class="p2-chartv">
+                <svg class="p2-chart" viewBox="0 0 560 348" width="560" height="348" role="img" aria-label="Illustrative demand against store capacity, with a marker where this scenario sits">
+                  <defs><clipPath id="p2-overclip"><rect class="p2-overr" x="0" y="0" width="560" height="0"/></clipPath></defs>
+                  <g class="p2-ticks"></g>
+                  <path class="p2-area" fill="#E6EAF1"/>
+                  <path class="p2-overa" fill="#B8322B" fill-opacity=".22" clip-path="url(#p2-overclip)"/>
+                  <line class="p2-cap" stroke="#4A4A4A" stroke-width="1.4" stroke-dasharray="7 5"/>
+                  <text class="p2-capl" text-anchor="end">capacity</text>
+                  <path class="p2-line" fill="none" stroke="#24406B" stroke-width="2.6" stroke-linejoin="round"/>
+                  <text class="p2-dl">demand</text>
+                  <rect class="p2-vl" x="-0.75" y="0" width="1.5" height="1" fill="#24406B" fill-opacity=".45"/>
+                  <rect class="p2-gap" x="-5" y="0" width="10" height="1" rx="0"/>
+                  <circle class="p2-dot" r="6.5" fill="#fff" stroke="#24406B" stroke-width="2.6"/>
+                  <text class="p2-lbl" text-anchor="middle">room to fill</text>
+                  <g class="p2-pill"><rect x="-27" y="0" width="54" height="22" rx="11" fill="#24406B"/><text class="p2-pillt" x="0" y="15.5" text-anchor="middle">15:00</text></g>
+                </svg>
               </div>
-              <div class="p2-view p2-dor p2-off">
-                <div class="p2-ctrls">
-                  <div class="p2-cg"><span class="p2-lab">Member</span><span class="seg p2-mem" role="group" aria-label="Member type"><button class="btn on" data-v="reg">Weekly regular</button><button class="btn" data-v="new">Little history</button></span></div>
-                  <div class="p2-cg"><span class="p2-lab">Step</span><span class="seg p2-step" role="group" aria-label="Step"><button class="btn" data-v="watch">Watching</button><button class="btn on" data-v="n1">Nudge 1</button><button class="btn" data-v="n2">Nudge 2</button><button class="btn" data-v="measure">Measure</button></span></div>
-                </div>
-                <div class="p2-box">
-                  <div class="p2-bh"><span><b>Days since last order</b></span><span class="p2-leg"><span><i style="background:#24406B"></i>order</span><span><i style="background:#2F6B45"></i>S$1 voucher</span><span><i style="background:#D9C79B"></i>valid 7 days</span><span><i style="background:#24406B;border-radius:50%;width:8px"></i>upsize or points</span></span></div>
-                  <svg class="p2-svg p2-tl" viewBox="0 0 530 300" width="530" height="300" role="img" aria-label="Illustrative timeline of a dormant member: trigger, first nudge, second nudge and a holdout group"></svg>
-                  <input class="p2-rng p2-day" type="range" min="-14" max="56" step="1" value="14" aria-label="Days since last order">
-                </div>
+              <div class="p2-dorv p2-off">
+                <ol class="p2-steps">
+                  <li class="p2-st" style="--c:#B8322B"><b class="p2-sn">1</b><span class="p2-sh"><span class="p2-sk">Trigger</span><span class="p2-sb">2× usual gap</span></span><span class="p2-sl">with no order · 30 days if little history</span></li>
+                  <li class="p2-st" style="--c:#2F6B45"><b class="p2-sn">2</b><span class="p2-sh"><span class="p2-sk">Nudge 1</span><span class="p2-sb">S$1 off</span></span><span class="p2-sl">7 days · off-peak · app pick-up</span></li>
+                  <li class="p2-st" style="--c:#24406B"><b class="p2-sn">3</b><span class="p2-sh"><span class="p2-sk">Nudge 2 · day 14</span><span class="p2-sb">Free upsize</span></span><span class="p2-sl">or bonus points</span></li>
+                </ol>
+                <p class="p2-hold"><i></i>Holdout group gets nothing, to measure the lift</p>
               </div>
             </div>
-            <div class="p2-right">
-              <div class="p2-badge" aria-live="polite"><span class="p2-bdot"></span><span class="p2-btx"><span class="p2-bk">Rule fired</span><span class="p2-bn">Off-peak, spare capacity</span></span></div>
-              <div class="p2-phone" aria-label="Offer the customer sees in the app">
-                <div class="p2-scr">
-                  <div class="p2-sbar"><span class="p2-clock">15:00</span><svg width="34" height="10" viewBox="0 0 34 10" aria-hidden="true"><rect x="0" y="6" width="3" height="4" rx="1" fill="#262626"/><rect x="5" y="4" width="3" height="6" rx="1" fill="#262626"/><rect x="10" y="2" width="3" height="8" rx="1" fill="#262626"/><rect x="18" y="1" width="14" height="8" rx="2" fill="none" stroke="#262626"/><rect x="20" y="3" width="9" height="4" rx="1" fill="#262626"/></svg></div>
-                  <div class="p2-app"><span class="p2-logo">CHAGEE</span><span class="p2-appr">Member</span></div>
-                  <div class="p2-offer">
-                    <span class="p2-otag">Today's offer</span>
-                    <span class="p2-big">S$1 off</span>
-                    <span class="p2-oline">on today's featured tea</span>
-                    <span class="p2-ometa">App order · valid till 22:00</span>
-                  </div>
-                  <div class="p2-rcpt">
-                    <div><span>Menu price</span><b>S$6.00</b></div>
-                    <div><span class="p2-rk">Voucher</span><b class="p2-rv">−S$1.00</b></div>
-                    <div class="p2-pay"><span>You pay</span><b class="p2-rp">S$5.00</b></div>
-                  </div>
-                  <div class="p2-ctas"><span class="p2-cta">Order for pick-up</span><span class="p2-cta2"></span></div>
-                  <div class="p2-home"></div>
+            <div class="p2-phone" aria-label="Offer the customer sees in the app">
+              <div class="p2-scr">
+                <div class="p2-sbar"><span class="p2-clock">15:00</span></div>
+                <div class="p2-app"><span class="p2-logo">CHAGEE</span></div>
+                <div class="p2-offer p2-t-green">
+                  <span class="p2-otag">Today's offer</span>
+                  <span class="p2-big">S$1 off</span>
+                  <span class="p2-oline">on today's featured tea</span>
                 </div>
+                <div class="p2-cup" aria-hidden="true"><svg width="70" height="92" viewBox="0 0 70 92"><path d="M11 22h48l-6 64a4 4 0 0 1-4 4H21a4 4 0 0 1-4-4z" fill="#F6F3ED" stroke="#C9C2B5" stroke-width="1.5"/><path d="M14 44h42l-3.6 38a3 3 0 0 1-3 2.6H20.6a3 3 0 0 1-3-2.6z" fill="#E9DCC0"/><rect x="7" y="15" width="56" height="8" rx="3" fill="#24406B"/><path d="M38 15l6-13" stroke="#24406B" stroke-width="3" stroke-linecap="round"/></svg></div>
+                <div class="p2-cta">Order for pick-up</div>
+                <div class="p2-home"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="cards p2-cards" style="gap:10px">
-        <div class="bc p2-rules">
-          <div class="k p2-rkh">Rules · first match wins</div>
-          <ol class="p2-lad p2-lad-scn">
-            <li data-r="event"><i style="background:#B8322B"></i><b>Event nearby</b><span>None; push pre-orders</span></li>
-            <li data-r="peak"><i style="background:#B8322B"></i><b>Peak</b><span>None; fewer Grab orders</span></li>
-            <li data-r="pre"><i style="background:#C8A96A"></i><b>Before peak</b><span>S$0.50 off pre-orders</span></li>
-            <li data-r="hot"><i style="background:#C8A96A"></i><b>Hot</b><span>S$0.50</span></li>
-            <li data-r="rain"><i style="background:#2F6B45"></i><b>Rain</b><span>S$1 delivery or sheltered</span></li>
-            <li data-r="quiet"><i style="background:#2F6B45"></i><b>Quiet office</b><span>S$1</span></li>
-            <li data-r="off" class="p2-act"><i style="background:#2F6B45"></i><b>Off-peak</b><span>S$1, top-profit drink</span></li>
-          </ol>
-          <ol class="p2-lad p2-lad-dor p2-off">
-            <li data-r="trig"><i style="background:#B8322B"></i><b>Trigger</b><span>No order for 2× usual gap <span class="p2-nw">(30 days if little history)</span></span></li>
-            <li data-r="n1"><i style="background:#2F6B45"></i><b>Nudge 1</b><span><span class="p2-nw">S$1 on most-ordered drink;</span> <span class="p2-nw">7 days, off-peak, app pick-up</span></span></li>
-            <li data-r="n2"><i style="background:#24406B"></i><b>Nudge 2</b><span>14 days on: free upsize <span class="p2-nw">or bonus points</span></span></li>
-            <li data-r="measure"><i style="background:#9A9387"></i><b>Holdout</b><span>No voucher, to count <span class="p2-nw">the extra orders</span></span></li>
-          </ol>
+      <div class="cards p2-cards">
+        <div class="bc p2-guard">
+          <div class="k">Guardrails</div>
+          <ul>
+            <li><span>Menu price never changes</span></li>
+            <li><span>Max <b>S$1</b> off</span></li>
+            <li><span>No vouchers at peak</span></li>
+          </ul>
         </div>
-        <div class="bc p2-cup">
-          <div class="k p2-cuph">Per cup with this offer</div>
-          <div class="p2-cuptop"><span class="p2-earn">S$3.20</span><span class="p2-earnl">still earned; staff and rent already paid</span></div>
-          <div class="p2-bar" aria-hidden="true"><span class="p2-b2"></span><span class="p2-b1"></span><span class="p2-b3"></span></div>
-          <div class="p2-eq"><span>S$6</span><span class="p2-eqv">− S$1 voucher</span><span class="p2-eqi">− S$1.80 ingredients</span></div>
+        <div class="bc p2-cupc">
+          <div class="k">Per S$1 voucher cup</div>
+          <div class="p2-rc"><span>Price</span><b>S$6</b></div>
+          <div class="p2-rc"><span>Voucher</span><b>− S$1</b></div>
+          <div class="p2-rc"><span>Ingredients</span><b>− S$1.80</b></div>
+          <div class="p2-rc p2-tot"><span>Still earned</span><b>S$3.20</b></div>
         </div>
       </div>
     </div>
-    <div class="takeaway"><span class="lab">BENEFIT</span><span class="t">Off-peak vouchers: <b>+5%</b> on S$12.05M delivery sales × about 40% margin after commission and discount ≈ <b>S$241k</b> a year.</span></div>
+    <div class="takeaway"><span class="lab">BENEFIT</span><span class="t">Off-peak vouchers turn idle capacity into about <b>S$241k</b> profit a year.</span></div>
   </div>
   <div class="foot"><span>OPIM639 · Group 3 · online retail · illustrative assumptions, not Chagee data · delivery 25% of S$48.2M sales</span><span class="rail"></span><span class="pg"></span></div>
   <aside class="notes">
-    <p>Second improvement: discount only when the outlet has room to fill. The menu price stays at S$6; only the voucher moves. The slide opens at 3 pm on a normal day, well under capacity, so the app offers S$1 off our highest-profit drink.</p>
-    <p>Press <b>Play</b> to run the day: an hour before lunch, pre-orders get S$0.50 off; at the peak, vouchers stop and we take fewer Grab orders; then the S$1 returns. Click <b>Hot</b>: the voucher shrinks to S$0.50. <b>Rain</b>: the S$1 moves to delivery or sheltered pick-up. <b>Event nearby</b>, such as a concert or F1: no discount, push pre-orders.</p>
-    <p>Open <b>Dormant members</b> and click through the steps: trigger, two nudges and the holdout.</p>
-    <p>Close on the per-cup card: S$6 minus S$1 minus S$1.80 still earns S$3.20, about S$241k a year. All figures are illustrative.</p>
+    <p>Second improvement: discount only when there is room to fill. The menu price never changes; only the voucher moves, capped at S$1. <b>Off-peak</b> is the default: demand sits under capacity, so the app offers S$1 off our highest-profit drink.</p>
+    <p>Click <b>Peak</b>: over capacity, so no voucher, S$0.50 off pre-orders made before the rush, and fewer low-profit Grab orders. Click <b>Hot day</b>: demand is already high, so only S$0.50. Click <b>Rain</b>: S$1 on app delivery or sheltered pick-up. Click <b>Event</b>: no discount, push pre-orders. Click <b>Quiet CBD</b>: S$1 fills weekend capacity. Click <b>Dormant</b>: two nudges, and a holdout group measures the lift.</p>
+    <p>Click <b>Off-peak</b> again: each voucher cup still earns S$3.20, S$6 minus S$1 minus S$1.80, because staff and rent are already paid. Delivery is 25% of S$48.2M, so S$12.05M; 5% more at about 40% margin is about S$241k profit a year. Illustrative figures.</p>
   </aside>
   <style>
-    #p2 .p2-play{min-width:94px;justify-content:center;text-align:center}
-    #p2 .p2-grid{display:grid;grid-template-columns:minmax(0,1fr) 214px;gap:14px;height:100%}
-    #p2 .p2-left{display:flex;flex-direction:column;min-width:0;min-height:0}
-    #p2 .p2-view{display:flex;flex-direction:column;gap:10px;flex:1;min-height:0}
+    #p2 .ptitle{font-size:12px}
+    #p2 .p2-seg .btn{height:32px;padding:0 16px;font-size:13px}
+    #p2 .p2-seg .btn:focus-visible{outline:2px solid var(--gold);outline-offset:-3px}
+    #p2 .p2-visual{margin-top:12px}
+    #p2 .p2-grid{display:grid;grid-template-columns:minmax(0,1fr) 206px;gap:16px;height:100%}
     #p2 .p2-off{display:none!important}
-    #p2 .p2-ctrls{flex:none;display:flex;gap:18px;align-items:flex-end;height:46px}
-    #p2 .p2-cg{display:flex;flex-direction:column;gap:6px}
-    #p2 .p2-lab{font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--taupe)}
-    #p2 .p2-ctrls .seg .btn{padding:0 11px}
-    #p2 .p2-box{flex:1;min-height:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 12px 6px;display:flex;flex-direction:column}
-    #p2 .p2-bh{flex:none;display:flex;justify-content:space-between;align-items:center;gap:10px;height:16px;font:11px/1.2 var(--sans);color:var(--taupe)}
-    #p2 .p2-bh b{font-weight:600;letter-spacing:.12em;text-transform:uppercase}
-    #p2 .p2-leg{display:flex;gap:12px;align-items:center}
-    #p2 .p2-leg>span{display:flex;align-items:center}
-    #p2 .p2-leg i{display:inline-block;width:10px;height:8px;border-radius:2px;margin-right:4px}
-    #p2 .p2-key{display:block;flex:none;margin-right:5px}
-    #p2 .p2-svg{display:block;flex:none;width:530px;height:300px;margin-top:2px;touch-action:none;user-select:none}
-    #p2 .p2-rng{display:block;flex:none;margin:0 0 0 22px;width:500px;height:18px;accent-color:var(--red);cursor:pointer}
-    #p2 .p2-day{margin-left:88px;width:436px}
-    #p2 .p2-ax{font:11px var(--sans);fill:var(--taupe)}
-    #p2 .p2-ax.p2-ax80{font-weight:700;fill:var(--ink)}
-    #p2 .p2-svl{font:600 11px var(--sans);paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
-    #p2 .p2-pilt{font:600 11px var(--sans);fill:#fff}
-    #p2 .p2-stt{font:600 11px var(--sans)}
-    #p2 .p2-tll{font:11px var(--sans);fill:var(--ink2);paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
-    #p2 .p2-tlb{font:600 12px var(--sans);fill:var(--ink)}
-    #p2 .p2-dim{opacity:.28}
-    #p2 .p2-hid{opacity:0}
-    #p2 svg g{transition:opacity .25s}
-    #p2 .p2-right{display:flex;flex-direction:column;gap:10px;align-items:stretch;min-height:0}
-    #p2 .p2-badge{flex:none;height:46px;display:flex;align-items:center;gap:9px;background:var(--navy);border-radius:10px;padding:0 12px;color:#fff}
-    #p2 .p2-bdot{flex:none;width:10px;height:10px;border-radius:50%;background:#2F6B45;box-shadow:0 0 0 2px #fff}
-    #p2 .p2-btx{display:flex;flex-direction:column;gap:3px;min-width:0}
-    #p2 .p2-bk{font:600 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-    #p2 .p2-bn{font:600 13px/1.15 var(--sans);white-space:nowrap}
-    #p2 .p2-phone{flex:1;min-height:0;width:196px;margin:0 auto;border-radius:30px;background:#232B3A;padding:7px;box-shadow:0 6px 18px rgba(36,64,107,.16)}
-    #p2 .p2-scr{position:relative;height:100%;border-radius:24px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+    #p2 .p2-box{min-width:0;min-height:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px 12px;display:flex;flex-direction:column}
+    /* the rule for the selected scenario: condition pill → action */
+    #p2 .p2-rule{flex:none;margin:0;display:flex;align-items:center;gap:12px;height:34px;white-space:nowrap}
+    #p2 .p2-cond{display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 14px 0 12px;border-radius:999px;background:var(--tint,#EEF5F0);color:var(--tone,#2F6B45);font:600 15px/1 var(--sans)}
+    #p2 .p2-cond i{width:9px;height:9px;border-radius:50%;background:var(--tone,#2F6B45)}
+    #p2 .p2-arr{font:400 20px/1 var(--sans);color:var(--taupe)}
+    #p2 .p2-act{font:500 17px/1.2 var(--sans);color:var(--ink)}
+    #p2 .p2-chartv{flex:1;min-height:0;display:flex;align-items:flex-end;justify-content:center}
+    #p2 .p2-chart{display:block;flex:none;width:560px;height:348px}
+    #p2 .p2-tick{font:12px var(--sans);fill:var(--taupe)}
+    #p2 .p2-capl{font:12px var(--sans);fill:var(--ink2)}
+    #p2 .p2-dl{font:600 12px var(--sans);fill:var(--navy)}
+    #p2 .p2-lbl{font:600 13px var(--sans);paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round}
+    #p2 .p2-pillt{font:600 12px var(--sans);fill:#fff}
+    /* dormant members: a static three-step strip */
+    #p2 .p2-dorv{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:22px;padding:0 6px}
+    #p2 .p2-steps{position:relative;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:26px}
+    #p2 .p2-steps::before{content:"";position:absolute;left:14px;top:30px;bottom:30px;border-left:2px dotted #D8D1C3}
+    #p2 .p2-st{position:relative;display:grid;grid-template-columns:30px 160px minmax(0,1fr);gap:0 18px;align-items:center}
+    #p2 .p2-sn{position:relative;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--c);color:#fff;font:600 14px/1 var(--sans);box-shadow:0 0 0 4px #fff}
+    #p2 .p2-sh{display:flex;flex-direction:column;gap:5px}
+    #p2 .p2-sk{font:600 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+    #p2 .p2-sb{font:500 30px/1.05 var(--serif);color:var(--ink);white-space:nowrap}
+    #p2 .p2-sl{font:14px/1.4 var(--sans);color:var(--ink2)}
+    #p2 .p2-hold{margin:0 0 0 46px;display:flex;align-items:center;gap:9px;padding-top:14px;border-top:1px solid var(--line);font:13px/1.3 var(--sans);color:var(--ink2)}
+    #p2 .p2-hold i{flex:none;width:12px;height:12px;border-radius:50%;border:2px solid var(--taupe)}
+    /* phone */
+    #p2 .p2-phone{align-self:stretch;width:206px;min-height:0;border-radius:28px;background:#232B3A;padding:6px;box-shadow:0 6px 18px rgba(36,64,107,.14)}
+    #p2 .p2-scr{position:relative;height:100%;border-radius:23px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
     #p2 .p2-scr::before{content:"";position:absolute;top:8px;left:50%;width:40px;height:5px;margin-left:-20px;border-radius:3px;background:#232B3A}
-    #p2 .p2-sbar{flex:none;display:flex;justify-content:space-between;align-items:center;padding:9px 16px 4px;font:600 11px/1 var(--sans);color:var(--ink)}
-    #p2 .p2-app{flex:none;display:flex;justify-content:space-between;align-items:baseline;padding:6px 14px 8px;border-bottom:1px solid var(--line)}
-    #p2 .p2-logo{font:600 13px/1 var(--serif);letter-spacing:.22em;color:var(--ink)}
-    #p2 .p2-appr{font:11px/1 var(--sans);color:var(--taupe)}
-    #p2 .p2-offer{flex:none;margin:9px 8px 0;padding:10px 10px 11px;border-radius:10px;background:var(--cream);border-left:4px solid #2F6B45;display:flex;flex-direction:column;gap:4px}
-    #p2 .p2-otag{font:600 11px/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:#2F6B45}
-    #p2 .p2-big{font:500 33px/1.05 var(--serif);color:var(--ink);white-space:nowrap}
-    #p2 .p2-big.p2-bigs{font-size:27px;line-height:1.2}
-    #p2 .p2-oline{font:12px/1.3 var(--sans);color:var(--ink2);text-wrap:balance}
-    #p2 .p2-ometa{font:11px/1.3 var(--sans);color:var(--taupe);text-wrap:balance}
-    #p2 .p2-offer.p2-t-gold{border-left-color:var(--gold)} #p2 .p2-t-gold .p2-otag{color:#8A6416}
-    #p2 .p2-offer.p2-t-red{border-left-color:var(--red)} #p2 .p2-t-red .p2-otag{color:var(--red)}
-    #p2 .p2-offer.p2-t-navy{border-left-color:var(--navy)} #p2 .p2-t-navy .p2-otag{color:var(--navy)}
-    #p2 .p2-offer.p2-t-grey{border-left-color:var(--taupe)} #p2 .p2-t-grey .p2-otag{color:var(--taupe)}
-    #p2 .p2-pop{animation:p2-pop .35s ease}
-    @keyframes p2-pop{from{opacity:.25;transform:translateY(5px)}to{opacity:1;transform:none}}
-    #p2 .p2-rcpt{flex:none;margin:8px 14px 0;font:12px/1 var(--sans);color:var(--ink2)}
-    #p2 .p2-rcpt>div{display:flex;justify-content:space-between;padding:4px 0}
-    #p2 .p2-rcpt b{font-weight:500;color:var(--ink)}
-    #p2 .p2-rcpt .p2-pay{border-top:1px solid var(--line);margin-top:3px;padding-top:7px}
-    #p2 .p2-rcpt .p2-pay span,#p2 .p2-rcpt .p2-pay b{font-weight:700;color:var(--ink)}
-    #p2 .p2-rv.p2-neg{color:var(--red)}
-    #p2 .p2-ctas{margin-top:auto;padding:6px 12px 0;display:flex;flex-direction:column;gap:5px}
-    #p2 .p2-home{flex:none;width:64px;height:4px;border-radius:2px;background:#262626;margin:8px auto 6px}
-    #p2 .p2-cta{display:flex;justify-content:center;align-items:center;height:30px;border-radius:999px;background:var(--red);color:#fff;font:600 12px/1 var(--sans)}
-    #p2 .p2-cta2{display:flex;justify-content:center;align-items:center;height:25px;border-radius:999px;border:1px solid #D8D1C3;color:var(--navy);font:500 12px/1 var(--sans)}
-    #p2 .p2-cta2:empty{display:none}
-    #p2 .p2-scr.p2-grey .p2-cta{background:#CFCAC0}
-    #p2 .p2-cards .bc .k{font-size:11px;letter-spacing:.11em}
-    #p2 .p2-rules{flex:1;min-height:0;display:flex;flex-direction:column}
-    #p2 .p2-lad{flex:1;list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;justify-content:space-between}
-    #p2 .p2-lad li{display:grid;grid-template-columns:9px 76px 1fr;gap:0 8px;align-items:start;padding:10px 8px;border-radius:7px;font:13px/1.3 var(--sans);color:var(--ink2);white-space:nowrap;transition:background .2s,color .2s}
-    #p2 .p2-lad li i{width:9px;height:9px;border-radius:50%;align-self:start;margin-top:4.5px}
-    #p2 .p2-lad li b{font-weight:600;color:var(--ink)}
-    #p2 .p2-lad li.p2-act{background:var(--navy);color:#fff}
-    #p2 .p2-lad li.p2-act b{color:#fff}
-    #p2 .p2-lad li.p2-act i{box-shadow:0 0 0 2px #fff}
-    #p2 .p2-lad li.p2-done{color:var(--navy)}
-    #p2 .p2-lad li.p2-done b{color:var(--navy)}
-    #p2 .p2-lad{position:relative}
-    #p2 .p2-lad::before{content:"";position:absolute;left:12px;top:19px;bottom:18px;border-left:1px dashed #D8D1C3}
-    #p2 .p2-lad li{position:relative}
-    #p2 .p2-lad-dor::before{top:17px;bottom:31px}
-    #p2 .p2-lad-dor li{grid-template-columns:9px 64px 1fr;padding:8px 8px;font-size:12px;white-space:normal}
-    #p2 .p2-lad-dor li i{margin-top:4px}
-    #p2 .p2-cup{flex:none}
-    #p2 .p2-nw{white-space:nowrap}
-    #p2 .p2-cuptop{display:flex;align-items:center;gap:10px;height:36px;margin-top:4px}
-    #p2 .p2-earn{flex:none;font:500 34px/1 var(--serif);color:#2F6B45}
-    #p2 .p2-earnl{font:12px/1.3 var(--sans);color:var(--ink2);text-wrap:balance}
-    #p2 .p2-bar{display:flex;height:12px;margin-top:8px;border-radius:4px;overflow:hidden;background:#F1EEE8}
-    #p2 .p2-bar span{height:100%;transition:width .35s ease}
-    #p2 .p2-b1{background:var(--taupe)} #p2 .p2-b2{background:var(--red)} #p2 .p2-b3{background:#2F6B45}
-    #p2 .p2-eq{display:flex;gap:7px;margin-top:6px;font:12px/1.35 var(--sans);color:var(--ink2);white-space:nowrap}
-    #p2 .p2-eq span:first-child{color:var(--ink);font-weight:500}
-    #p2 .p2-eqv{color:var(--red)}
-    #p2 .p2-eqi{color:#7E776B}
-    #p2 .p2-cuptop,#p2 .p2-bar,#p2 .p2-eq{transition:opacity .25s}
-    #p2 .p2-cup.p2-dimc .p2-cuptop,#p2 .p2-cup.p2-dimc .p2-bar,#p2 .p2-cup.p2-dimc .p2-eq{opacity:.45}
-    @media (prefers-reduced-motion:reduce){#p2 .p2-pop{animation:none}#p2 .p2-bar span,#p2 .p2-lad li,#p2 svg g,#p2 .p2-cuptop,#p2 .p2-bar,#p2 .p2-eq{transition:none}}
-    @media print{#p2 .p2-pop{animation:none}#p2 .p2-bar span,#p2 .p2-lad li,#p2 svg g,#p2 .p2-cuptop,#p2 .p2-bar,#p2 .p2-eq{transition:none}}
+    #p2 .p2-sbar{flex:none;height:28px;display:flex;align-items:center;padding:0 18px;font:600 12px/1 var(--sans);color:var(--ink)}
+    #p2 .p2-app{flex:none;padding:8px 14px 9px;border-bottom:1px solid var(--line);text-align:center}
+    #p2 .p2-logo{font:600 14px/1 var(--serif);letter-spacing:.24em;color:var(--ink)}
+    #p2 .p2-offer{flex:none;margin:12px 10px 0;padding:12px 12px 13px;border-radius:10px;background:var(--cream);border-left:4px solid var(--tone,#2F6B45);display:flex;flex-direction:column;gap:5px}
+    #p2 .p2-otag{font:600 12px/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--tonet,#2F6B45)}
+    #p2 .p2-big{font:500 34px/1.05 var(--serif);color:var(--ink);white-space:nowrap}
+    #p2 .p2-big.p2-bigs{font-size:29px}
+    #p2 .p2-oline{font:13px/1.3 var(--sans);color:var(--ink2)}
+    #p2 .p2-cup{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+    #p2 .p2-cta{flex:none;margin:0 14px;display:flex;justify-content:center;align-items:center;height:34px;border-radius:999px;background:var(--red);color:#fff;font:600 13px/1 var(--sans)}
+    #p2 .p2-home{flex:none;width:60px;height:4px;border-radius:2px;background:#262626;margin:10px auto 7px}
+    #p2 .p2-pop{animation:p2-pop .3s ease}
+    @keyframes p2-pop{from{opacity:.3;transform:translateY(4px)}to{opacity:1;transform:none}}
+    /* side cards */
+    #p2 .p2-cards .bc{flex:1 1 0;min-height:0;display:flex;flex-direction:column;padding:14px 16px 16px}
+    #p2 .p2-cards .bc .k{font-size:12px;letter-spacing:.12em}
+    #p2 .p2-guard ul{flex:1;list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;justify-content:space-evenly;gap:12px}
+    #p2 .p2-guard li{display:flex;align-items:center;gap:12px;font:15px/1.35 var(--sans);color:var(--ink)}
+    #p2 .p2-guard li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--navy)}
+    #p2 .p2-cupc{border-left-color:#2F6B45}
+    #p2 .p2-rc{display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;font:15px/1.35 var(--sans);color:var(--ink2)}
+    #p2 .p2-rc b{font-weight:500;color:var(--ink)}
+    #p2 .p2-rc.p2-tot{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);align-items:center;color:var(--ink);font-weight:500}
+    #p2 .p2-rc.p2-tot b{font:500 36px/1 var(--serif);color:#2F6B45}
+    @media (prefers-reduced-motion:reduce){#p2 .p2-pop{animation:none}}
+    @media print{#p2 .p2-pop{animation:none}}
   </style>
   <script>
   (function () {
@@ -757,345 +609,109 @@ aside.notes{display:none}
     if (!sl) return;
     const $ = s => sl.querySelector(s), $$ = s => Array.from(sl.querySelectorAll(s));
     const RM = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
-    const hm = t => { const m = Math.round(t * 60); return Math.floor(m / 60) + ":" + String(m % 60).padStart(2, "0"); };
-    const m2 = v => "S$" + v.toFixed(2);
-    const short = v => "S$" + (v % 1 ? v.toFixed(2) : v.toFixed(0));
-    const dayTxt = d => "day " + (d < 0 ? "−" + (-d) : d);
-    const TONE = { green: "#2F6B45", gold: "#C8A96A", red: "#B8322B", navy: "#24406B", grey: "#9A9387" };
-    const AMT = { green: ["S$1"], gold: ["S$0.50"], red: ["no voucher", "none"] };
 
-    /* ---------- illustrative demand model: cups an hour at one outlet (normal day about 500 cups) ---------- */
-    const T0 = 10, T1 = 22, STEP = 0.25, NS = (T1 - T0) / STEP, CAP = 80, BUSY = 0.9 * CAP;
+    /* illustrative demand model: cups an hour at one outlet; capacity 80 */
+    const T0 = 10, T1 = 22, CAP = 80, YMAX = 124;
     const g = (t, mu, s) => Math.exp(-(((t - mu) / s) ** 2));
-    const WX = { hot: { all: 1.1, tea: 1.6 }, normal: { all: 1, tea: 1 }, rain: { all: 0.75, tea: 1 } };
-    const CX = { normal: { all: 1, lunch: 1, eve: 1 }, event: { all: 1.15, lunch: 1, eve: 2.6 }, quiet: { all: 0.7, lunch: 0.3, eve: 0.8 } };
+    const WX = { normal: { all: 1, tea: 1 }, hot: { all: 1.1, tea: 1.6 }, rain: { all: 0.75, tea: 1 } };
+    const CX = { normal: { all: 1, lunch: 1, eve: 1 }, event: { all: 1.15, lunch: 1, eve: 2.1 }, quiet: { all: 0.7, lunch: 0.3, eve: 0.8 } };
     const demand = (t, wx, cx) => { const w = WX[wx], c = CX[cx];
       return (15 + 78 * c.lunch * g(t, 12.75, 1.25) + 26 * w.tea * g(t, 15.75, 1.1) + 40 * c.eve * g(t, 19, 1.5)) * w.all * c.all; };
 
-    /* ---------- the rules, first match wins ---------- */
-    const R = {
-      event: { badge: "Event nearby", tone: "red", v: 0 },
-      peak: { badge: "Peak: no room to fill", tone: "red", v: 0 },
-      pre: { badge: "Before the peak", tone: "gold", v: 0.5 },
-      hot: { badge: "Hot weather, off-peak", tone: "gold", v: 0.5 },
-      rain: { badge: "Rain, off-peak", tone: "green", v: 1, note: "on sheltered pick-up; delivery adds a rider fee" },
-      quiet: { badge: "Quiet office area", tone: "green", v: 1 },
-      off: { badge: "Off-peak, spare capacity", tone: "green", v: 1 }
+    const TONE = {
+      green: { c: "#2F6B45", t: "#EEF5F0", x: "#2F6B45" },
+      gold: { c: "#C8A96A", t: "#FBF5E8", x: "#8A6416" },
+      red: { c: "#B8322B", t: "#FBEDEC", x: "#B8322B" },
+      navy: { c: "#24406B", t: "#E9EDF4", x: "#24406B" }
     };
-    // a 15-minute slot is busy when demand anywhere in it reaches 90% of capacity, so the S$1 only returns with visible room to fill
-    function slotBusy(wx, cx) {
-      const b = [];
-      for (let i = 0; i < NS; i++) { let m = 0; for (let k = 0; k <= 4; k++) m = Math.max(m, demand(T0 + (i + k / 4) * STEP, wx, cx)); b.push(m >= BUSY); }
-      return b;
-    }
-    function slotRules(busy, wx, cx) {
-      const pre = busy.map(() => false);
-      for (let i = 0; i < NS; i++) if (busy[i] && (i === 0 || !busy[i - 1]))
-        for (let k = 1; k <= 4 && i - k >= 0 && !busy[i - k]; k++) pre[i - k] = true;
-      return busy.map((p, i) => cx === "event" ? "event" : p ? "peak" : pre[i] ? "pre" : wx === "hot" ? "hot" : wx === "rain" ? "rain" : cx === "quiet" ? "quiet" : "off");
-    }
-    function runs(list, keyOf) {
-      const out = [];
-      list.forEach((r, i) => { const k = keyOf ? keyOf(r) : r, l = out[out.length - 1]; if (l && l.key === k) l.b = i + 1; else out.push({ key: k, rule: r, a: i, b: i + 1 }); });
-      return out;
-    }
-    const slotOf = t => Math.min(NS - 1, Math.max(0, Math.floor((t - T0) / STEP + 1e-6)));
+    /* one entry per tab: where the scenario sits on the day, the rule, and the offer the app shows */
+    const SC = {
+      off: { wx: "normal", cx: "normal", t: 15, tone: "green", st: "room to fill", cond: "Spare capacity", act: "S$1 off the highest-profit drink",
+        o: { tag: "Today's offer", big: "S$1 off", line: "on today's featured tea", cta: "Order for pick-up" } },
+      peak: { wx: "normal", cx: "normal", t: 12.75, tone: "red", st: "no room", cond: "Over capacity", act: "No voucher · limit low-profit Grab orders",
+        o: { tag: "Lunch rush", big: "No voucher", line: "Pre-order before 12:00 tomorrow: S$0.50 off", cta: "Pre-order" } },
+      hot: { wx: "hot", cx: "normal", t: 15.75, tone: "gold", st: "less room", cond: "Demand already high", act: "Smaller discount: S$0.50",
+        o: { tag: "Hot day", big: "S$0.50 off", line: "on today's featured tea", cta: "Order for pick-up" } },
+      rain: { wx: "rain", cx: "normal", t: 15, tone: "green", st: "room to fill", cond: "Fewer walk-ins", act: "S$1 on app delivery or sheltered pick-up",
+        o: { tag: "Rainy day", big: "S$1 off", line: "app delivery, or pick-up at malls and MRT", cta: "Order for delivery" } },
+      event: { wx: "normal", cx: "event", t: 19, tone: "red", st: "no room", cond: "Concert, F1 or holiday", act: "No discount · push pre-orders",
+        o: { tag: "Event nearby", big: "Pre-order", line: "skip the event queue", cta: "Choose a time" } },
+      quiet: { wx: "normal", cx: "quiet", t: 12.75, tone: "green", st: "room to fill", cond: "CBD weekend or school holiday", act: "S$1 to fill spare capacity",
+        o: { tag: "Quiet weekend", big: "S$1 off", line: "on today's featured tea", cta: "Order for pick-up" } },
+      dorm: { tone: "navy", cond: "Member gone quiet", act: "S$1 nudge, then a stronger offer",
+        o: { tag: "We miss you", big: "S$1 off", line: "your most-ordered drink", cta: "Order for pick-up" } }
+    };
+    const DEF = "off";
 
-    function offerFor(rule, run, next) {
-      const till = hm(T0 + run.b * STEP);
-      switch (rule) {
-        case "event": return { tone: "red", tag: "Big event nearby", big: "Pre-order", line: "skip the queue, collect at your time", meta: "Concert, F1 or holiday", v: 0, cta: "Pre-order now" };
-        case "peak": return { tone: "red", tag: "Busy hour", big: "No voucher", line: "menu price during the rush", meta: "Busy till " + till, v: 0, cta: "Order ahead" };
-        case "pre": return { tone: "gold", tag: "Beat the rush", big: "S$0.50 off", line: "pre-order for " + hm(T0 + next.a * STEP) + " to " + hm(T0 + next.b * STEP), meta: "Order before " + hm(T0 + next.a * STEP), v: 0.5, cta: "Pre-order now" };
-        case "hot": return { tone: "gold", tag: "Cool down", big: "S$0.50 off", line: "on today's featured tea", meta: "App order · valid till " + till, v: 0.5, cta: "Order for pick-up" };
-        case "rain": return { tone: "green", tag: "Rainy day", big: "S$1 off", line: "on app delivery, or sheltered pick-up", meta: "Malls or near MRT links", v: 1, cta: "Order for delivery", cta2: "Sheltered pick-up" };
-        case "quiet": return { tone: "green", tag: "Quiet day in the CBD", big: "S$1 off", line: "on today's featured tea", meta: "Weekend or school holiday", v: 1, cta: "Order for pick-up" };
-        default: return { tone: "green", tag: "Today's offer", big: "S$1 off", line: "on today's featured tea", meta: "App order · valid till " + till, v: 1, cta: "Order for pick-up" };
-      }
-    }
-
-    /* ---------- state ---------- */
-    const DEF = { view: "scn", wx: "normal", cx: "normal", t: 15, mem: "reg" };
-    const S = Object.assign({}, DEF, { day: 14, rules: [], busy: [] });
-    let raf = 0, playing = false, paused = false, lastKey = "";
-
-    /* ---------- shared outputs: badge, phone, rule ladder, per-cup card ---------- */
-    function setBadge(text, tone) { $(".p2-bn").textContent = text; $(".p2-bdot").style.background = TONE[tone]; }
-    function setPhone(o, clock) {
-      $(".p2-clock").textContent = clock;
-      const box = $(".p2-offer");
-      box.className = "p2-offer p2-t-" + o.tone;
-      $(".p2-otag").textContent = o.tag; $(".p2-big").textContent = o.big; $(".p2-big").classList.toggle("p2-bigs", o.big.length > 8);
-      $(".p2-oline").textContent = o.line; $(".p2-ometa").textContent = o.meta;
-      const rv = $(".p2-rv");
-      $(".p2-rk").textContent = o.rowk || "Voucher";
-      rv.textContent = o.rowv || (o.v ? "−" + m2(o.v) : "none");
-      rv.classList.toggle("p2-neg", !!o.v && !o.rowv);
-      $(".p2-rp").textContent = m2(6 - o.v);
-      $(".p2-cta").textContent = o.cta; $(".p2-cta2").textContent = o.cta2 || "";
-      $(".p2-scr").classList.toggle("p2-grey", o.tone === "grey");
-      const key = o.tag + o.big + o.line;
-      if (key !== lastKey && lastKey && !RM) { box.classList.remove("p2-pop"); void box.offsetWidth; box.classList.add("p2-pop"); }
-      lastKey = key;
-    }
-    function setLadder(sel, act, done) {
-      $$(sel + " li").forEach(li => { li.classList.toggle("p2-act", li.dataset.r === act); li.classList.toggle("p2-done", (done || []).includes(li.dataset.r)); });
-    }
-    function setCup(v, title, note, dim) {
-      $(".p2-cuph").textContent = title;
-      const earn = 6 - v - 1.8;
-      $(".p2-earn").textContent = m2(earn);
-      $(".p2-earnl").textContent = note || (v ? "still earned; staff and rent already paid" : "earned at menu price; no voucher");
-      $(".p2-b1").style.width = (1.8 / 6 * 100) + "%";
-      $(".p2-b2").style.width = (v / 6 * 100) + "%";
-      $(".p2-b3").style.width = (earn / 6 * 100) + "%";
-      $(".p2-eqv").textContent = v ? "− " + short(v) + " voucher" : "− no voucher";
-      $(".p2-cup").classList.toggle("p2-dimc", !!dim);
-    }
-
-    /* ---------- scenario chart ---------- */
-    const CW = 530, CH = 300, PL = 30, PR = 16, PT = 12, PB = 46, PW = CW - PL - PR, PH = CH - PT - PB, YMAX = 150;
-    const SY = PT + PH + 6, SH = 14, PILY = PT + PH + 23, AXY = PT + PH + 36;
+    /* chart geometry */
+    const W = 560, H = 348, PL = 14, PR = 14, PT = 40, PB = 44, PW = W - PL - PR, PH = H - PT - PB, BY = PT + PH;
     const X = t => PL + (t - T0) / (T1 - T0) * PW, Y = v => PT + PH - Math.min(v, YMAX) / YMAX * PH;
-    const chart = $(".p2-chart");
-    const ghostOn = () => S.wx !== "normal" || S.cx !== "normal";
-    // rough text widths for 11px semibold Roboto, used when the slide is hidden and cannot be measured
-    const estW = s => { let w = 0; for (const ch of s) w += ch === " " ? 3 : ch === "." ? 3 : /[0-9S$]/.test(ch) ? 6.3 : /[mw]/.test(ch) ? 9 : /[ilrt]/.test(ch) ? 4 : 6.1; return w; };
-    function curve(wx, cx) { const p = []; for (let i = 0; i <= 144; i++) { const t = T0 + i * (T1 - T0) / 144; p.push(X(t).toFixed(1) + "," + Y(demand(t, wx, cx)).toFixed(1)); } return "M" + p.join("L"); }
-    function drawChart() {
-      const wx = S.wx, cx = S.cx, line = curve(wx, cx), area = line + "L" + X(T1) + "," + Y(0) + "L" + X(T0) + "," + Y(0) + "Z";
-      S.busy = slotBusy(wx, cx); S.rules = slotRules(S.busy, wx, cx);
-      let h = '<defs><clipPath id="p2-over"><rect x="' + PL + '" y="0" width="' + PW + '" height="' + Y(CAP) + '"/></clipPath>' +
-        '<clipPath id="p2-stripc"><rect x="' + PL + '" y="' + SY + '" width="' + PW + '" height="' + SH + '" rx="4"/></clipPath></defs>';
-      [0, 40, 80, 120].forEach(v => { h += '<line x1="' + PL + '" x2="' + (PL + PW) + '" y1="' + Y(v) + '" y2="' + Y(v) + '" stroke="#EFEAE0"/><text class="p2-ax' + (v === CAP ? " p2-ax80" : "") + '" x="' + (PL - 7) + '" y="' + (Y(v) + 4) + '" text-anchor="end">' + v + '</text>'; });
-      h += '<rect x="' + PL + '" y="' + Y(CAP) + '" width="' + PW + '" height="' + (Y(0) - Y(CAP)) + '" fill="#2F6B45" fill-opacity=".11"/>';
-      h += '<path d="' + area + '" fill="#E2E7EF"/>';
-      h += '<path d="' + area + '" fill="#B8322B" fill-opacity=".3" clip-path="url(#p2-over)"/>';
-      if (ghostOn()) h += '<path d="' + curve("normal", "normal") + '" fill="none" stroke="#9A9387" stroke-width="1.6" stroke-dasharray="4 4"/>';
-      h += '<line x1="' + PL + '" x2="' + (PL + PW) + '" y1="' + Y(CAP) + '" y2="' + Y(CAP) + '" stroke="#4A4A4A" stroke-width="1.3" stroke-dasharray="7 4"/>';
-      h += '<path d="' + line + '" fill="none" stroke="#24406B" stroke-width="2.3" stroke-linejoin="round"/>';
-      h += '<g class="p2-cur"><line class="p2-cl" stroke="#24406B" stroke-width="1.4" y1="' + PT + '" y2="' + PILY + '"/><rect class="p2-sp" width="7" rx="2"/><circle class="p2-cd" r="5" fill="#fff" stroke="#24406B" stroke-width="2.4"/><rect class="p2-svb" rx="4" fill="#fff" stroke-opacity=".45" style="display:none"/><text class="p2-svl"></text></g>';
-      // the voucher over the day: one run per colour, amount written inside when it fits
-      h += '<g clip-path="url(#p2-stripc)">';
-      const tr = runs(S.rules, r => R[r].tone);
-      tr.forEach(r => {
-        const x0 = X(T0 + r.a * STEP), w = (r.b - r.a) * STEP / (T1 - T0) * PW, tone = R[r.rule].tone;
-        h += '<rect x="' + x0 + '" y="' + SY + '" width="' + Math.max(0, w) + '" height="' + SH + '" fill="' + TONE[tone] + '"/>';
-        const txt = AMT[tone].find(s => estW(s) + 3 <= w);
-        if (txt) h += '<text class="p2-stt" x="' + (x0 + w / 2) + '" y="' + (SY + 10.5) + '" text-anchor="middle" fill="' + (tone === "gold" ? "#262626" : "#fff") + '">' + txt + '</text>';
+    const hm = t => { const m = Math.round(t * 60); return Math.floor(m / 60) + ":" + String(m % 60).padStart(2, "0"); };
+    const pts = (wx, cx) => { const p = []; for (let i = 0; i <= 120; i++) { const t = T0 + i * (T1 - T0) / 120; p.push(X(t).toFixed(1) + "," + Y(demand(t, wx, cx)).toFixed(1)); } return p; };
+    const chart = $(".p2-chart"), q = s => chart.querySelector(s);
+    const setD = (el, d) => { el.style.d = 'path("' + d + '")'; el.setAttribute("d", d); };
+    const tf = (el, s) => { el.style.transform = s; };
+
+    function drawStatic() {
+      let h = '<line x1="' + PL + '" x2="' + (PL + PW) + '" y1="' + BY + '" y2="' + BY + '" stroke="#D8D1C3"/>';
+      [10, 13, 16, 19, 22].forEach(t => {
+        const a = t === 10 ? "start" : t === 22 ? "end" : "middle";
+        h += '<text class="p2-tick" data-t="' + t + '" x="' + X(t) + '" y="' + (BY + 26) + '" text-anchor="' + a + '">' + t + ':00</text>';
       });
-      h += '</g>';
-      for (let t = 10; t <= 22; t += 2) h += '<text class="p2-ax p2-xt" data-t="' + t + '" x="' + X(t) + '" y="' + AXY + '" text-anchor="middle">' + t + ':00</text>';
-      h += '<rect class="p2-pil" y="' + PILY + '" width="46" height="19" rx="9.5" fill="#24406B"/><text class="p2-pilt p2-cpt" y="' + AXY + '" text-anchor="middle"></text>';
-      h += '<rect class="p2-hit" x="' + (PL - 6) + '" y="0" width="' + (PW + 12) + '" height="' + CH + '" fill="transparent" style="cursor:ew-resize"/>';
-      chart.innerHTML = h;
-      $(".p2-ghostl").style.display = ghostOn() ? "" : "none";
+      q(".p2-ticks").innerHTML = h;
+      const cap = q(".p2-cap"), yc = Y(CAP);
+      cap.setAttribute("x1", PL); cap.setAttribute("x2", PL + PW); cap.setAttribute("y1", yc); cap.setAttribute("y2", yc);
+      const cl = q(".p2-capl"); cl.setAttribute("x", PL + PW); cl.setAttribute("y", yc - 8);
+      q(".p2-overr").setAttribute("height", yc);
     }
-    // place the cursor label beside the cursor where it touches neither curve, the capacity line nor the cursor;
-    // if no such spot exists, take the spot with the least overlap and put the label on a white tag
-    function placeLabel(el, bg, text, fill, x, yPref) {
-      el.textContent = text;
-      let w = 0; try { w = el.getComputedTextLength(); } catch (_) { w = 0; }
-      w = (w || estW(text)) + 2;
-      const yc = Y(CAP), cs = [[S.wx, S.cx, 1]].concat(ghostOn() ? [["normal", "normal", 0.4]] : []);
-      const score = (x0, y) => {
-        const x1 = x0 + w, y0 = y - 10, y1 = y + 3;
-        if (x0 < PL + 2 || x1 > PL + PW - 2 || y0 < PT + 1 || y1 > PT + PH - 2) return Infinity;
-        if (yc >= y0 - 2 && yc <= y1 + 2) return Infinity;
-        let sc = 0;
-        for (const [wx, cx, wt] of cs) {
-          let prev = null;
-          for (let px = x0 - 3; px <= x1 + 3.01; px += 1.5) {
-            const yv = Y(demand(Math.min(T1, Math.max(T0, T0 + (px - PL) / PW * (T1 - T0))), wx, cx));
-            const lo = prev === null ? yv : Math.min(prev, yv), hi = prev === null ? yv : Math.max(prev, yv);
-            if (hi >= y0 - 3 && lo <= y1 + 3) sc += wt;
-            prev = yv;
-          }
-        }
-        return sc;
-      };
-      const sides = x < PL + PW - w - 14 ? [1, -1] : [-1, 1];
-      let best = { s: sides[0], y: yPref, sc: Infinity };
-      search: for (let k = 0; k <= 50; k++) {
-        const y = yPref + (k % 2 ? 1 : -1) * Math.ceil(k / 2) * 4;
-        for (const s of sides) {
-          const sc = score(s > 0 ? x + 10 : x - 10 - w, y);
-          if (sc < best.sc) best = { s, y, sc };
-          if (sc === 0) break search;
-        }
+
+    function drawChart(s) {
+      const p = pts(s.wx, s.cx), line = "M" + p.join("L"), area = line + "L" + X(T1) + "," + BY + "L" + X(T0) + "," + BY + "Z";
+      setD(q(".p2-line"), line); setD(q(".p2-area"), area); setD(q(".p2-overa"), area);
+      const x = X(s.t), yd = Y(demand(s.t, s.wx, s.cx)), yc = Y(CAP), top = Math.min(yd, yc), tone = TONE[s.tone].c;
+      tf(q(".p2-vl"), "translate(" + x + "px," + yd + "px) scale(1," + Math.max(0.01, BY - yd) + ")");
+      const gap = q(".p2-gap"); gap.style.fill = tone;
+      tf(gap, "translate(" + x + "px," + top + "px) scale(1," + Math.max(0.01, Math.abs(yc - yd)) + ")");
+      tf(q(".p2-dot"), "translate(" + x + "px," + yd + "px)");
+      const lb = q(".p2-lbl"); lb.textContent = s.st; lb.style.fill = TONE[s.tone].x;
+      tf(lb, "translate(" + x + "px," + (top - 12) + "px)");
+      const px = Math.min(PL + PW - 27, Math.max(PL + 27, x));
+      tf(q(".p2-pill"), "translate(" + px + "px," + (BY + 9) + "px)");
+      q(".p2-pillt").textContent = hm(s.t);
+      chart.querySelectorAll(".p2-tick").forEach(el => { el.style.opacity = Math.abs(X(+el.dataset.t) - px) < 52 ? 0 : 1; });
+      let yt = BY; for (let t = 20.9; t <= T1; t += 0.05) yt = Math.min(yt, Y(demand(t, s.wx, s.cx)));
+      const dl = q(".p2-dl");
+      dl.setAttribute("x", PL + PW); dl.setAttribute("y", 0); dl.setAttribute("text-anchor", "end"); tf(dl, "translate(0px," + (yt - 8) + "px)");
+    }
+
+    let cur = "";
+    function show(k, still) {
+      const s = SC[k] || SC[DEF];
+      $$(".p2-seg .btn").forEach(b => { const on = b.dataset.k === k; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on ? "true" : "false"); });
+      const tn = TONE[s.tone];
+      const rule = $(".p2-rule");
+      rule.style.setProperty("--tone", tn.x); rule.style.setProperty("--tint", tn.t);
+      $(".p2-condt").textContent = s.cond; $(".p2-act").textContent = s.act;
+      const dorm = k === "dorm";
+      $(".p2-chartv").classList.toggle("p2-off", dorm); $(".p2-dorv").classList.toggle("p2-off", !dorm);
+      if (!dorm) drawChart(s);
+      // the phone: what the customer sees
+      const off = $(".p2-offer");
+      off.style.setProperty("--tone", tn.c); off.style.setProperty("--tonet", tn.x);
+      $(".p2-otag").textContent = s.o.tag; $(".p2-big").textContent = s.o.big; $(".p2-big").classList.toggle("p2-bigs", s.o.big.length > 9); $(".p2-oline").textContent = s.o.line;
+      $(".p2-cta").textContent = s.o.cta;
+      $(".p2-clock").textContent = dorm ? "15:00" : hm(s.t);
+      if (still) $$(".p2-pop").forEach(el => el.classList.remove("p2-pop"));
+      else if (cur && cur !== k && !RM) {
+        [off, rule, $(".p2-chartv"), $(".p2-dorv")].forEach(el => { el.classList.remove("p2-pop"); void el.offsetWidth; el.classList.add("p2-pop"); });
       }
-      const tx = best.s > 0 ? x + 10 : x - 10;
-      el.setAttribute("x", tx); el.setAttribute("y", best.y); el.setAttribute("text-anchor", best.s > 0 ? "start" : "end"); el.setAttribute("fill", fill);
-      const tag = best.sc > 0;
-      bg.setAttribute("x", (best.s > 0 ? tx : tx - w) - 4); bg.setAttribute("y", best.y - 11); bg.setAttribute("width", w + 8); bg.setAttribute("height", 16);
-      bg.setAttribute("stroke", fill); bg.style.display = tag ? "" : "none";
-    }
-    function updateScn() {
-      const t = S.t, x = X(t), d = demand(t, S.wx, S.cx), yd = Y(d), yc = Y(CAP), i = slotOf(t);
-      const q = s => chart.querySelector(s), set = (el, a) => { for (const k in a) el.setAttribute(k, a[k]); };
-      set(q(".p2-cl"), { x1: x, x2: x });
-      set(q(".p2-cd"), { cx: x, cy: yd });
-      // the label follows the same slot as the rule: never "spare" while the rule says peak, never "over" while a voucher runs
-      const st = d >= CAP ? "over" : S.busy[i] ? "near" : "spare", col = st === "spare" ? "#2F6B45" : "#B8322B";
-      set(q(".p2-sp"), { x: Math.min(PL + PW - 7, Math.max(PL, x - 3.5)), y: Math.min(yd, yc), height: Math.max(0, Math.abs(yc - yd)), fill: col, "fill-opacity": st === "near" ? ".5" : ".85" });
-      placeLabel(q(".p2-svl"), q(".p2-svb"), st + " capacity", col, x, (yd + yc) / 2 + 4);
-      const px = Math.min(PL + PW - 23, Math.max(PL + 23 - 6, x));
-      set(q(".p2-pil"), { x: px - 23 }); set(q(".p2-cpt"), { x: px }); q(".p2-cpt").textContent = hm(t);
-      chart.querySelectorAll(".p2-xt").forEach(el => { el.style.opacity = Math.abs(X(+el.dataset.t) - px) < 38 ? 0 : 1; });
-      const rr = runs(S.rules), k = rr.findIndex(r => i >= r.a && i < r.b), run = rr[k], rule = run.rule;
-      setPhone(offerFor(rule, run, rr[k + 1] || run), hm(t));
-      setBadge(R[rule].badge, R[rule].tone);
-      setLadder(".p2-lad-scn", rule);
-      setCup(R[rule].v, "Per cup with this offer", R[rule].note, false);
-      const rng = $(".p2-time"); if (Math.abs(+rng.value - t) > 0.13) rng.value = String(t);
+      cur = k;
     }
 
-    /* ---------- dormant-member timeline ---------- */
-    const D0 = -14, D1 = 56, DL = 96, DR = 14, DPW = CW - DL - DR, LA = 90, LB = 216, DAX = AXY;
-    const DX = d => DL + (d - D0) / (D1 - D0) * DPW;
-    const MEM = { reg: { past: [-14, -7, 0], tg: 14, trig: "trigger: 2× usual gap" }, new: { past: [0], tg: 30, trig: "trigger: 30 days" } };
-    const tl = $(".p2-tl");
-    function stepOf(d) { const tg = MEM[S.mem].tg; return d < tg ? "watch" : d < tg + 14 ? "n1" : d < D1 ? "n2" : "measure"; }
-    function stepDay(st) { const tg = MEM[S.mem].tg; return { watch: tg - 5, n1: tg, n2: tg + 14, measure: D1 }[st]; }
-    const expired = d => stepOf(d) === "n1" && d >= MEM[S.mem].tg + 7;
-    function drawTl() {
-      const m = MEM[S.mem], tg = m.tg;
-      let h = "";
-      for (let d = D0; d <= D1; d += 7) h += '<line x1="' + DX(d) + '" x2="' + DX(d) + '" y1="' + (LA - 12) + '" y2="' + (DAX - 18) + '" stroke="#F1EDE5"/><text class="p2-ax p2-xt" data-t="' + d + '" x="' + DX(d) + '" y="' + DAX + '" text-anchor="middle">' + (d < 0 ? "−" + (-d) : d) + '</text>';
-      [[LA, "Nudged", "group"], [LB, "Holdout", "no voucher"]].forEach(([y, a, b]) => { h += '<text class="p2-tlb" x="0" y="' + (y - 2) + '">' + a + '</text><text class="p2-tll" x="0" y="' + (y + 13) + '">' + b + '</text>'; });
-      [LA, LB].forEach(y => {
-        h += '<line x1="' + DX(D0) + '" x2="' + DX(0) + '" y1="' + y + '" y2="' + y + '" stroke="#24406B" stroke-width="2"/>';
-        h += '<line x1="' + DX(0) + '" x2="' + DX(D1) + '" y1="' + y + '" y2="' + y + '" stroke="#C9C2B5" stroke-width="2" stroke-dasharray="3 5"/>';
-        m.past.forEach(d => { h += '<circle cx="' + DX(d) + '" cy="' + y + '" r="6" fill="#24406B"/>'; });
-      });
-      h += S.mem === "reg"
-        ? '<path d="M' + DX(-7) + ',' + (LA - 16) + 'v4H' + DX(0) + 'v-4" fill="none" stroke="#9A9387"/><text class="p2-tll" x="' + DX(-3.5) + '" y="' + (LA - 21) + '" text-anchor="middle">usual gap 7 days</text>'
-        : '<text class="p2-tll" x="' + DX(0) + '" y="' + (LA - 17) + '" text-anchor="middle">only order</text>';
-      // cursor: starts under the lane labels so it never runs through them
-      h += '<g class="p2-cur"><line class="p2-cl" stroke="#24406B" stroke-width="1.4" y1="' + (LA - 12) + '" y2="' + (DAX - 13) + '"/>' +
-        '<rect class="p2-pil" y="' + (DAX - 13) + '" width="54" height="19" rx="9.5" fill="#24406B"/><text class="p2-pilt p2-cpt" y="' + DAX + '" text-anchor="middle"></text></g>';
-      // trigger: label and a short connector down to the first nudge
-      h += '<g data-d="' + tg + '"><line x1="' + DX(tg) + '" x2="' + DX(tg) + '" y1="' + (LA - 45) + '" y2="' + (LA - 31) + '" stroke="#B8322B" stroke-width="1.4" stroke-dasharray="4 3"/>' +
-        '<text class="p2-svl" x="' + DX(tg) + '" y="' + (LA - 50) + '" text-anchor="middle" fill="#B8322B">' + m.trig + '</text></g>';
-      // nudge 1: S$1 voucher, valid 7 days
-      h += '<g data-d="' + tg + '"><rect x="' + DX(tg) + '" y="' + (LA - 7) + '" width="' + (DX(tg + 7) - DX(tg)) + '" height="14" rx="4" fill="#D9C79B"/>' +
-        '<rect x="' + (DX(tg) - 17) + '" y="' + (LA - 11) + '" width="34" height="22" rx="5" fill="#2F6B45"/><text class="p2-pilt" x="' + DX(tg) + '" y="' + (LA + 4) + '" text-anchor="middle">S$1</text>' +
-        '<text class="p2-svl" x="' + DX(tg) + '" y="' + (LA - 19) + '" text-anchor="middle" fill="#2F6B45">nudge 1</text></g>';
-      // nudge 2: free upsize or bonus points
-      h += '<g data-d="' + (tg + 14) + '"><rect x="' + (DX(tg + 14) - 11) + '" y="' + (LA - 11) + '" width="22" height="22" rx="11" fill="#24406B"/><text class="p2-pilt" x="' + DX(tg + 14) + '" y="' + (LA + 4) + '" text-anchor="middle">+</text>' +
-        '<text class="p2-svl" x="' + DX(tg + 14) + '" y="' + (LA - 19) + '" text-anchor="middle" fill="#24406B">nudge 2</text></g>';
-      // holdout
-      h += '<g data-d="' + tg + '"><circle cx="' + DX(tg) + '" cy="' + LB + '" r="8" fill="#fff" stroke="#9A9387" stroke-width="2"/></g>';
-      // measure
-      const bx = DX(D1) - 12;
-      h += '<g data-d="' + D1 + '" data-hide="1"><path d="M' + (bx - 6) + ',' + LA + 'H' + bx + 'V' + LB + 'H' + (bx - 6) + '" fill="none" stroke="#24406B" stroke-width="1.6"/>' +
-        '<text class="p2-svl" x="' + (bx - 10) + '" y="' + ((LA + LB) / 2 - 2) + '" text-anchor="end" fill="#24406B">extra orders =</text>' +
-        '<text class="p2-tll" x="' + (bx - 10) + '" y="' + ((LA + LB) / 2 + 13) + '" text-anchor="end">nudged − holdout</text></g>';
-      h += '<rect class="p2-hit" x="' + (DL - 6) + '" y="0" width="' + (DPW + 12) + '" height="' + CH + '" fill="transparent" style="cursor:ew-resize"/>';
-      tl.innerHTML = h;
-    }
-    const DORM = {
-      watch: { badge: "Watching the gap", tone: "grey", phone: { tone: "grey", tag: "Member home", big: "No offer", line: "too soon to nudge", meta: "Nothing sent yet", v: 0, cta: "Order" } },
-      n1: { badge: "Trigger: first nudge", tone: "green", phone: { tone: "green", tag: "We miss you", big: "S$1 off", line: "your most-ordered drink", meta: "Valid 7 days · off‑peak · app pick‑up only", v: 1, cta: "Order for pick-up" } },
-      n2: { badge: "Still inactive: nudge 2", tone: "navy", phone: { tone: "navy", tag: "A treat for you", big: "Free upsize", line: "or bonus points towards your next tier", meta: "14 days after the first nudge", v: 0, rowk: "Upsize", rowv: "free", cta: "Order for pick-up" } },
-      measure: { badge: "Holdout: measure the lift", tone: "grey", phone: { tone: "grey", tag: "Member home", big: "No offer", line: "menu prices as usual", meta: "Held back to measure the lift", v: 0, cta: "Order" } }
-    };
-    const expiredState = tg => ({ badge: "Nudge 1 expired", tone: "grey", phone: { tone: "grey", tag: "Voucher expired", big: "No offer", line: "the S$1 went unused", meta: "Nudge 2 on day " + (tg + 14), v: 0, cta: "Order" } });
-    function updateDor() {
-      const d = S.day, x = DX(d), st = stepOf(d), tg = MEM[S.mem].tg, exp = expired(d), q = s => tl.querySelector(s);
-      q(".p2-cl").setAttribute("x1", x); q(".p2-cl").setAttribute("x2", x);
-      const px = Math.min(DL + DPW - 27, Math.max(DL + 21, x));
-      q(".p2-pil").setAttribute("x", px - 27); q(".p2-cpt").setAttribute("x", px); q(".p2-cpt").textContent = dayTxt(d);
-      tl.querySelectorAll(".p2-xt").forEach(el => { el.style.opacity = Math.abs(DX(+el.dataset.t) - px) < 38 ? 0 : 1; });
-      tl.querySelectorAll("g[data-d]").forEach(el => { const later = +el.dataset.d > d; el.classList.toggle("p2-dim", later && !el.dataset.hide); el.classList.toggle("p2-hid", later && !!el.dataset.hide); });
-      const s = exp ? expiredState(tg) : DORM[st];
-      setPhone(s.phone, dayTxt(d));
-      setBadge(s.badge, s.tone);
-      const order = ["trig", "n1", "n2", "measure"], act = st === "watch" ? "" : st;
-      setLadder(".p2-lad-dor", act, act ? order.slice(0, order.indexOf(act)) : []);
-      setCup(1, "Per cup with the first nudge", null, st !== "n1" || exp);
-      $$(".p2-step .btn").forEach(b => { const on = b.dataset.v === st; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); });
-      const rng = $(".p2-day"); if (+rng.value !== Math.round(d)) rng.value = String(Math.round(d));
-    }
-
-    /* ---------- views, controls ---------- */
-    function segOn(sel, v) { $$(sel + " .btn").forEach(b => { const on = b.dataset.v === v || b.dataset.view === v; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); }); }
-    function setView(v) {
-      S.view = v;
-      segOn(".p2-views", v);
-      $(".p2-scn").classList.toggle("p2-off", v !== "scn"); $(".p2-dor").classList.toggle("p2-off", v !== "dor");
-      $(".p2-lad-scn").classList.toggle("p2-off", v !== "scn"); $(".p2-lad-dor").classList.toggle("p2-off", v !== "dor");
-      $(".p2-rkh").textContent = v === "scn" ? "Rules · first match wins" : "Dormant members · in order";
-      $(".p2-title").textContent = v === "scn" ? "Offer engine · menu price fixed · illustrative" : "Dormant members · nudged vs holdout · illustrative";
-      if (v === "scn") updateScn(); else updateDor();
-    }
-    function playLabel() { $(".p2-play").textContent = playing ? "❚❚ Pause" : paused ? "▶ Resume" : "▶ Play"; }
-    function halt() { cancelAnimationFrame(raf); raf = 0; playing = false; }
-    function stop() { halt(); paused = false; playLabel(); }
-    function play() {
-      if (playing) { halt(); paused = true; playLabel(); return; }
-      const scn = S.view === "scn", from = scn ? T0 : D0, to = scn ? T1 : D1, speed = scn ? 1.7 : 11; // hours or days per second
-      const key = () => scn ? S.rules[slotOf(S.t)] : stepOf(S.day) + (expired(S.day) ? "x" : "");
-      const cur = scn ? S.t : S.day, resume = paused && cur < to;
-      paused = false;
-      let pos = resume ? cur : from;
-      if (!resume) { if (scn) S.t = from; else S.day = from; }
-      if (RM) { if (scn) { S.t = to; updateScn(); } else { S.day = to; updateDor(); } playLabel(); return; }
-      if (scn) updateScn(); else updateDor();
-      playing = true; playLabel();
-      let last = performance.now(), hold = resume ? 0 : 500, prev = key();
-      const tick = now => {
-        const dt = Math.min(64, now - last); last = now;
-        if (hold > 0) hold -= dt;
-        else {
-          pos = Math.min(to, pos + dt / 1000 * speed);
-          if (scn) { S.t = pos; updateScn(); } else { S.day = Math.round(pos); updateDor(); }
-          const k = key(); if (k !== prev) { prev = k; hold = 1100; }
-        }
-        if (pos >= to && hold <= 0) { stop(); return; }
-        raf = requestAnimationFrame(tick);
-      };
-      raf = requestAnimationFrame(tick);
-    }
-    function reset() {
-      stop();
-      Object.assign(S, DEF); S.day = MEM[DEF.mem].tg;
-      segOn(".p2-wx", S.wx); segOn(".p2-cx", S.cx); segOn(".p2-mem", S.mem);
-      $(".p2-time").value = String(S.t); $(".p2-day").value = String(S.day);
-      lastKey = "";
-      drawChart(); drawTl(); setView("scn");
-    }
-
-    $$(".p2-views .btn").forEach(b => b.addEventListener("click", () => { stop(); setView(b.dataset.view); }));
-    $$(".p2-wx .btn").forEach(b => b.addEventListener("click", () => { stop(); S.wx = b.dataset.v; segOn(".p2-wx", S.wx); drawChart(); updateScn(); }));
-    $$(".p2-cx .btn").forEach(b => b.addEventListener("click", () => { stop(); S.cx = b.dataset.v; segOn(".p2-cx", S.cx); drawChart(); updateScn(); }));
-    $$(".p2-mem .btn").forEach(b => b.addEventListener("click", () => { stop(); const st = stepOf(S.day); S.mem = b.dataset.v; segOn(".p2-mem", S.mem); S.day = stepDay(st); drawTl(); updateDor(); }));
-    $$(".p2-step .btn").forEach(b => b.addEventListener("click", () => { stop(); S.day = stepDay(b.dataset.v); updateDor(); }));
-    $(".p2-time").addEventListener("input", e => { stop(); S.t = +e.target.value; updateScn(); });
-    $(".p2-day").addEventListener("input", e => { stop(); S.day = +e.target.value; updateDor(); });
-    // after a mouse drag on a slider, hand the arrow keys back to the deck; keyboard users keep focus
-    $$(".p2-rng").forEach(r => {
-      r.addEventListener("pointerup", () => r.blur());
-      r.addEventListener("change", e => { let kb = false; try { kb = r.matches(":focus-visible"); } catch (_) { kb = false; } if (e.isTrusted && !kb) r.blur(); });
-    });
-    $(".p2-play").addEventListener("click", play);
-    $(".p2-reset").addEventListener("click", reset);
-
-    // drag directly on either chart
-    function drag(svg, onX) {
-      let on = false;
-      const at = e => { const r = svg.getBoundingClientRect(); onX((e.clientX - r.left) / r.width * CW); };
-      svg.addEventListener("pointerdown", e => { if (!e.target.classList.contains("p2-hit")) return; on = true; stop(); try { svg.setPointerCapture(e.pointerId); } catch (_) {} at(e); });
-      svg.addEventListener("pointermove", e => { if (on) at(e); });
-      const end = () => { on = false; };
-      svg.addEventListener("pointerup", end); svg.addEventListener("pointercancel", end);
-    }
-    drag(chart, x => { const t = T0 + (x - PL) / PW * (T1 - T0); S.t = Math.min(T1, Math.max(T0, Math.round(t / STEP) * STEP)); updateScn(); });
-    drag(tl, x => { const d = D0 + (x - DL) / DPW * (D1 - D0); S.day = Math.min(D1, Math.max(D0, Math.round(d))); updateDor(); });
-
-    sl.addEventListener("slideleave", stop);
-    sl.addEventListener("deckprint", reset);
-    reset();
+    $$(".p2-seg .btn").forEach(b => b.addEventListener("click", e => { show(b.dataset.k); if (e.detail) b.blur(); }));
+    sl.addEventListener("deckprint", () => show(DEF, true));
+    drawStatic();
+    show(DEF, true);
   })();
   </script>
 </section>
@@ -1105,350 +721,172 @@ aside.notes{display:none}
   <div class="inner">
     <p class="kicker">03 · Online retail · self pick-up<span class="ctag">Course link · Topic 7, last-mile delivery</span></p>
     <h2 class="head">Every cup collected saves the delivery commission</h2>
-    <div class="body" style="grid-template-columns:1fr 300px;gap:16px;margin-top:12px">
+    <div class="body" style="grid-template-columns:1fr 262px;gap:16px;margin-top:12px">
       <div class="panel">
-        <div class="ptop"><span class="ptitle">One S$6 cup, three ways · illustrative</span><span class="ctl"><button class="btn primary k3-play" type="button" aria-label="Play the tour">▶ Play</button><button class="btn k3-reset" type="button">Reset</button></span></div>
-        <div class="visual k3-visual">
+        <div class="ptop"><span class="ptitle">Per channel · illustrative</span><span class="ctl"><span class="seg k3-seg" role="group" aria-label="Compare channels"><button class="btn k3-ch" type="button" data-ch="0" aria-pressed="false">GrabFood delivery</button><button class="btn k3-ch" type="button" data-ch="1" aria-pressed="false">In-app delivery</button><button class="btn on k3-ch" type="button" data-ch="2" aria-pressed="true">App pick-up</button></span></span></div>
+        <div class="visual k3-visual" data-ch="2">
 
-          <!-- channel comparison -->
-          <div class="k3-cmp" data-sel="2" style="--k3i:2">
-            <div class="seg k3-seg" role="group" aria-label="Channel">
-              <button class="btn" type="button" data-ch="0" aria-pressed="false">GrabFood delivery</button>
-              <button class="btn" type="button" data-ch="1" aria-pressed="false">In-app delivery</button>
-              <button class="btn on" type="button" data-ch="2" aria-pressed="true">App pick-up</button>
+          <div class="k3-facts" aria-live="polite">
+            <div class="k3-f" data-f="cost" data-ok="1">
+              <span class="k3-mark" aria-hidden="true"><svg viewBox="0 0 16 16"><path class="k3-tick" d="M3.6 8.4l3 3 5.8-6.6"/><path class="k3-x" d="M4.5 4.5l7 7M11.5 4.5l-7 7"/></svg></span>
+              <div class="k3-fk">Chagee pays per cup</div>
+              <div class="k3-fv">
+                <div class="k3-barw" aria-hidden="true"><div class="k3-bar"><i class="k3-b-unk"></i><i class="k3-b-rng"></i><i class="k3-b-cut"></i><i class="k3-b-keep"></i></div><span class="k3-bl">S$6 cup</span></div>
+              </div>
+              <div class="k3-val">S$0</div>
+              <div class="k3-sub">no commission, no rider</div>
             </div>
-            <div class="k3-hlw" aria-hidden="true" style="grid-area:3/1/6/4"><div class="k3-hl"></div></div>
-            <div class="k3-hlw" aria-hidden="true" style="grid-area:7/1/9/4"><div class="k3-hl"></div></div>
-            <div class="k3-hlw" aria-hidden="true" style="grid-area:10/1/11/4"><div class="k3-hl"></div></div>
 
-            <div class="k3-lab" style="grid-area:2/1/3/4">Drink quality in transit</div>
-            <div class="k3-cl k3-route" data-c="0" style="grid-area:3/1"><svg viewBox="0 0 26 16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12.4" r="2.5"/><circle cx="21" cy="12.4" r="2.5"/><path d="M7.5 12.4H16l3-7.4h2.6M9.5 9h6"/><rect x="2.4" y="2.4" width="7.2" height="6" rx="1"/></g></svg><span>waits for a rider</span></div>
-            <div class="k3-cl k3-route" data-c="1" style="grid-area:3/2"><svg viewBox="0 0 26 16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12.4" r="2.5"/><circle cx="21" cy="12.4" r="2.5"/><path d="M7.5 12.4H16l3-7.4h2.6M9.5 9h6"/><rect x="2.4" y="2.4" width="7.2" height="6" rx="1"/></g></svg><span>waits for a rider</span></div>
-            <div class="k3-cl k3-route" data-c="2" style="grid-area:3/3"><svg viewBox="0 0 26 16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.6" cy="2.6" r="1.8"/><path d="M13 5.4l-1.6 4.6 2.6 2.4.6 3.1M11.4 10l-2 5.1M13 6l3 2.4M12.7 6l-2.9 2"/></g></svg><span>you collect it</span></div>
+            <div class="k3-f" data-f="drink" data-ok="1">
+              <span class="k3-mark" aria-hidden="true"><svg viewBox="0 0 16 16"><path class="k3-tick" d="M3.6 8.4l3 3 5.8-6.6"/><path class="k3-x" d="M4.5 4.5l7 7M11.5 4.5l-7 7"/></svg></span>
+              <div class="k3-fk">Drink quality</div>
+              <div class="k3-fv">
+                <svg class="k3-cup" viewBox="0 0 60 84" aria-hidden="true"><rect x="33" y="1" width="3.6" height="22" rx="1.5" fill="#C8A96A" transform="rotate(9 35 22)"/><path d="M8 22H52L47.6 79.2Q47.3 82 44.5 82H15.5Q12.7 82 12.4 79.2Z" fill="#F7F9FC" stroke="#AEBBD0" stroke-width="1.2"/><path class="k3-tea" d="M9.1 36H50.9L47.7 78.9Q47.5 80.6 45.6 80.6H14.4Q12.5 80.6 12.3 78.9Z"/><path class="k3-water" d="M8.8 31H51.2L50.9 36.2H9.1Z"/><g transform="rotate(-12 18.5 34.5)"><rect class="k3-ice" x="13" y="29" width="11" height="11" rx="2"/></g><g transform="rotate(10 30.5 37.5)"><rect class="k3-ice" x="25" y="32" width="11" height="11" rx="2"/></g><g transform="rotate(-6 42.5 33.5)"><rect class="k3-ice" x="37" y="28" width="11" height="11" rx="2"/></g><g transform="rotate(18 25 50)"><rect class="k3-ice k3-ice-d" x="20" y="45" width="10" height="10" rx="2"/></g><path d="M7 19.5Q7 16 11 16H49Q53 16 53 19.5V22H7Z" fill="#fff" stroke="#AEBBD0" stroke-width="1.2"/><g class="k3-drops"><circle cx="5" cy="44" r="1.3"/><circle cx="55.5" cy="52" r="1.1"/><circle cx="54.6" cy="64" r="1.4"/><circle cx="6.2" cy="61" r="1"/></g></svg>
+              </div>
+              <div class="k3-val">Fresh</div>
+              <div class="k3-sub">you collect it</div>
+            </div>
 
-            <div class="k3-cl k3-cupc" data-c="0" style="grid-area:4/1"><svg class="k3-cup k3-melt" viewBox="0 0 60 84" aria-hidden="true"><rect x="33" y="1" width="3.6" height="22" rx="1.5" fill="#C8A96A" transform="rotate(9 35 22)"/><path d="M8 22H52L47.6 79.2Q47.3 82 44.5 82H15.5Q12.7 82 12.4 79.2Z" fill="#F7F9FC" stroke="#AEBBD0" stroke-width="1.2"/><path class="k3-tea" d="M9.1 36H50.9L47.7 78.9Q47.5 80.6 45.6 80.6H14.4Q12.5 80.6 12.3 78.9Z"/><path class="k3-water" d="M8.8 31H51.2L50.9 36.2H9.1Z"/><g transform="rotate(-12 18.5 34.5)"><rect class="k3-ice" x="13" y="29" width="11" height="11" rx="2"/></g><g transform="rotate(10 30.5 37.5)"><rect class="k3-ice" x="25" y="32" width="11" height="11" rx="2"/></g><g transform="rotate(-6 42.5 33.5)"><rect class="k3-ice" x="37" y="28" width="11" height="11" rx="2"/></g><g transform="rotate(18 25 50)"><rect class="k3-ice k3-ice-d" x="20" y="45" width="10" height="10" rx="2"/></g><path d="M7 19.5Q7 16 11 16H49Q53 16 53 19.5V22H7Z" fill="#fff" stroke="#AEBBD0" stroke-width="1.2"/><g class="k3-drops"><circle cx="5" cy="44" r="1.3"/><circle cx="55.5" cy="52" r="1.1"/><circle cx="54.6" cy="64" r="1.4"/><circle cx="6.2" cy="61" r="1"/></g></svg></div>
-            <div class="k3-cl k3-cupc" data-c="1" style="grid-area:4/2"><svg class="k3-cup k3-melt" viewBox="0 0 60 84" aria-hidden="true"><rect x="33" y="1" width="3.6" height="22" rx="1.5" fill="#C8A96A" transform="rotate(9 35 22)"/><path d="M8 22H52L47.6 79.2Q47.3 82 44.5 82H15.5Q12.7 82 12.4 79.2Z" fill="#F7F9FC" stroke="#AEBBD0" stroke-width="1.2"/><path class="k3-tea" d="M9.1 36H50.9L47.7 78.9Q47.5 80.6 45.6 80.6H14.4Q12.5 80.6 12.3 78.9Z"/><path class="k3-water" d="M8.8 31H51.2L50.9 36.2H9.1Z"/><g transform="rotate(-12 18.5 34.5)"><rect class="k3-ice" x="13" y="29" width="11" height="11" rx="2"/></g><g transform="rotate(10 30.5 37.5)"><rect class="k3-ice" x="25" y="32" width="11" height="11" rx="2"/></g><g transform="rotate(-6 42.5 33.5)"><rect class="k3-ice" x="37" y="28" width="11" height="11" rx="2"/></g><g transform="rotate(18 25 50)"><rect class="k3-ice k3-ice-d" x="20" y="45" width="10" height="10" rx="2"/></g><path d="M7 19.5Q7 16 11 16H49Q53 16 53 19.5V22H7Z" fill="#fff" stroke="#AEBBD0" stroke-width="1.2"/><g class="k3-drops"><circle cx="5" cy="44" r="1.3"/><circle cx="55.5" cy="52" r="1.1"/><circle cx="54.6" cy="64" r="1.4"/><circle cx="6.2" cy="61" r="1"/></g></svg></div>
-            <div class="k3-cl k3-cupc" data-c="2" style="grid-area:4/3"><svg class="k3-cup k3-fresh" viewBox="0 0 60 84" aria-hidden="true"><rect x="33" y="1" width="3.6" height="22" rx="1.5" fill="#C8A96A" transform="rotate(9 35 22)"/><path d="M8 22H52L47.6 79.2Q47.3 82 44.5 82H15.5Q12.7 82 12.4 79.2Z" fill="#F7F9FC" stroke="#AEBBD0" stroke-width="1.2"/><path class="k3-tea" d="M9.1 36H50.9L47.7 78.9Q47.5 80.6 45.6 80.6H14.4Q12.5 80.6 12.3 78.9Z"/><path class="k3-water" d="M8.8 31H51.2L50.9 36.2H9.1Z"/><g transform="rotate(-12 18.5 34.5)"><rect class="k3-ice" x="13" y="29" width="11" height="11" rx="2"/></g><g transform="rotate(10 30.5 37.5)"><rect class="k3-ice" x="25" y="32" width="11" height="11" rx="2"/></g><g transform="rotate(-6 42.5 33.5)"><rect class="k3-ice" x="37" y="28" width="11" height="11" rx="2"/></g><g transform="rotate(18 25 50)"><rect class="k3-ice k3-ice-d" x="20" y="45" width="10" height="10" rx="2"/></g><path d="M7 19.5Q7 16 11 16H49Q53 16 53 19.5V22H7Z" fill="#fff" stroke="#AEBBD0" stroke-width="1.2"/><g class="k3-drops"><circle cx="5" cy="44" r="1.3"/><circle cx="55.5" cy="52" r="1.1"/><circle cx="54.6" cy="64" r="1.4"/><circle cx="6.2" cy="61" r="1"/></g></svg></div>
-
-            <div class="k3-cl k3-st k3-bad" data-c="0" style="grid-area:5/1">ice melts</div>
-            <div class="k3-cl k3-st k3-bad" data-c="1" style="grid-area:5/2">ice melts</div>
-            <div class="k3-cl k3-st k3-good" data-c="2" style="grid-area:5/3">fresh</div>
-
-            <div class="k3-lab k3-labl" style="grid-area:6/1/7/4"><span>Per S$6 cup</span><span class="k3-lg"><i class="k3-lgk"></i>kept<i class="k3-lgl"></i>leaves Chagee</span></div>
-            <div class="k3-cl k3-barc" data-c="0" style="grid-area:7/1"><div class="k3-bar" title="18-30% of S$6 leaves as commission"><i class="k3-keep"></i><i class="k3-cutr"></i><i class="k3-cuts"></i></div></div>
-            <div class="k3-cl k3-barc" data-c="1" style="grid-area:7/2"><div class="k3-bar" title="a rider fee leaves; amount not given"><i class="k3-keep"></i><i class="k3-cutq">?</i></div></div>
-            <div class="k3-cl k3-barc" data-c="2" style="grid-area:7/3"><div class="k3-bar" title="nothing leaves"><i class="k3-keep"></i></div></div>
-
-            <div class="k3-cl k3-valc" data-c="0" style="grid-area:8/1"><span class="k3-val k3-bad">S$1.10-1.80</span><span class="k3-sub">18-30% commission</span></div>
-            <div class="k3-cl k3-valc" data-c="1" style="grid-area:8/2"><span class="k3-val k3-mid">rider fee</span><span class="k3-sub">paid per delivery</span></div>
-            <div class="k3-cl k3-valc" data-c="2" style="grid-area:8/3"><span class="k3-val k3-good">S$0</span><span class="k3-sub">nothing leaves</span></div>
-
-            <div class="k3-lab" style="grid-area:9/1/10/4">Who keeps the customer data</div>
-            <div class="k3-cl k3-chipc" data-c="0" style="grid-area:10/1"><span class="chip red">Grab</span></div>
-            <div class="k3-cl k3-chipc" data-c="1" style="grid-area:10/2"><span class="chip">Chagee</span></div>
-            <div class="k3-cl k3-chipc" data-c="2" style="grid-area:10/3"><span class="chip">Chagee</span></div>
-
-            <div class="k3-say" aria-live="polite"><b>Pick-up:</b> no commission, fresh cup, Chagee's customer.</div>
+            <div class="k3-f" data-f="data" data-ok="1">
+              <span class="k3-mark" aria-hidden="true"><svg viewBox="0 0 16 16"><path class="k3-tick" d="M3.6 8.4l3 3 5.8-6.6"/><path class="k3-x" d="M4.5 4.5l7 7M11.5 4.5l-7 7"/></svg></span>
+              <div class="k3-fk">Customer data</div>
+              <div class="k3-fv">
+                <svg class="k3-card" viewBox="0 0 76 54" aria-hidden="true"><rect x="2" y="2" width="72" height="50" rx="8" fill="#fff" stroke="currentColor" stroke-width="2.2"/><circle cx="23" cy="21" r="7.5" fill="currentColor"/><path d="M10.5 42c1.4-7.4 6.4-10.6 12.5-10.6S34.1 34.6 35.5 42z" fill="currentColor"/><path d="M45 19h19M45 28h15M45 37h10" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg>
+              </div>
+              <div class="k3-val">Chagee</div>
+              <div class="k3-sub">keeps it</div>
+            </div>
           </div>
 
-          <!-- incentive toggles -->
-          <div class="k3-tg" role="group" aria-label="Pick-up incentives">
+          <div class="k3-inc">
             <div class="k3-cap">Make pick-up worth it</div>
-            <button class="k3-sw k3-on" type="button" role="switch" aria-checked="true" data-i="0"><span class="k3-knob"></span><span>Bonus points, more at peak</span></button>
-            <button class="k3-sw k3-on" type="button" role="switch" aria-checked="true" data-i="1"><span class="k3-knob"></span><span>Show the saving at checkout</span></button>
-            <button class="k3-sw k3-on" type="button" role="switch" aria-checked="true" data-i="2"><span class="k3-knob"></span><span>App voucher on GrabFood pick-up cups</span></button>
-            <button class="k3-sw k3-on" type="button" role="switch" aria-checked="true" data-i="3"><span class="k3-knob"></span><span>5 pick-ups a month: free upsize</span></button>
-            <button class="k3-sw k3-on" type="button" role="switch" aria-checked="true" data-i="4"><span class="k3-knob"></span><span>Group pick-up for offices</span></button>
-            <div class="k3-tgf"><button class="btn k3-all" type="button">All off</button><span class="k3-n">5 of 5 on</span></div>
-          </div>
-
-          <!-- phone checkout mock: a customer's first app order, collected in store -->
-          <div class="k3-phone" role="img" aria-label="App pick-up checkout showing the incentives that are switched on">
-            <div class="k3-scr">
-              <div class="k3-sbar"><span>12:28</span><svg width="34" height="10" viewBox="0 0 34 10" aria-hidden="true"><rect x="0" y="6" width="3" height="4" rx="1" fill="#262626"/><rect x="5" y="4" width="3" height="6" rx="1" fill="#262626"/><rect x="10" y="2" width="3" height="8" rx="1" fill="#262626"/><rect x="18" y="1" width="14" height="8" rx="2" fill="none" stroke="#262626"/><rect x="20" y="3" width="9" height="4" rx="1" fill="#262626"/></svg></div>
-              <div class="k3-ph-h">Pick-up checkout</div>
-              <div class="k3-ph-item"><svg viewBox="0 0 14 18" aria-hidden="true"><path d="M2 4h10l-1.4 12.2q-.1 .8-.9 .8H4.3q-.8 0-.9-.8z" fill="#E2C391" stroke="#AEBBD0"/><path d="M1.5 2.6h11v1.6h-11z" fill="#fff" stroke="#AEBBD0"/></svg><span>Milk tea, large</span><b>S$6.00</b></div>
-              <div class="k3-ph-ready"><i></i>Ready 12:40 · live estimate</div>
-
-              <div class="k3-pe" data-i="0"><div class="k3-pin"><div class="k3-pb k3-pb-pts"><b><span class="k3-g">★</span> Bonus points, peak boost</b><div class="k3-tier"><span class="k3-tbar"><em></em></span><span>next tier</span></div></div></div></div>
-              <div class="k3-pe" data-i="1"><div class="k3-pin"><div class="k3-pb k3-pb-save"><b>✓ You save the delivery fee</b></div></div></div>
-              <div class="k3-pe" data-i="2"><div class="k3-pin"><div class="k3-pb k3-pb-vch"><b>✓ First-order voucher</b><span>from a GrabFood cup sticker</span></div></div></div>
-              <div class="k3-pe" data-i="3"><div class="k3-pin"><div class="k3-pb k3-pb-chl"><b>Pick-up challenge <span class="k3-dots"><i class="k3-d1"></i><i></i><i></i><i></i><i></i></span></b><span>1 of 5 → free upsize</span></div></div></div>
-              <div class="k3-pe" data-i="4"><div class="k3-pin"><div class="k3-pb k3-pb-grp"><b>Office order?</b> One collects, the team gets a discount</div></div></div>
-
-              <div class="k3-go">Place pick-up order</div>
-              <div class="k3-home"></div>
-            </div>
+            <ul class="k3-chips">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L12 16.6l-5.3 2.9 1.1-5.9-4.4-4.1 6-.8z"/></svg><span>Bonus points at peak</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.6V4.5a1 1 0 0 1 1-1h8.1l8 8a1.4 1.4 0 0 1 0 2l-7.1 7.1a1.4 1.4 0 0 1-2 0z"/><circle cx="8.3" cy="8.3" r="1.6"/></svg><span>Saving at checkout</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v2.6a2 2 0 0 0 0 3.8v2.6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2.6a2 2 0 0 0 0-3.8z"/><path d="M15 7v10" stroke-dasharray="1.6 1.8"/></svg><span>Voucher on Grab pick-ups</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-1.6 13.1a1 1 0 0 1-1 .9H7.6a1 1 0 0 1-1-.9z"/><path d="M4 4.5h16V7H4zM12 10.5v6M9 13.5h6"/></svg><span>5 pick-ups: free upsize</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8.5" r="2.8"/><circle cx="16.5" cy="9.5" r="2.3"/><path d="M2.8 19.5c.6-3.6 2.7-5.6 5.2-5.6s4.6 2 5.2 5.6M13.6 15.2c.9-1 1.8-1.4 2.9-1.4 2.1 0 3.8 1.7 4.3 5.7"/></svg><span>Office group discount</span></li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <div class="cards" style="gap:10px">
-        <div class="bc"><div class="k">AI role</div><ol class="k3-ai"><li><span class="num">1</span><span>Target likely switchers</span></li><li><span class="num">2</span><span>Push pick-up at peak, allow delivery <span class="k3-nw">off-peak</span></span></li><li><span class="num">3</span><span>Predict ready times from live volume and speed</span></li></ol></div>
-        <div class="bc warn"><div class="k">Fix the wait first</div><p>Incentives fail while pick-up waits stay <b>long and inaccurate</b>.</p></div>
-        <div class="bc k3-calc"><div class="k">Saving a year</div>
-          <label class="k3-sl"><span>Delivery share</span><b class="k3-dv">25%</b><input type="range" class="k3-del" min="10" max="40" step="1" value="25" aria-label="Delivery share of sales, percent"></label>
-          <label class="k3-sl"><span>Shifts to pick-up</span><b class="k3-sv">10%</b><input type="range" class="k3-sh" min="1" max="30" step="1" value="10" aria-label="Share of delivery orders shifting to pick-up, percent"></label>
-          <div class="k3-res">
-            <div class="k3-v">S$205k</div>
-            <div class="k3-math">S$48.2M × <span class="k3-md">25%</span> × <span class="k3-ms">10%</span><br>× 17% average saving per shifted order</div>
-          </div>
-        </div>
+      <div class="cards k3-cards">
+        <div class="bc k3-ai"><div class="k">AI role</div><ol><li><span class="num">1</span><span>Target likely switchers</span></li><li><span class="num">2</span><span>Pick-up at peak,<br>delivery off-peak</span></li><li><span class="num">3</span><span>Predict ready times</span></li></ol></div>
+        <div class="bc warn k3-warn"><div class="k">Fix the wait first</div><p>Incentives fail while<br>pick-up waits are<br><b>long and inaccurate</b>.</p></div>
       </div>
     </div>
-    <div class="takeaway"><span class="lab">BENEFIT</span><span class="t">App pick-up: each shifted order saves S$1.10-1.80 commission; <b>10%</b> of S$12.05M delivery sales shifting ≈ <b>S$205k</b> a year.</span></div>
+    <div class="takeaway"><span class="lab">BENEFIT</span><span class="t">Each delivery order moved to pick-up saves about <b>S$1.10-1.80</b>; shifting 10% of delivery ≈ <b>S$205k</b> a year.</span></div>
   </div>
-  <div class="foot"><span>OPIM639 · Group 3 · online retail · illustrative assumptions, not Chagee data · delivery 25% of S$48.2M sales · rider fee not quantified</span><span class="rail"></span><span class="pg"></span></div>
+  <div class="foot"><span>OPIM639 · Group 3 · online retail · illustrative assumptions, not Chagee data · delivery 25% of S$48.2M sales</span><span class="rail"></span><span class="pg"></span></div>
   <aside class="notes">
-    <p>Last improvement: get more customers to collect their own orders. The box on the left shows one S$6 cup, three ways.</p>
-    <p>Click <b>GrabFood delivery</b>: 18 to 30% commission, about S$1.10 to S$1.80, leaves Chagee; the ice melts while the drink waits for a rider, and Grab keeps the customer. <b>In-app delivery</b> keeps the customer but still pays a rider. <b>App pick-up</b>: nothing leaves and the drink is fresh.</p>
-    <p>Press <b>All off</b> for a bare checkout, then switch the five incentives back on and watch each fill its slot. Point to the red card: none of this works until the pick-up wait is fixed, which is where AI ready-time prediction comes in.</p>
-    <p>Close on the calculator: 25% delivery and 10% shifting give about S$205k a year, using 17% as the average saving per shifted order. All figures are illustrative.</p>
+    <p>Finally: get customers to collect their own orders.</p>
+    <p>Click <b>GrabFood delivery</b>: an 18 to 30% commission, about S$1.10 to S$1.80 of a S$6 cup, goes to Grab; the ice melts while it waits for a rider; and Grab keeps the customer data. Click <b>In-app delivery</b>: Chagee keeps the customer but still pays a rider fee on every order (amount not given; the grey cap is only a marker). Click <b>App pick-up</b>: no commission, no rider, a fresh drink, and the customer is ours. The strip lists five incentives, such as a free upsize for 5 pick-ups in a month.</p>
+    <p>Point to the red card: none of this works until pick-up waits are short and accurate; AI ready-time prediction makes the quoted time accurate.</p>
+    <p>Arithmetic: S$48.2M sales × 25% delivery = S$12.05M; 10% shifting is S$1.2M; at a 17% average saving per shifted order, about S$205k a year. All figures are illustrative.</p>
   </aside>
   <style>
-    #k3 .k3-visual{display:grid;grid-template-columns:minmax(0,1fr) 176px 196px;gap:10px}
-    #k3 .k3-play{min-width:94px;justify-content:center;text-align:center}
+    #k3 .ptitle{font-size:12px}
+    #k3 .k3-seg .btn{height:32px;padding:0 16px;font-size:13px}
+    #k3 .k3-seg .btn:focus-visible{outline:2px solid var(--gold);outline-offset:-3px}
 
-    /* channel comparison */
-    #k3 .k3-cmp{position:relative;min-height:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 10px 10px;
-      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(10,auto) 1fr}
-    #k3 .k3-seg{grid-area:1/1/2/4;display:grid;grid-template-columns:repeat(3,1fr);position:relative;z-index:1}
-    #k3 .k3-seg .btn{justify-content:center;padding:0 4px;height:28px;font-size:11.5px}
-    #k3 .k3-seg .btn+.btn{border-left:1px solid #E4DED2}
-    #k3 .k3-seg .btn.on+.btn,#k3 .k3-seg .btn.on{border-left-color:var(--navy)}
-    #k3 .k3-hlw{position:relative;z-index:0;pointer-events:none}
-    #k3 .k3-hl{position:absolute;top:-5px;bottom:-5px;left:0;width:33.3333%;transform:translateX(calc(var(--k3i) * 100%));transition:transform .45s cubic-bezier(.3,.7,.25,1)}
-    #k3 .k3-hl::before{content:"";position:absolute;top:0;bottom:0;left:3px;right:3px;background:#EEF2F8;border:1.5px solid rgba(36,64,107,.45);border-radius:8px}
-    #k3 .k3-lab{position:relative;z-index:1;font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--taupe);padding:14px 0 6px 12px}
-    #k3 .k3-labl{display:flex;justify-content:space-between;align-items:baseline;padding-right:12px}
-    #k3 .k3-lg{display:inline-flex;align-items:center;gap:5px;font:11px/1 var(--sans);letter-spacing:0;text-transform:none;color:var(--ink2)}
-    #k3 .k3-lg i{width:10px;height:10px;border-radius:2px;background:var(--navy)}
-    #k3 .k3-lg .k3-lgl{margin-left:6px;background:var(--red)}
-    #k3 .k3-cl{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 8px;cursor:pointer}
-    #k3 .k3-route{flex-direction:row;justify-content:center;gap:4px;padding:2px 2px 0;font:11px/1.2 var(--sans);color:var(--ink2);white-space:nowrap}
-    #k3 .k3-route svg{width:28px;height:18px;flex:none;color:var(--navy)}
-    #k3 .k3-cup{width:60px;height:84px;margin-top:4px;overflow:visible}
-    #k3 .k3-cup .k3-tea{fill:#E2C391}
-    #k3 .k3-cup .k3-water{fill:#D3E1F0;opacity:0}
-    #k3 .k3-cup .k3-ice{fill:#fff;fill-opacity:.94;stroke:#8EA4C6;stroke-width:1;transform-box:fill-box;transform-origin:center}
+    #k3 .k3-visual{display:flex;flex-direction:column;gap:16px;margin-top:12px}
+
+    /* three facts for the selected channel */
+    #k3 .k3-facts{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    #k3 .k3-f{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+      background:#fff;border:1px solid var(--line);border-top:3px solid var(--red);border-radius:10px;padding:16px 14px 18px;transition:border-color .3s ease}
+    #k3 .k3-f[data-ok="1"]{border-top-color:#2F6B45}
+    #k3 .k3-fk{font:600 13px/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+    #k3 .k3-fv{height:100px;margin:14px 0 12px;display:flex;align-items:center;justify-content:center}
+    #k3 .k3-val{font:500 36px/1.05 var(--serif);color:var(--red);transition:color .3s ease}
+    #k3 .k3-f[data-ok="1"] .k3-val{color:#2F6B45}
+    #k3 .k3-sub{margin-top:5px;font:14px/1.3 var(--sans);color:var(--ink2)}
+    #k3 .k3-mark{position:absolute;top:12px;right:12px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#FBEDEC;transition:background .3s ease}
+    #k3 .k3-mark svg{width:14px;height:14px;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+    #k3 .k3-mark .k3-tick{stroke:#2F6B45;opacity:0}
+    #k3 .k3-mark .k3-x{stroke:var(--red)}
+    #k3 .k3-f[data-ok="1"] .k3-mark{background:#EEF5F0}
+    #k3 .k3-f[data-ok="1"] .k3-tick{opacity:1}
+    #k3 .k3-f[data-ok="1"] .k3-x{opacity:0}
+
+    /* per-cup bar: the whole S$6 cup; what Chagee pays out sits on top */
+    #k3 .k3-barw{display:flex;flex-direction:column;align-items:center;gap:7px}
+    #k3 .k3-bar{width:46px;height:78px;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;background:var(--navy)}
+    #k3 .k3-bar i{display:block;flex:none;height:0;transition:height .35s ease}
+    #k3 .k3-b-keep{flex:1 1 auto!important;background:var(--navy)}
+    #k3 .k3-b-cut{background:var(--red)}
+    #k3 .k3-b-rng{background:repeating-linear-gradient(135deg,#E3A19C 0 3px,#FBEDEC 3px 6px)}
+    #k3 .k3-b-unk{background:repeating-linear-gradient(135deg,#C9C1B3 0 3px,#F2EEE6 3px 6px)}
+    #k3 .k3-bl{font:12px/1 var(--sans);color:var(--taupe)}
+    #k3 .k3-visual[data-ch="0"] .k3-b-rng{height:12%}
+    #k3 .k3-visual[data-ch="0"] .k3-b-cut{height:18%}
+    #k3 .k3-visual[data-ch="1"] .k3-b-unk{height:12%}
+
+    /* the cup: ice melts while it waits for a rider */
+    #k3 .k3-cup{width:68px;height:96px;overflow:visible}
+    #k3 .k3-cup .k3-tea{fill:#E2C391;transition:fill .4s ease}
+    #k3 .k3-cup .k3-water{fill:#D3E1F0;opacity:0;transition:opacity .4s ease}
+    #k3 .k3-cup .k3-ice{fill:#fff;fill-opacity:.94;stroke:#8EA4C6;stroke-width:1;transform-box:fill-box;transform-origin:center;transition:transform .4s ease}
     #k3 .k3-cup .k3-ice-d{fill-opacity:.55}
-    #k3 .k3-cup .k3-drops{fill:#9FB4D3;opacity:0}
-    #k3 .k3-melt .k3-tea{fill:#ECDFC4}
-    #k3 .k3-melt .k3-water{opacity:1}
-    #k3 .k3-melt .k3-ice{transform:scale(.46)}
-    #k3 .k3-melt .k3-drops{opacity:1}
-    #k3 .k3-st{font:500 12px/1.2 var(--sans);padding-top:3px}
-    #k3 .k3-bad{color:var(--red)}
-    #k3 .k3-good{color:#2F6B45}
-    #k3 .k3-mid{color:var(--ink2)}
-    #k3 .k3-barc{padding:3px 8px 0}
-    #k3 .k3-bar{width:100%;height:18px;border-radius:4px;display:flex;overflow:hidden;background:#ECE8E0}
-    #k3 .k3-bar i{display:block;height:100%;font-style:normal}
-    #k3 .k3-keep{flex:1 1 auto;background:var(--navy)}
-    #k3 .k3-cutr{flex:none;width:12%;background:repeating-linear-gradient(135deg,#E3A19C 0 2px,#FBEDEC 2px 4px)}
-    #k3 .k3-cuts{flex:none;width:18%;background:var(--red)}
-    #k3 .k3-cutq{flex:none;width:14px;background:#E9E4DA;border-left:1.5px dashed #9A9387;color:#4A4A4A;font:700 11px/18px var(--sans);text-align:center}
-    #k3 .k3-valc{padding-top:5px}
-    #k3 .k3-val{font:500 20px/1.1 var(--serif)}
-    #k3 .k3-sub{font:11px/1.25 var(--sans);color:var(--taupe);margin-top:1px}
-    #k3 .k3-chipc .chip{padding:3px 10px}
-    #k3 .k3-say{grid-area:11/1/12/4;align-self:end;position:relative;z-index:1;margin-top:12px;padding:7px 10px;border-radius:7px;
-      font:12.5px/1.4 var(--sans);color:var(--ink);background:#EEF5F0;border-left:3px solid #2F6B45}
-    #k3 .k3-cmp[data-sel="0"] .k3-say{background:#FBEDEC;border-left-color:var(--red)}
-    #k3 .k3-cmp[data-sel="1"] .k3-say{background:var(--cream);border-left-color:var(--taupe)}
+    #k3 .k3-cup .k3-drops{fill:#9FB4D3;opacity:0;transition:opacity .4s ease}
+    #k3 .k3-visual:not([data-ch="2"]) .k3-tea{fill:#ECDFC4}
+    #k3 .k3-visual:not([data-ch="2"]) .k3-water{opacity:1}
+    #k3 .k3-visual:not([data-ch="2"]) .k3-ice{transform:scale(.46)}
+    #k3 .k3-visual:not([data-ch="2"]) .k3-drops{opacity:1}
 
-    /* replay when a channel is picked */
-    #k3 .k3-run .k3-melt .k3-ice{animation:k3-melt 1.9s ease-in both}
-    #k3 .k3-run .k3-melt .k3-water{animation:k3-in 1.9s ease-in both}
-    #k3 .k3-run .k3-melt .k3-drops{animation:k3-in 1.9s ease-in both}
-    #k3 .k3-run .k3-melt .k3-tea{animation:k3-tea 1.9s ease-in both}
-    #k3 .k3-run .k3-fresh .k3-ice{animation:k3-clink .7s cubic-bezier(.3,1.6,.5,1) both}
-    #k3 .k3-run .k3-fresh g:nth-of-type(2) .k3-ice{animation-delay:.08s}
-    #k3 .k3-run .k3-fresh g:nth-of-type(3) .k3-ice{animation-delay:.16s}
-    #k3 .k3-route.k3-run svg{animation:k3-ride .8s ease-out both}
-    #k3 .k3-st.k3-run{animation:k3-pop .4s ease-out 1.5s both}
-    #k3 .k3-barc.k3-run .k3-cutr,#k3 .k3-barc.k3-run .k3-cuts,#k3 .k3-barc.k3-run .k3-cutq{animation:k3-grow .7s ease-out .5s both}
-    #k3 .k3-valc.k3-run{animation:k3-pop .4s ease-out .9s both}
-    #k3 .k3-chipc.k3-run{animation:k3-pop .4s ease-out 1.2s both}
-    #k3 .k3-say.k3-run{animation:k3-pop .35s ease-out both}
-    @keyframes k3-melt{0%,12%{transform:scale(1)}100%{transform:scale(.46)}}
-    @keyframes k3-in{0%,12%{opacity:0}100%{opacity:1}}
-    @keyframes k3-tea{0%,12%{fill:#E2C391}100%{fill:#ECDFC4}}
-    @keyframes k3-clink{0%{transform:translateY(-7px)}100%{transform:translateY(0)}}
-    @keyframes k3-ride{from{transform:translateX(-12px);opacity:0}}
-    @keyframes k3-grow{from{width:0}}
-    @keyframes k3-pop{from{opacity:0;transform:translateY(4px)}}
+    /* the customer card: Chagee's (navy) or not (grey) */
+    #k3 .k3-card{width:84px;height:60px;color:#C9C1B3;transition:color .3s ease}
+    #k3 .k3-f[data-ok="1"] .k3-card{color:var(--navy)}
 
-    /* incentive switches */
-    #k3 .k3-tg{min-height:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 9px 10px;display:flex;flex-direction:column;gap:9px}
-    #k3 .k3-cap{font:600 11px/1.3 var(--sans);letter-spacing:.1em;white-space:nowrap;text-transform:uppercase;color:var(--taupe);margin:0 0 3px 2px}
-    #k3 .k3-sw{display:grid;grid-template-columns:24px 1fr;gap:7px;align-items:start;width:100%;margin:0;text-align:left;background:#fff;border:1px solid var(--line);
-      border-radius:8px;padding:9px 7px;font:12px/1.3 var(--sans);color:var(--taupe);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
-    #k3 .k3-sw:hover{border-color:var(--navy)}
-    #k3 .k3-knob{position:relative;width:24px;height:14px;border-radius:7px;background:#D8D1C3;margin-top:1px;transition:background .2s}
-    #k3 .k3-knob::after{content:"";position:absolute;top:2px;left:2px;width:10px;height:10px;border-radius:50%;background:#fff;transition:transform .2s}
-    #k3 .k3-sw.k3-on{color:var(--ink);background:#F4F6FA;border-color:#C9D3E3}
-    #k3 .k3-sw.k3-on .k3-knob{background:var(--navy)}
-    #k3 .k3-sw.k3-on .k3-knob::after{transform:translateX(10px)}
-    #k3 .k3-tgf{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:6px}
-    #k3 .k3-tgf .btn{height:26px;padding:0 10px}
-    #k3 .k3-n{font:500 11.5px/1 var(--sans);color:var(--taupe)}
+    /* incentives: a calm strip, no switches */
+    #k3 .k3-inc{flex:none}
+    #k3 .k3-cap{font:600 12px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--taupe);margin:0 0 9px 2px}
+    #k3 .k3-chips{list-style:none;margin:0;padding:14px 6px;display:flex;background:#fff;border:1px solid var(--line);border-radius:10px}
+    #k3 .k3-chips li{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;align-items:center;gap:7px;padding:0 10px;text-align:center;font:13px/1.3 var(--sans);color:var(--ink)}
+    #k3 .k3-chips li+li{border-left:1px solid #EFEBE3}
+    #k3 .k3-chips svg{width:22px;height:22px;flex:none;fill:none;stroke:#B8913F;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 
-    /* phone */
-    #k3 .k3-phone{min-height:0;display:flex;background:#232B3A;border-radius:30px;padding:7px;box-shadow:0 6px 18px rgba(36,64,107,.16)}
-    #k3 .k3-scr>*{flex:none}
-    #k3 .k3-scr{flex:1;min-height:0;position:relative;display:flex;flex-direction:column;background:#fff;border-radius:24px;padding:0 9px;font:11px/1.3 var(--sans);color:var(--ink)}
-    #k3 .k3-scr::before{content:"";position:absolute;top:8px;left:50%;width:40px;height:5px;margin-left:-20px;border-radius:3px;background:#232B3A}
-    #k3 .k3-sbar{display:flex;justify-content:space-between;align-items:center;height:26px;padding:4px 7px 0 9px;font:600 11px/1 var(--sans);color:var(--ink)}
-    #k3 .k3-ph-h{margin-top:3px;font:600 14px/1.2 var(--sans);color:var(--ink)}
-    #k3 .k3-ph-item{display:flex;align-items:center;gap:6px;margin-top:6px;padding:5px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-    #k3 .k3-ph-item svg{width:12px;height:16px;flex:none}
-    #k3 .k3-ph-item span{flex:1}
-    #k3 .k3-ph-ready{display:flex;align-items:center;gap:5px;margin-top:6px;color:#2F6B45;font-weight:500}
-    #k3 .k3-ph-ready i{width:7px;height:7px;border-radius:50%;background:#2F6B45;flex:none}
-    #k3 .k3-pe{position:relative;display:grid;grid-template-rows:1fr;min-height:22px;margin-top:6px;clip-path:inset(0 -3px);transition:grid-template-rows .4s ease}
-    #k3 .k3-pe::before{content:"";position:absolute;inset:0;border:1px dashed #CFC7B8;border-radius:7px;opacity:0;transition:opacity .25s ease}
-    #k3 .k3-pe.k3-off{grid-template-rows:0fr}
-    #k3 .k3-pe.k3-off::before{opacity:1;transition-delay:.15s}
-    #k3 .k3-pin{min-height:0;transition:opacity .3s ease}
-    #k3 .k3-pe.k3-off .k3-pin{opacity:0}
-    #k3 .k3-pb{padding:5px 7px;border-radius:7px;border:1px solid var(--line);background:#FAF8F4}
-    #k3 .k3-pb b{font-weight:600}
-    #k3 .k3-pb>span{display:block;color:var(--ink2)}
-    #k3 .k3-pb-pts{background:#FBF5E8;border-color:#E8D9B5}
-    #k3 .k3-g{color:#B8913F}
-    #k3 .k3-tier{display:flex;align-items:center;gap:6px;margin-top:3px;color:#7A6432}
-    #k3 .k3-tbar{position:relative;flex:1;height:6px;border-radius:3px;background:#EFE5CC;overflow:hidden}
-    #k3 .k3-tbar em{position:absolute;top:0;bottom:0;left:0;width:34%;background:var(--gold);transition:width .5s ease .2s}
-    #k3 .k3-pe.k3-off .k3-tbar em{width:0}
-    #k3 .k3-pb-save{background:#EEF5F0;border-color:#CFE3D6;color:#2F6B45}
-    #k3 .k3-pb-vch{background:#F4F6FA;border:1px dashed var(--blue)}
-    #k3 .k3-pb-chl{background:#fff}
-    #k3 .k3-dots{display:inline-flex;gap:2px;margin-left:2px;vertical-align:0}
-    #k3 .k3-dots i{width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 1.3px #B9B1A3}
-    #k3 .k3-dots .k3-d1{background:var(--navy);box-shadow:none}
-    #k3 .k3-pb-grp{background:var(--cream)}
-    #k3 .k3-go{margin-top:auto;padding:7px 0;border-radius:999px;background:var(--red);color:#fff;text-align:center;font:500 11.5px/1.2 var(--sans)}
-    #k3 .k3-home{width:64px;height:4px;margin:6px auto 6px;border-radius:2px;background:#262626}
+    /* side cards */
+    #k3 .k3-cards .bc{flex:1 1 0;min-height:0;display:flex;flex-direction:column;padding:14px 16px 16px}
+    #k3 .k3-cards .bc .k{font-size:12px;letter-spacing:.12em}
+    #k3 .k3-ai ol{flex:1;list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;justify-content:space-evenly;gap:12px}
+    #k3 .k3-ai li{display:flex;align-items:center;gap:12px;font:15px/1.35 var(--sans);color:var(--ink)}
+    #k3 .k3-ai .num{width:22px;height:22px;margin:0;font-size:12px}
+    #k3 .k3-warn .k{color:var(--red)}
+    #k3 .k3-warn p{margin:auto 0;padding-bottom:10px;font:400 20px/1.35 var(--serif);color:var(--ink2);white-space:nowrap}
+    #k3 .k3-warn p b{font-weight:600;color:var(--ink)}
 
-    /* side cards (label size as on slides 1 and 2) */
-    #k3 .bc .k{font-size:11px;letter-spacing:.11em}
-    #k3 .k3-ai{list-style:none;margin:5px 0 0;padding:0;display:flex;flex-direction:column;gap:5px}
-    #k3 .k3-ai li{display:flex;align-items:flex-start;gap:8px;font:12.5px/1.38 var(--sans);color:var(--ink2)}
-    #k3 .k3-ai li>span:last-child{text-wrap:balance}
-    #k3 .k3-ai .num{width:18px;height:18px;margin-top:0;font-size:11px}
-    #k3 .k3-nw{white-space:nowrap}
-    #k3 .bc.warn p{margin-top:3px;font-size:12.5px}
-
-    /* calculator */
-    #k3 .k3-calc{flex:1;display:flex;flex-direction:column}
-    #k3 .k3-sl{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:0 8px;margin-top:12px;font:12.5px var(--sans);color:var(--ink2)}
-    #k3 .k3-sl b{font:600 13px var(--sans);color:var(--ink)}
-    #k3 .k3-sl input{grid-column:1 / -1;width:100%;margin:5px 0 0;accent-color:var(--red)}
-    #k3 .k3-res{margin-top:auto;padding:10px 12px 9px;border-radius:8px;background:var(--cream)}
-    #k3 .k3-v{font:500 44px/1 var(--serif);color:var(--navy)}
-    #k3 .k3-math{margin-top:6px;font:11px/1.45 var(--sans);color:var(--taupe)}
-
-    @media (prefers-reduced-motion:reduce){#k3 *,#k3 *::before,#k3 *::after{animation:none!important;transition:none!important}}
-    @media print{#k3 *,#k3 *::before,#k3 *::after{animation:none!important;transition:none!important}}
+    @media (prefers-reduced-motion:reduce){#k3 *,#k3 *::before,#k3 *::after{transition:none!important}}
+    @media print{#k3 *,#k3 *::before,#k3 *::after{transition:none!important}}
   </style>
   <script>
   (function () {
     "use strict";
     const sl = document.getElementById("k3");
     const $ = s => sl.querySelector(s), $$ = s => Array.prototype.slice.call(sl.querySelectorAll(s));
-    const reduced = () => !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
-    const SALES = 48.2e6, SAVE = 0.17, DEF = { ch: 2, del: 25, sh: 10 };
-    const SAY = [
-      "<b>GrabFood:</b> commission leaves, and so does the customer.",
-      "<b>In-app:</b> Chagee's customer, but a rider is still paid.",
-      "<b>Pick-up:</b> no commission, fresh cup, Chagee's customer."
+    const DEF = 2;                                              // App pick-up: the "after" story, also what prints
+    const FACTS = [                                             // per channel: [big value, short line, good?]
+      { cost: ["S$1.10-1.80", "18-30% to Grab", 0], drink: ["Ice melts", "waits for a rider", 0], data: ["Grab", "keeps it", 0] },
+      { cost: ["Rider fee", "paid on every order", 0], drink: ["Ice melts", "waits for a rider", 0], data: ["Chagee", "keeps it", 1] },
+      { cost: ["S$0", "no commission, no rider", 1], drink: ["Fresh", "you collect it", 1], data: ["Chagee", "keeps it", 1] }
     ];
-    const cmp = $(".k3-cmp"), say = $(".k3-say"), segB = $$(".k3-seg .btn"), sws = $$(".k3-sw"), pes = $$(".k3-pe");
-    const playB = $(".k3-play"), allB = $(".k3-all"), del = $(".k3-del"), sh = $(".k3-sh");
+    const vis = $(".k3-visual"), btns = $$(".k3-ch"), tiles = $$(".k3-f");
 
-    function select(i, anim) {
-      segB.forEach((b, k) => { b.classList.toggle("on", k === i); b.setAttribute("aria-pressed", String(k === i)); });
-      cmp.style.setProperty("--k3i", i);
-      cmp.dataset.sel = String(i);
-      say.innerHTML = SAY[i];
-      $$(".k3-run").forEach(el => el.classList.remove("k3-run"));
-      if (anim && !reduced()) {
-        void cmp.offsetWidth;                                   // restart the CSS animations
-        $$('.k3-cl[data-c="' + i + '"]').forEach(el => el.classList.add("k3-run"));
-        say.classList.add("k3-run");
-      }
+    function show(i) {
+      vis.dataset.ch = String(i);
+      btns.forEach((b, k) => { b.classList.toggle("on", k === i); b.setAttribute("aria-pressed", String(k === i)); });
+      tiles.forEach(t => {
+        const f = FACTS[i][t.dataset.f];
+        t.querySelector(".k3-val").textContent = f[0];
+        t.querySelector(".k3-sub").textContent = f[1];
+        t.dataset.ok = f[2] ? "1" : "0";
+      });
     }
 
-    function setInc(k, on) {
-      sws[k].classList.toggle("k3-on", on);
-      sws[k].setAttribute("aria-checked", String(on));
-      pes[k].classList.toggle("k3-off", !on);
-      const n = sws.filter(s => s.classList.contains("k3-on")).length;
-      $(".k3-n").textContent = n + " of 5 on";
-      allB.textContent = n === 5 ? "All off" : "All on";
-    }
-
-    // the calculator explores; the BENEFIT bar stays on the user's case (25% delivery, 10% shifting)
-    function fmt(v) { return v >= 995e3 ? "S$" + (v / 1e6).toFixed(2) + "M" : "S$" + Math.round(v / 1e3) + "k"; }
-    function calc() {
-      const d = +del.value, s = +sh.value;
-      $(".k3-dv").textContent = $(".k3-md").textContent = d + "%";
-      $(".k3-sv").textContent = $(".k3-ms").textContent = s + "%";
-      $(".k3-v").textContent = fmt(SALES * d / 100 * s / 100 * SAVE);
-    }
-
-    // tour: GrabFood, in-app, pick-up, then the incentives one by one (pausable; reduced motion steps without animating)
-    const TOUR = [[0, () => { sws.forEach((_, k) => setInc(k, false)); select(0, true); }],
-                  [2300, () => select(1, true)], [4600, () => select(2, true)]];
-    for (let k = 0; k < 5; k++) TOUR.push([5900 + k * 650, () => setInc(k, true)]);
-    let step = -1, timer = 0, due = 0, left = 0, playing = false;
-
-    function showBtn() {
-      playB.textContent = playing ? "❚❚ Pause" : step >= 0 ? "▶ Resume" : "▶ Play";
-      playB.setAttribute("aria-label", playing ? "Pause the tour" : step >= 0 ? "Resume the tour" : "Play the tour");
-    }
-    function stop() { clearTimeout(timer); timer = 0; step = -1; playing = false; showBtn(); }
-    function sched(ms) { due = Date.now() + ms; timer = setTimeout(() => run(step + 1), ms); }
-    function run(i) {
-      timer = 0; step = i; TOUR[i][1]();
-      if (i + 1 < TOUR.length) sched(TOUR[i + 1][0] - TOUR[i][0]);
-      else { step = -1; playing = false; showBtn(); }
-    }
-    function play() {
-      if (playing) { clearTimeout(timer); timer = 0; left = Math.max(0, due - Date.now()); playing = false; showBtn(); return; }
-      if (step >= 0) { playing = true; showBtn(); sched(left); return; }   // resume a paused tour
-      reset(); playing = true; showBtn(); run(0);
-    }
-
-    function reset() {                                          // the default state: reads correctly as a printed page
-      stop();
-      select(DEF.ch, false);
-      sws.forEach((_, k) => setInc(k, true));
-      del.value = DEF.del; sh.value = DEF.sh; calc();
-    }
-
-    segB.forEach((b, i) => b.addEventListener("click", () => { stop(); select(i, true); }));
-    $$(".k3-cl[data-c]").forEach(el => el.addEventListener("click", () => { stop(); select(+el.dataset.c, true); }));
-    sws.forEach((b, k) => b.addEventListener("click", () => { stop(); setInc(k, !b.classList.contains("k3-on")); }));
-    allB.addEventListener("click", () => {
-      stop();
-      const on = !sws.every(s => s.classList.contains("k3-on"));
-      sws.forEach((_, k) => setInc(k, on));
-    });
-    [del, sh].forEach(r => {
-      let ptr = false;                                          // after a pointer drag, hand the keys back to the deck
-      const done = () => { if (ptr) { ptr = false; r.blur(); } };
-      r.addEventListener("input", calc);
-      r.addEventListener("pointerdown", () => { ptr = true; });
-      r.addEventListener("pointerup", done);
-      r.addEventListener("change", done);
-    });
-    playB.addEventListener("click", play);
-    $(".k3-reset").addEventListener("click", reset);
-    sl.addEventListener("slideleave", reset);
-    sl.addEventListener("deckprint", reset);
-    reset();
+    btns.forEach((b, i) => b.addEventListener("click", e => { show(i); if (e.detail) b.blur(); }));
+    sl.addEventListener("deckprint", () => show(DEF));
+    show(DEF);
   })();
   </script>
 </section>
